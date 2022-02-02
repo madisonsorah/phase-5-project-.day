@@ -6,7 +6,7 @@
     padding-bottom: 60px;
     width: 100%;
     background-color: #fff;
-    color: rgb(177, 170, 163);
+    color: #000;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -38,7 +38,7 @@
     display: inline-block;
     text-decoration: none;
     background-color: #fff;
-    color: rgb(177, 170, 163);
+    color: #000;
     border: none;
 }
 
@@ -46,7 +46,7 @@
     display: inline-block;
     text-decoration: underline;
     background-color: #fff;
-    color: rgb(177, 170, 163);
+    color: #000;
     border: none;
 }
 
