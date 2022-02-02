@@ -1,10 +1,11 @@
 import React from 'react';
+import './index.css';
 
-function SignupPage() {
+function SignUpPage() {
     return (
         <div>
         </div>
     )
 }
 
-export default SignupPage;
+export default SignUpPage;

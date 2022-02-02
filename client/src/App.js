@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
-import LoginPage from './components/LoginPage';
-import SignupPage from './Components/SignupPage';
+import LogInPage from './components/LogInPage';
+import SignUpPage from './components/SignUpPage';
 import BrowseEntries from './Components/BrowseEntries';
 import EntryPage from './Components/EntryPage';
 import AuthorPage from './Components/AuthorPage';
@@ -26,11 +27,12 @@ function App() {
 
   return (
     <div>
+      <NavBar currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<HomePage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>
-          <Route path='/login' element={<LoginPage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>
-          <Route path='/signup' element={<SignupPage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>
+          <Route path='/login' element={<LogInPage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>
+          <Route path='/signup' element={<SignUpPage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>
           <Route path='/profile/:id' element={<AuthorPage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>
           <Route path='/account/:id' element={<AuthorAccount currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>
           <Route path='/entries' element={<BrowseEntries currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>

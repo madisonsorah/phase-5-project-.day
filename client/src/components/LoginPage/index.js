@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 
-function LoginPage() {
+function LogInPage() {
     return (
         <div>
         </div>
