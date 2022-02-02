@@ -19,7 +19,7 @@ function App() {
     fetch('/me')
     .then((r) => {
       if (r.ok) {
-        r.json().then((author) => setCurrentAuthor(author));
+        r.json().then((author) => setCurrentAuthor(author))
       }
     })
   }, []);
