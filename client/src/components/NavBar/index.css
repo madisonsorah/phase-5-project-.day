@@ -1,0 +1,52 @@
+.navbarcontainer {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    padding-top: 10px;
+    padding-bottom: 60px;
+    width: 100%;
+    background-color: #fff;
+    color: rgb(177, 170, 163);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navbarul {
+    list-style-type: none;
+}
+
+.navbarlink {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.navbarlink:hover {
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.navbarlogo {
+    width: 20%;
+    height: 75%;
+}
+
+.navbaravatar {
+    width: 10%;
+    height: 65%;
+}
+
+.navbarbutton {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #fff;
+    color: rgb(177, 170, 163);
+    border: none;
+}
+
+.navbarlink:hover {
+    display: inline-block;
+    text-decoration: underline;
+    background-color: #fff;
+    color: rgb(177, 170, 163);
+    border: none;
+}
+

@@ -1,0 +1,49 @@
+body {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(177, 170, 163);
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+.homepagecontainer {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.homepageh1 {
+    color: #000;
+}
+
+.homepageh3 {
+    color: #000;
+}
+
+.homepageh6 { 
+    color: #000;
+}
+
+.homepagep {
+    color: #000;
+}
+
+.homepagelink {
+    text-decoration: underline;
+    color: #000;
+}
+
+.homepagelink:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+.homepagedivider {
+    color: #000;
+}
+
+.homepagefooter {
+    width: 100%;
+    height: 25%;
+}

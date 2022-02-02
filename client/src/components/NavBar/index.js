@@ -16,24 +16,24 @@ function NavBar({currentAuthor, setCurrentAuthor}) {
     }
 
     return (
-        <div>
+        <div className='navbarcontainer'>
             {currentAuthor ? (
-                <div>
-                    <Link to='/'>Home</Link>
-                    <Link to='/entries'>Browse Entries</Link>
-                    <Link to='/profile'>My Profile</Link>
-                    <img alt='pixelpad logo'></img>
-                    <img alt='author avatar'></img>
-                    <Link to='/account'>Hi, Madison.</Link>
-                    <button onClick={handleLogOut}>Log Out</button>
-                </div>
+                <ul className='navbarul'>
+                    <Link className='navbarlink' to='/'>Home</Link>
+                    <Link className='navbarlink' to='/entries'>Browse Entries</Link>
+                    <Link className='navbarlink' to='/profile'>My Profile</Link>
+                    <img className='navbarlogo' alt='pixelpad logo'></img>
+                    <img className='navbar avatar' alt='author avatar'></img>
+                    <Link className='navbarlink' to='/account'>Hi, Madison.</Link>
+                    <button className='navbarbutton' onClick={handleLogOut}>Log Out</button>
+                </ul>
             ) : (
                 <div>
-                    <img alt='pixelpad logo'></img>
-                    <Link to='/'>Home</Link>
-                    <Link to='/login'>Log In</Link>
-                    <Link to='/signup'>Sign Up</Link>
-                    <img alt='pixelpad graphic'></img>
+                    <img className='navbarlogo' alt='pixelpad logo'></img>
+                    <Link className='navbarlink' to='/'>Home</Link>
+                    <Link className='navbarlink' to='/login'>Log In</Link>
+                    <Link className='navbarlink' to='/signup'>Sign Up</Link>
+                    <img className='navbargraphic' alt='pixelpad graphic'></img>
                 </div>
             )}
         </div>
