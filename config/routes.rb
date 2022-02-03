@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   
   # Author CRUD actions
   resources :authors, only: [:show, :create, :update, :destroy]
+
+  # Journal Entry CRUD actions
+  resources :journal_entries, only: [:index, :show, :create, :update, :destroy]
   
   get '*path',
       to: 'fallback#index',

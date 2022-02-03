@@ -27,6 +27,29 @@ madison = Author.create!(
         avatar_url: "https://previews.dropbox.com/p/thumb/ABYApU8ZoVmGrdyuxDxEoMfJGr02oOXx1vCRR9szHP5gnaYnzU045uQaYb-hvZYwujUGyVDl2c7PiCZwWINR2NRNgJMZlVGGRKRmNoWRn31j2vi3mRSemwklY-RSs_AxmS6gEuxVkG7RkxRJTq4twrlT_piM-_cR8VBVxV3jy6Lg5PeAiKNxqC4-tVl-XwTXUGOMVThvI68uu7smpGUt5nTXIFDYvTcJCFGkwNPt43ntqQHfmq76DoFlki3CSI26YEL30r3ullGnlcA2S55vbu7RtvEJYht1SkMpwzun_CTdGe2FecJU08AEDHx0PY_wpTGAqGH0vpAz6ipqyYg_LYCdLbLrdAfr5Pk1c-v4HXNV2Q/p.jpeg"
     })
 
+# Sample journal entries
+entryOne = JournalEntry.create!(
+    {
+        image_url: "XX",
+        date: "02/02/2022",
+        author_id: madison.id
+    }
+)
+
+# entryTwo = JournalEntry.create!(
+#     {
+#         image_url: "XX"
+#         date: Date.strptime("02/03/2022", "%m/%d/%Y")
+#         author_id: madison.id
+#     })
+
+# entryThree = JournalEntry.create!(
+#     {
+#         image_url: "XX"
+#         date: Date.strptime("02/04/2022", "%m/%d/%Y")
+#         author_id: madison.id
+#     })
+
 # Sample themes
 creativity = Theme.create!(
     {
@@ -93,7 +116,7 @@ Answer.create!(
 
 Answer.create!(
     {
-        question: "I thought about hanging up colorful paintings in my office to inspire my imagination.",
+        answer: "I thought about hanging up colorful paintings in my office to inspire my imagination.",
         question_id: creativityQuestionTwo.id,
         journal_entry_id: entryOne.id
     }
@@ -101,35 +124,11 @@ Answer.create!(
 
 Answer.create!(
     {
-        question: "I plan to build out the CSS for my app to improve the design.",
-        theme_id: creativityQuestionThree.id,
+        answer: "I plan to build out the CSS for my app to improve the design.",
+        question_id: creativityQuestionThree.id,
         journal_entry_id: entryOne.id
     }
 )
-
-# Sample journal entries
-
-entryOne = JournalEntry.create!(
-    {
-        image_url: "XX",
-        date: "02/02/2022",
-        author_id: madison.id
-    }
-)
-
-# entryTwo = JournalEntry.create!(
-#     {
-#         image_url: "XX"
-#         date: Date.strptime("02/03/2022", "%m/%d/%Y")
-#         author_id: madison.id
-#     })
-
-# entryThree = JournalEntry.create!(
-#     {
-#         image_url: "XX"
-#         date: Date.strptime("02/04/2022", "%m/%d/%Y")
-#         author_id: madison.id
-#     })
 
 
 puts "Seeding Done!"
