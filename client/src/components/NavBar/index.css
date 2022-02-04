@@ -2,8 +2,7 @@
     position: fixed;
     top: 0;
     z-index: 100;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
     width: 100%;
     background-color: #fff;
     color: #000;
@@ -18,12 +17,18 @@
     display: inline-block;
     padding: 20px;
     text-decoration: none;
+    font-size: 14px;
+    border: none;
+    background-color: #fff;
     color: #000;
 }
 
 .navbarlink:hover {
     display: inline-block;
     text-decoration: underline;
+    font-size: 14px;
+    border: none;
+    background-color: #fff;
     color: #000;
 }
 
@@ -31,26 +36,18 @@
     width: 20%;
     height: 75%;
     padding-left: 30%;
+    padding-right: 10%;
+}
+
+.navbarlogologgedin {
+    width: 20%;
+    height: 75%;
+    padding-left: 24%;
+    padding-right: 25%;
 }
 
 .navbaravatar {
     width: 10%;
     height: 65%;
-}
-
-.navbarbutton {
-    display: inline-block;
-    text-decoration: none;
-    background-color: #fff;
-    color: #000;
-    border: none;
-}
-
-.navbarlink:hover {
-    display: inline-block;
-    text-decoration: underline;
-    background-color: #fff;
-    color: #000;
-    border: none;
 }
 

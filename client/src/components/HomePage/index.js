@@ -73,7 +73,7 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                             </form>
                             <span>
                                 <p className='homepagep'>Don't have an account?</p>
-                                <Link className='homepagelink' to='/signup'>Sign Up</Link><p className='homepagedivider'>|</p><button onClick={() => setLogInForm(false)} className='homepagelink'>Back</button>
+                                <Link className='loginlink' to='/signup'>Sign Up</Link><p className='homepagedivider'>|</p><button onClick={() => setLogInForm(false)} className='loginlink'>Back</button>
                             </span>
                         </div>
                         <div className='homepageblur'>

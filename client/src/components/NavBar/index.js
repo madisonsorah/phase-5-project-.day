@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link, useNavigate} from 'react-router-dom';
+import dotdaylogo from '../images/dotdaylogo.png'
 import './index.css';
 
 function NavBar({currentAuthor, setCurrentAuthor, setLogInForm}) {
@@ -20,24 +21,29 @@ function NavBar({currentAuthor, setCurrentAuthor, setLogInForm}) {
         setLogInForm(true);
     }
 
+    function handleRevertHome() {
+        navigate('/', {replace: true});
+        setLogInForm(false);
+    }
+
     return (
         <div className='navbarcontainer'>
             {currentAuthor ? (
                 <ul className='navbarul'>
-                    <Link className='navbarlink' to='/'>Home</Link>
+                    <Link to='/' className='navbarlink'>Home</Link>
                     <Link className='navbarlink' to='/entries'>Browse Entries</Link>
                     <Link className='navbarlink' to='/profile'>My Profile</Link>
-                    <img className='navbarlogo' alt='.Day logo'></img>
-                    <img className='navbar avatar' alt='author avatar'></img>
+                    <img className='navbarlogologgedin' alt='.Day logo' src={dotdaylogo}></img>
+                    <img className='navbaravatar' alt='author avatar'></img>
                     <Link className='navbarlink' to='/account'>Hi, {currentAuthor.first_name}.</Link>
-                    <button className='navbarbutton' onClick={handleLogOut}>Log Out</button>
+                    <button className='navbarlink' onClick={handleLogOut}>Log Out</button>
                 </ul>
             ) : (
                 <div>
-                    <Link className='navbarlink' to='/'>Home</Link>
+                    <button onClick={handleRevertHome} className='navbarlink'>Home</button>
                     <button className='navbarlink' onClick={handleLogInForm}>Log In</button>
                     <Link className='navbarlink' to='/signup'>Sign Up</Link>
-                    <img className='navbarlogo' alt='.Day logo'></img>
+                    <img onClick={handleRevertHome} className='navbarlogo' alt='.Day logo' src={dotdaylogo}></img>
                 </div>
             )}
         </div>

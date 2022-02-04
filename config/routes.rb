@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   # Current logged in author
-  get "/currentauthor", to: "authors#currentauthors"
+  get "/currentauthor", to: "authors#currentauthor"
   
   # Author CRUD actions
   resources :authors, only: [:show, :create, :update, :destroy]

@@ -38,13 +38,19 @@ body {
 
 .homepagelink {
     display: inline-block;
-    text-decoration: underline;
+    text-decoration: none;
+    font-size: medium;
+    border: none;
+    background-color: rgb(241, 232, 223);
     color: #000;
 }
 
 .homepagelink:hover {
     display: inline-block;
     text-decoration: underline;
+    font-size: medium;
+    border: none;
+    background-color: rgb(241, 232, 223);
     color: #000;
 }
 
