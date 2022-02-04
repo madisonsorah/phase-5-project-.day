@@ -24,7 +24,6 @@ Rails.application.routes.draw do
   # Answer CRUD actions 
   resources :answers, only: [:index, :show, :create, :update]
 
-  
   get '*path',
       to: 'fallback#index',
       constraints: ->(req) { !req.xhr? && req.format.html? }
