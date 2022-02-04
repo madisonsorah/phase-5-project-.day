@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
-import LogInPage from './components/LogInPage';
 import SignUpPage from './components/SignUpPage';
 import BrowseEntries from './components/BrowseEntries';
 import EntryPage from './components/EntryPage';
@@ -15,9 +14,10 @@ import AuthorRewards from './components/AuthorRewards';
 
 function App() {
   const [currentAuthor, setCurrentAuthor] = useState(null);
+  const [logInForm, setLogInForm] = useState(false);
 
   useEffect(() => {
-    fetch('/me')
+    fetch('/currentauthor')
     .then((r) => {
       if (r.ok) {
         r.json().then((author) => setCurrentAuthor(author))
@@ -28,10 +28,9 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-      <NavBar currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>
+      <NavBar currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor} logInForm={logInForm} setLogInForm={setLogInForm}/>
         <Routes>
-          <Route path='/' element={<HomePage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>
-          <Route path='/login' element={<LogInPage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>
+          <Route path='/' element={<HomePage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor} logInForm={logInForm} setLogInForm={setLogInForm}/>}/>
           <Route path='/signup' element={<SignUpPage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>
           <Route path='/profile/:id' element={<AuthorPage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>
           <Route path='/account/:id' element={<AuthorAccount currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>

@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   # Author login
-  post '/authorlogin', to: 'sessions#create'
+  post '/login', to: 'sessions#create'
 
   # Author logout
-  delete '/authorlogout', to: 'sessions#destroy'
+  delete '/logout', to: 'sessions#destroy'
 
   # Current logged in author
-  get "/me", to: "authors#currentauthors"
+  get "/currentauthor", to: "authors#currentauthors"
   
   # Author CRUD actions
   resources :authors, only: [:show, :create, :update, :destroy]

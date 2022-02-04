@@ -2,17 +2,22 @@ import React from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import './index.css';
 
-function NavBar({currentAuthor, setCurrentAuthor}) {
+function NavBar({currentAuthor, setCurrentAuthor, setLogInForm}) {
     const navigate = useNavigate();
 
     function handleLogOut() {
-        fetch('/authorlogout', {method: 'DELETE'}).then((r) => {
+        fetch('/logout', {method: 'DELETE'}).then((r) => {
           if (r.ok) {
             setCurrentAuthor(null)
           }
         });
-
         navigate('/', {replace: true});
+        setLogInForm(false);
+    }
+
+    function handleLogInForm() {
+        navigate('/', {replace: true});
+        setLogInForm(true);
     }
 
     return (
@@ -24,13 +29,13 @@ function NavBar({currentAuthor, setCurrentAuthor}) {
                     <Link className='navbarlink' to='/profile'>My Profile</Link>
                     <img className='navbarlogo' alt='pixelpad logo'></img>
                     <img className='navbar avatar' alt='author avatar'></img>
-                    <Link className='navbarlink' to='/account'>Hi, Madison.</Link>
+                    <Link className='navbarlink' to='/account'>Hi, {currentAuthor.first_name}.</Link>
                     <button className='navbarbutton' onClick={handleLogOut}>Log Out</button>
                 </ul>
             ) : (
                 <div>
                     <Link className='navbarlink' to='/'>Home</Link>
-                    <Link className='navbarlink' to='/login'>Log In</Link>
+                    <button className='navbarlink' onClick={handleLogInForm}>Log In</button>
                     <Link className='navbarlink' to='/signup'>Sign Up</Link>
                     <img className='navbarlogo' alt='pixelpad logo'></img>
                 </div>
