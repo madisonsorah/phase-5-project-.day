@@ -2,12 +2,12 @@
     position: fixed;
     top: 0;
     z-index: 100;
-    padding-top: 10px;
-    padding-bottom: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 100%;
     background-color: #fff;
     color: #000;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: graphik, Arial, sans-serif;
 }
 
 .navbarul {
@@ -16,17 +16,21 @@
 
 .navbarlink {
     display: inline-block;
+    padding: 20px;
     text-decoration: none;
+    color: #000;
 }
 
 .navbarlink:hover {
     display: inline-block;
     text-decoration: underline;
+    color: #000;
 }
 
 .navbarlogo {
     width: 20%;
     height: 75%;
+    padding-left: 30%;
 }
 
 .navbaravatar {

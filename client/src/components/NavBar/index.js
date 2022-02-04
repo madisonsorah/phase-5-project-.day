@@ -29,11 +29,10 @@ function NavBar({currentAuthor, setCurrentAuthor}) {
                 </ul>
             ) : (
                 <div>
-                    <img className='navbarlogo' alt='pixelpad logo'></img>
                     <Link className='navbarlink' to='/'>Home</Link>
                     <Link className='navbarlink' to='/login'>Log In</Link>
                     <Link className='navbarlink' to='/signup'>Sign Up</Link>
-                    <img className='navbargraphic' alt='pixelpad graphic'></img>
+                    <img className='navbarlogo' alt='pixelpad logo'></img>
                 </div>
             )}
         </div>

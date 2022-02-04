@@ -4,14 +4,14 @@ import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
 import LogInPage from './components/LogInPage';
 import SignUpPage from './components/SignUpPage';
-import BrowseEntries from './Components/BrowseEntries';
-import EntryPage from './Components/EntryPage';
-import AuthorPage from './Components/AuthorPage';
-import AuthorAccount from './Components/AuthorAccount';
-import EntryHistory from './Components/EntryHistory';
-import PublishEntry from './Components/PublishEntry';
+import BrowseEntries from './components/BrowseEntries';
+import EntryPage from './components/EntryPage';
+import AuthorPage from './components/AuthorPage';
+import AuthorAccount from './components/AuthorAccount';
+import EntryHistory from './components/EntryHistory';
+import PublishEntry from './components/PublishEntry';
 import AuthorThemes from './components/AuthorThemes';
-import AuthorRewards from './Components/AuthorRewards';
+import AuthorRewards from './components/AuthorRewards';
 
 function App() {
   const [currentAuthor, setCurrentAuthor] = useState(null);
@@ -27,8 +27,8 @@ function App() {
 
   return (
     <div>
-      <NavBar currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>
       <BrowserRouter>
+      <NavBar currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>
         <Routes>
           <Route path='/' element={<HomePage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>
           <Route path='/login' element={<LogInPage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>
