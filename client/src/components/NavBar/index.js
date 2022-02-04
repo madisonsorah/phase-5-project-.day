@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link, useNavigate} from 'react-router-dom';
-import dotdaylogo from '../images/dotdaylogo.png'
+import dotdaylogo from '../../images/dotdaylogo.png'
 import './index.css';
 
 function NavBar({currentAuthor, setCurrentAuthor, setLogInForm}) {
@@ -31,20 +31,23 @@ function NavBar({currentAuthor, setCurrentAuthor, setLogInForm}) {
             {currentAuthor ? (
                 <ul className='navbarul'>
                     <Link to='/' className='navbarlink'>Home</Link>
+                    <p className='navbardivider'>|</p>
                     <Link className='navbarlink' to='/entries'>Browse Entries</Link>
                     <Link className='navbarlink' to='/profile'>My Profile</Link>
                     <img className='navbarlogologgedin' alt='.Day logo' src={dotdaylogo}></img>
                     <img className='navbaravatar' alt='author avatar'></img>
                     <Link className='navbarlink' to='/account'>Hi, {currentAuthor.first_name}.</Link>
+                    <p className='navbardivider'>|</p>
                     <button className='navbarlink' onClick={handleLogOut}>Log Out</button>
                 </ul>
             ) : (
-                <div>
-                    <button onClick={handleRevertHome} className='navbarlink'>Home</button>
+                <ul className='navbarul'>
+                    <button className='navbarlink' onClick={handleRevertHome}>Home</button>
+                    <p className='navbardivider'>|</p>
                     <button className='navbarlink' onClick={handleLogInForm}>Log In</button>
                     <Link className='navbarlink' to='/signup'>Sign Up</Link>
-                    <img onClick={handleRevertHome} className='navbarlogo' alt='.Day logo' src={dotdaylogo}></img>
-                </div>
+                    <img className='navbarlogo' onClick={handleRevertHome} alt='.Day logo' src={dotdaylogo}></img>
+                </ul>
             )}
         </div>
     )
