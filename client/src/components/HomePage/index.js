@@ -47,8 +47,8 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                         <div className='loginformcontainer'>
                             <form onSubmit={handleSubmit}>
                                 <span>
-                                    <h1 className='homepageh1'>Welcome back!</h1>
-                                    <h4 className='homepageh4'>Please log in.</h4>
+                                    <h1 className='homepageh1'>Welcome back</h1>
+                                    <p className='loginp'>Please log in.</p>
                                 </span>
                                 <div className='logininputdiv'>
                                     <input className='logininput'
@@ -72,15 +72,15 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                                 {errorMessage ? (<p>{errorMessage}</p>) : null}
                             </form>
                             <span>
-                                <p className='homepagep'>Don't have an account?</p>
-                                <Link className='loginlink' to='/signup'>Sign Up</Link><p className='homepagedivider'>|</p><button onClick={() => setLogInForm(false)} className='loginlink'>Back</button>
+                                <p className='loginbottomp'>Don't have an account?</p>
+                                <Link className='loginlink' to='/signup'>Sign Up</Link><p className='homepagedivider'>|</p><button className='loginlink' onClick={() => setLogInForm(false)}>Back</button>
                             </span>
                         </div>
                         <div className='homepageblur'>
-                        <h1 className='homepageh1'>Welcome to .Day</h1>
+                        <h1 className='homepageh1'>Welcome to .DAY</h1>
                             <p className='homepagep'>Customize and track your daily habits in your very own private, digital bullet journal.</p>
                             <button onClick={() => setLogInForm(true)} className='homepagelink' to='/login'>Log In</button><p className='homepagedivider'>|</p><button className='homepagelink' to='/signup'>Sign Up</button>
-                            <h2 className='homepageh2'>How .Day works</h2>
+                            <h2 className='homepageh2'>How .DAY works</h2>
                             <div className='homepageaboutleft'>
                                 <div className='homepageaboutleftsection'>
                                     <h4 className='homepageh4'>Create an account with your author details.</h4>
@@ -122,10 +122,10 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
             return (
                 <div className='homepagediv'>
                     <div className='homepagecontainer'>
-                        <h1 className='homepageh1'>Welcome to .Day</h1>
+                        <h1 className='homepageh1'>Welcome to .DAY</h1>
                         <p className='homepagep'>Customize and track your daily habits in your very own private, digital bullet journal.</p>
                         <button onClick={() => setLogInForm(true)} className='homepagelink' to='/login'>Log In</button><p className='homepagedivider'>|</p><button className='homepagelink' to='/signup'>Sign Up</button>
-                        <h2 className='homepageh2'>How .Day works</h2>
+                        <h2 className='homepageh2'>How .DAY works</h2>
                         <div className='homepageaboutleft'>
                             <div className='homepageaboutleftsection'>
                                 <h4 className='homepageh4'>Create an account with your author details.</h4>

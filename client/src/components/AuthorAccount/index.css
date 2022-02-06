@@ -1,0 +1,82 @@
+.accountpagecontainer {
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding-top: 8%;
+    background-color: #fff;
+}
+
+.accountlinkscontainer {
+    width: 10%;
+    margin-left: 30%;
+    float: left;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+}
+
+.accountformcontainer {
+    width: 40%;
+    margin-right: 20%;
+    float: right;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+}
+
+.accountp {
+    font-size: 12px;
+    width: 100%;
+}
+
+.accountsavedp {
+    font-size: 12px;
+    margin-left: 10px;
+    width: 100%;
+}
+
+.accountinput {
+    padding: 10px;
+    width: 80%;
+    background-color: rgb(241, 232, 223);
+    border: none;
+}
+
+.accountinputdiv {
+    margin: 10px;
+}
+
+.accountlink {
+    color: #000;
+    background-color: #fff;
+    font-size: 15px;
+    border: none;
+    text-decoration: none;
+}
+
+.accountlink:hover {
+    color: #000;
+    background-color: #fff;
+    font-size: 15px;
+    border: none;
+    text-decoration: underline;
+}
+
+.accountlinkdiv {
+    margin-bottom: 10px;
+}
+
+.accountbutton {
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 80.5%;
+    border: none;
+    background-color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+}

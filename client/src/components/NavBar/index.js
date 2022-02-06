@@ -1,15 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import dotdaylogo from '../../images/dotdaylogo.png'
 import './index.css';
 
 function NavBar({currentAuthor, setCurrentAuthor, setLogInForm}) {
     const navigate = useNavigate();
+    const [dropDown, setDropDown] = useState(false);
 
     function handleLogOut() {
         fetch('/logout', {method: 'DELETE'}).then((r) => {
           if (r.ok) {
             setCurrentAuthor(null)
+            setDropDown(!dropDown)
           }
         });
         navigate('/', {replace: true});
@@ -32,13 +34,24 @@ function NavBar({currentAuthor, setCurrentAuthor, setLogInForm}) {
                 <ul className='navbarul'>
                     <Link to='/' className='navbarlink'>Home</Link>
                     <p className='navbardivider'>|</p>
-                    <Link className='navbarlink' to='/entries'>Browse Entries</Link>
-                    <Link className='navbarlink' to='/profile'>My Profile</Link>
+                    <Link className='navbarlink' to='/profile'>Profile</Link>
+                    <Link className='navbarlink' to='/entries'>View Entries</Link>
                     <img className='navbarlogologgedin' alt='.Day logo' src={dotdaylogo}></img>
-                    <img className='navbaravatar' alt='author avatar'></img>
-                    <Link className='navbarlink' to='/account'>Hi, {currentAuthor.first_name}.</Link>
+                    <button onClick={() => setDropDown(!dropDown)} className='navbarlink'>Hi, {currentAuthor.first_name}.</button>
                     <p className='navbardivider'>|</p>
                     <button className='navbarlink' onClick={handleLogOut}>Log Out</button>
+                    {dropDown === true ? (
+                        <div className='navbardropdown'>
+                            <div className='dropdowndiv'>
+                                <Link className='navbarlink' onClick={() => setDropDown(!dropDown)} to={`/account`}>Account Details</Link>
+                            </div>
+                            <div className='dropdowndiv'>
+                                <button className='navbarlink' onClick={handleLogOut}>Log Out</button>
+                            </div>
+                            <div className='dropdownclosediv'>
+                                <button className='navbarlink' onClick={() => setDropDown(!dropDown)}>Close</button>
+                            </div>
+                        </div>) : null}
                 </ul>
             ) : (
                 <ul className='navbarul'>

@@ -1,8 +1,9 @@
 .navbarcontainer {
-    position: fixed;
+    position: sticky;
+    text-overflow: hidden;
+    white-space: nowrap;
     top: 0;
     z-index: 100;
-    padding: 5px;
     width: 100%;
     background-color: #fff;
     color: #000;
@@ -10,7 +11,8 @@
 }
 
 .navbarul {
-    margin: 5px;
+    margin: auto;
+    position: sticky;
     list-style-type: none;
 }
 
@@ -36,27 +38,51 @@
 .navbardivider {
     display: inline-block;
     font-size: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
     color: #000;
 }
 
 .navbarlogo {
-    width: 3.5%;
-    height: .2%;
-    padding-top: 1%;
-    padding-left: 27.7%;
-    padding-right: 10%;
+    width: 4.5%;
+    height: .4%;
+    padding-top: 1.5%;
+    display: inline-block;
+    margin-left: 27%;
 }
 
 .navbarlogologgedin {
-    width: 3.5%;
-    height: .2%;
-    padding-top: 1%;
-    padding-left: 23%;
-    padding-right: 22%;
+    width: 4.5%;
+    height: .4%;
+    padding-top: 1.5%;
+    display: inline-block;
+    margin-left: 25%;
+    margin-right: 30%;
 }
 
-.navbaravatar {
-    width: 3.5%;
-    height: .2%;
+.navbardropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300px;
+    height: 240px;
+    background: #fff;
+    padding: 25px, 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid rgb(241, 232, 223);
+    z-index: -1;
+}
+
+.dropdowndiv {
+    margin: 20px;
+    width: 90%;
+    border-bottom: 1px solid rgb(241, 232, 223);
+}
+
+.dropdownclosediv {
+    margin: 20px;
+    width: 90%;
 }
 
