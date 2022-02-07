@@ -3,7 +3,7 @@ import {Link, useNavigate} from 'react-router-dom';
 import dotdaylogo from '../../images/dotdaylogo.png'
 import './index.css';
 
-function NavBar({currentAuthor, setCurrentAuthor, setLogInForm}) {
+function NavBar({currentAuthor, setCurrentAuthor, setLogInForm, setErrorMessage}) {
     const navigate = useNavigate();
     const [dropDown, setDropDown] = useState(false);
 
@@ -21,6 +21,7 @@ function NavBar({currentAuthor, setCurrentAuthor, setLogInForm}) {
     function handleLogInForm() {
         navigate('/', {replace: true});
         setLogInForm(true);
+        setErrorMessage('');
     }
 
     function handleRevertHome() {

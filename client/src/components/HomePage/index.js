@@ -26,6 +26,11 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
       });
     }
 
+    function handleLogInForm() {
+        setLogInForm(true);
+        setErrorMessage('');
+    }
+
     if (currentAuthor) {
         return (
             <div className='homepagediv'>
@@ -79,7 +84,7 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                         <div className='homepageblur'>
                         <h1 className='homepageh1'>Welcome to .DAY</h1>
                             <p className='homepagep'>Customize and track your daily habits in your very own private, digital bullet journal.</p>
-                            <button onClick={() => setLogInForm(true)} className='homepagelink' to='/login'>Log In</button><p className='homepagedivider'>|</p><button className='homepagelink' to='/signup'>Sign Up</button>
+                            <button onClick={handleLogInForm} className='homepagelink' to='/login'>Log In</button><p className='homepagedivider'>|</p><button className='homepagelink' to='/signup'>Sign Up</button>
                             <h2 className='homepageh2'>How .DAY works</h2>
                             <div className='homepageaboutleft'>
                                 <div className='homepageaboutleftsection'>
@@ -124,7 +129,7 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                     <div className='homepagecontainer'>
                         <h1 className='homepageh1'>Welcome to .DAY</h1>
                         <p className='homepagep'>Customize and track your daily habits in your very own private, digital bullet journal.</p>
-                        <button onClick={() => setLogInForm(true)} className='homepagelink' to='/login'>Log In</button><p className='homepagedivider'>|</p><button className='homepagelink' to='/signup'>Sign Up</button>
+                        <button onClick={handleLogInForm} className='homepagelink' to='/login'>Log In</button><p className='homepagedivider'>|</p><button className='homepagelink' to='/signup'>Sign Up</button>
                         <h2 className='homepageh2'>How .DAY works</h2>
                         <div className='homepageaboutleft'>
                             <div className='homepageaboutleftsection'>
