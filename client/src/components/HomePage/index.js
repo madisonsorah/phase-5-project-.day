@@ -41,7 +41,14 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                     <Link className='homepagelink' to='/publish'>Write down your thoughts.</Link>
                     <Link className='homepagelink' to='/account'>Update your account details.</Link>
                 </div>
-                <div className='homepagefooter'></div>
+                <div className='homepagefooter'>
+                    <h2 className='footerheader'>About .DAY</h2>
+                    <ul className='footerul'>
+                        <div className='footerp'>.DAY is a project concept created by @madisonsorah.</div>
+                        <div className='footerp'>A girl with many thoughts, Madison always tried to get into bullet journaling, but never stuck with it and instead chose to habit track digitally. .DAY is her best-of-both solution.</div>
+                        <div className='footerp2'>As Madison grows as a developer, updates will be continuously made to .DAY to improve the author's experience.</div>
+                    </ul>
+                </div>
             </div>
         )
     } else {
@@ -120,7 +127,14 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                             </div>
                         </div>
                     </div>
-                    <div className='homepagefooter'></div>
+                    <div className='homepagefooter'>
+                        <h2 className='footerheader'>About .DAY</h2>
+                        <ul className='footerul'>
+                            <div className='footerp'>.DAY is a project concept created by @madisonsorah.</div>
+                            <div className='footerp'>A girl with many thoughts, Madison always tried to get into bullet journaling, but never stuck with it and instead chose to habit track digitally. .DAY is her best-of-both solution.</div>
+                            <div className='footerp2'>As Madison grows as a developer, updates will be continuously made to .DAY to improve the author's experience.</div>
+                        </ul>
+                    </div>
                 </div>
             )
         } else {
@@ -164,7 +178,14 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                             </div>
                         </div>
                     </div>
-                    <div className='homepagefooter'></div>
+                    <div className='homepagefooter'>
+                        <h2 className='footerheader'>About .DAY</h2>
+                        <ul className='footerul'>
+                            <div className='footerp'>.DAY is a project concept created by @madisonsorah.</div>
+                            <div className='footerp'>A girl with many thoughts, Madison always tried to get into bullet journaling, but never stuck with it and instead chose to habit track digitally. .DAY is her best-of-both solution.</div>
+                            <div className='footerp2'>As Madison grows as a developer, updates will be continuously made to .DAY to improve the author's experience.</div>
+                        </ul>
+                    </div>
                 </div>
             )
         }

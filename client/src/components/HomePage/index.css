@@ -88,13 +88,6 @@ body {
     height: 200px;
 }
 
-.homepagefooter {
-    position: absolute;
-    width: 100%;
-    height: 25%;
-    background-color: #fff;
-}
-
 .homepageblur {
     filter: blur(3px);
 }
@@ -156,4 +149,40 @@ body {
     font-size: 15px;
     font-weight: 500;
     color: #fff;
+}
+
+.homepagefooter {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    background-color: #fff;
+}
+
+.footerul {
+    margin: auto;
+    position: sticky;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px 1em;
+}
+
+.footerheader {
+    padding-left: 40px;
+    margin-top: 3.5%;
+}
+
+.footerp {
+    display: inline-block;
+    width: 80%;
+    font-size: 15px;
+    padding-right: 50px;
+    border-right: 1px solid rgb(241, 232, 223);
+}
+
+.footerp2 {
+    display: inline-block;
+    width: 80%;
+    font-size: 15px;
+    padding-right: 50px;
 }

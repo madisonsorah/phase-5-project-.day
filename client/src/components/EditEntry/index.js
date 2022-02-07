@@ -1,11 +1,11 @@
 import React from 'react';
 import './index.css';
 
-function JournalEntry() {
+function EditEntry() {
     return (
         <div>
         </div>
     )
 }
 
-export default JournalEntry;
+export default EditEntry;
