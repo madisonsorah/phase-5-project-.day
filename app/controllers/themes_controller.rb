@@ -8,21 +8,17 @@ class ThemesController < ApplicationController
     end
 
     def show
-        theme = Theme.find_theme
+        theme = Theme.find(params[:id])
         render json: theme
     end
 
     def update
-        theme = Theme.find_theme
+        theme = Theme.find(params[:id])
         theme.update!(theme_params)
         render json: theme
     end
 
     private
-    def find_theme
-        theme = Theme.find(params[:id])
-    end
-
     def theme_params
         params.permit(:category, :journal_entry_id, :author_id)
     end

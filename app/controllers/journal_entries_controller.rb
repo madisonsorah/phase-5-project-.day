@@ -8,7 +8,7 @@ class JournalEntriesController < ApplicationController
     end
 
     def show
-        journalentry = find_journalentry
+        journalentry = JournalEntry.find(params[:id])
         render json: journalentry
     end
 

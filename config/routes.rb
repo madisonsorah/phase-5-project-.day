@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   # Current logged in author
   get "/currentauthor", to: "authors#currentauthor"
+
+  # Answers that belong to a journal entry
+    get '/journal_entries/:journal_entry_id/answers', to: 'answers#entryanswers'
   
   # Author CRUD actions
   resources :authors, only: [:show, :create, :update, :destroy]

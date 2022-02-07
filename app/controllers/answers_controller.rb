@@ -12,6 +12,12 @@ class AnswersController < ApplicationController
         render json: answer
     end
 
+    def entryanswers
+        answers = Answer.all
+        journalentryanswers = answers.where(journal_entry_id: params[:journal_entry_id])
+        render json: journalentryanswers
+    end
+
     def create
         answer = Answer.create!(answer_params)
         render json: answer, status: :created

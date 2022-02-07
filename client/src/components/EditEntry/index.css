@@ -1,0 +1,46 @@
+.editentrycontainer {
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding-top: 8%;
+    background-color: #fff;
+}
+
+.editentryformcontainer {
+    width: 50%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+}
+
+.editentryformp {
+    font-size: 12px;
+    width: 100%;
+}
+
+.editentryinput {
+    padding: 10px;
+    width: 80%;
+    background-color: rgb(241, 232, 223);
+    border: none;
+}
+
+.editentryinputdiv {
+    margin: 10px;
+}
+
+.editentrybutton {
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 80.5%;
+    border: none;
+    background-color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+}
