@@ -5,6 +5,8 @@ import './index.css';
 function EditEntry() {
     const {id} = useParams();
     const [answers, setAnswers] = useState([]);
+    const [answer, setAnswer] = useState('');
+    const [entryUpdatedNote, setEntryUpdatedNote] = useState('');
     
    useEffect(() => {
        fetch(`/journal_entries/${id}/answers`)
@@ -12,10 +14,23 @@ function EditEntry() {
        .then((answerData) => setAnswers(answerData))
     }, [id])
 
+    function handleUpdatedAnswers(e) {
+        e.preventDefault();
+        fetch(`/journal_entries/${id}/answers`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({answer}),
+        })
+        setEntryUpdatedNote('Entry updates saved.')
+    }
+
+
     return (
         <div className='editentrycontainer'>
             <div className='editentryformcontainer'>
-                <form>
+                <form onSubmit={handleUpdatedAnswers}>
                     <span>
                         <h4>Update your journal entry</h4>
                     </span>
@@ -24,12 +39,13 @@ function EditEntry() {
                             answers.map((answer) => {
                                 return (<div className='editentryinputdiv' key={answer.id}>
                                     <p className='editentryformp'>{answer.question.question}</p>
-                                    <input className='editentryinput' value={answer.answer}></input>
+                                    <input className='editentryinput' value={answer.answer} onChange={(e) => setAnswer(e.target.value)}></input>
                                 </div>)
                             })
                         }
                     </div>
                     <button className='editentrybutton'>UPDATE</button>
+                    {entryUpdatedNote ? (<p className='entrysavedp'>{entryUpdatedNote}</p>) : null}
                 </form>
             </div>
         </div>

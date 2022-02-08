@@ -12,6 +12,11 @@ class ThemesController < ApplicationController
         render json: theme
     end
 
+    def authortheme
+        theme = Theme.where(author_id: params[:author_id])
+        render json: theme, include: [:questions]
+    end
+
     def update
         theme = Theme.find(params[:id])
         theme.update!(theme_params)

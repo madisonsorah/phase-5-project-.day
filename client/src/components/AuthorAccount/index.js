@@ -38,6 +38,9 @@ function AuthorAccount({currentAuthor}) {
                         <Link className='accountlink' to='/entries'>Entries</Link>
                     </div>
                     <div className='accountlinkdiv'>
+                        <Link className='accountlink' to='/publish'>New Entry</Link>
+                    </div>
+                    <div className='accountlinkdiv'>
                         <Link className='accountlink' to='/rewards'>Rewards</Link>
                     </div>
                     <div className='accountlinkdiv'>

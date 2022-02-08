@@ -4,19 +4,34 @@ import './index.css';
 
 function EntryPage() {
     const {id} = useParams();
-    const [entry, setEntry] = useState([])
+    const [entry, setEntry] = useState([]);
+    const [answers, setAnswers] = useState([]);
 
     useEffect(() => {
         fetch(`/journal_entries/${id}`)
         .then((r) => r.json())
         .then((entryData) => setEntry(entryData))
-    }, [id])
+
+        fetch(`/journal_entries/${id}/answers`)
+        .then((r) => r.json())
+        .then((answerData) => setAnswers(answerData))
+     }, [id])
 
     return (
         <div>
-            <p>{entry.image_url}</p>
-            <p>{entry.date}</p>
-            <Link to={`/editentry/${entry.id}`}>Edit Entry</Link>
+            <div>
+                <img src={entry.image_url}></img>
+                <p>{entry.date}</p>
+                {
+                    answers.map((answer) => {
+                        return (<div className='entrydiv' key={answer.id}>
+                                    <h5 className='entryh5'>{answer.question.question}</h5>
+                                    <p className='entryp'>{answer.answer}</p>
+                                </div>)
+                        })
+                }
+                <Link to={`/editentry/${id}`}>Edit Entry</Link>
+            </div>
         </div>
     )
 }

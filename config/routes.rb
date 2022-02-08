@@ -11,6 +11,9 @@ Rails.application.routes.draw do
 
   # Answers that belong to a journal entry
     get '/journal_entries/:journal_entry_id/answers', to: 'answers#entryanswers'
+
+  # Theme & questions that belong to an author
+  get '/authors/:author_id/themes', to: 'themes#authortheme'
   
   # Author CRUD actions
   resources :authors, only: [:show, :create, :update, :destroy]
