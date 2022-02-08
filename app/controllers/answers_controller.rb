@@ -13,9 +13,8 @@ class AnswersController < ApplicationController
     end
 
     def entryanswers
-        answers = Answer.all
-        journalentryanswers = answers.where(journal_entry_id: params[:journal_entry_id])
-        render json: journalentryanswers
+        answers = Answer.where(journal_entry_id: params[:journal_entry_id])
+        render json: answers, include: ['question']
     end
 
     def create
