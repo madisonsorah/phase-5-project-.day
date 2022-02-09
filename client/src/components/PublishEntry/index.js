@@ -1,23 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 import './index.css';
 
 function PublishEntry({currentAuthor}) {
-    // const [themeData, setThemeData] = useState([]);
-    // const [answer, setAnswer] = useState('');
-    const [publishedNote, setPublishedNote] = useState('');
     const [image_url, setImageUrl] = useState('');
     let today = new Date();
     let dd = String(today.getDate()).padStart(2, '0');
     let mm = String(today.getMonth() + 1).padStart(2, '0'); 
     let yyyy = today.getFullYear();
     today = mm + '/' + dd + '/' + yyyy;
-
-
-    // useEffect(() => {
-    //     fetch(`authors/${currentAuthor.id}/themes`)
-    //     .then ((r) => r.json())
-    //     .then((data) => setThemeData(data));
-    // })
+    let navigate = useNavigate();
 
     function handlePublishEntry(e) {
         e.preventDefault();
@@ -32,9 +24,8 @@ function PublishEntry({currentAuthor}) {
             author_id: currentAuthor.id 
             }),
         });
-        setPublishedNote('Entry published');
+        navigate('/profile', {replace: true});
     }
-
 
     return (
         <div>
@@ -42,7 +33,7 @@ function PublishEntry({currentAuthor}) {
             <div className='editentryformcontainer'>
                 <form onSubmit={handlePublishEntry}>
                     <span>
-                        <h4>Publish a new entry</h4>
+                        <h4>Create a new entry</h4>
                     </span>
                     <div>
                         <p>Entry Image</p>
@@ -52,8 +43,7 @@ function PublishEntry({currentAuthor}) {
                         <p>Today's Date</p>
                         <p>{today}</p>
                     </div>
-                    <button className='editentrybutton'>PUBLISH</button>
-                    {publishedNote ? (<p className='entrysavedp'>{publishedNote}</p>) : null}
+                    <button className='editentrybutton'>CREATE ENTRY</button>
                 </form>
             </div>
         </div>

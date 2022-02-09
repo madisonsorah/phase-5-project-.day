@@ -4,14 +4,15 @@ import './index.css';
 
 function EditEntry() {
     const {id} = useParams();
+    const [entry, setEntry] = useState(null);
     const [answers, setAnswers] = useState([]);
     const [answer, setAnswer] = useState('');
     const [entryUpdatedNote, setEntryUpdatedNote] = useState('');
     
    useEffect(() => {
-       fetch(`/journal_entries/${id}/answers`)
+       fetch(`/journal_entries/${id}`)
        .then((r) => r.json())
-       .then((answerData) => setAnswers(answerData))
+       .then((entryData) => setEntry(entryData))
     }, [id])
 
     function handleUpdatedAnswers(e) {
@@ -25,31 +26,35 @@ function EditEntry() {
         })
         setEntryUpdatedNote('Entry updates saved.')
     }
-
-
-    return (
-        <div className='editentrycontainer'>
-            <div className='editentryformcontainer'>
-                <form onSubmit={handleUpdatedAnswers}>
-                    <span>
-                        <h4>Update your journal entry</h4>
-                    </span>
-                    <div>
-                        {
-                            answers.map((answer) => {
-                                return (<div className='editentryinputdiv' key={answer.id}>
-                                    <p className='editentryformp'>{answer.question.question}</p>
-                                    <input className='editentryinput' value={answer.answer} onChange={(e) => setAnswer(e.target.value)}></input>
-                                </div>)
-                            })
-                        }
-                    </div>
-                    <button className='editentrybutton'>UPDATE</button>
-                    {entryUpdatedNote ? (<p className='entrysavedp'>{entryUpdatedNote}</p>) : null}
-                </form>
+    
+    if (entry === null) {
+        return (
+            'Loading...'
+        )
+    }
+        return (
+            <div className='editentrycontainer'>
+                <div className='editentryformcontainer'>
+                    <form onSubmit={handleUpdatedAnswers}>
+                        <span>
+                            <h4>Update your journal entry</h4>
+                        </span>
+                        <div>
+                            {
+                                entry.questions.map((question) => {
+                                    return (<div className='editentryinputdiv' key={question.id}>
+                                        <p className='editentryformp'>{question.question}</p>
+                                        <input className='editentryinput' onChange={(e) => setAnswer(e.target.value)}></input>
+                                    </div>)
+                                })
+                            }
+                        </div>
+                        <button className='editentrybutton'>UPDATE</button>
+                        {entryUpdatedNote ? (<p className='entrysavedp'>{entryUpdatedNote}</p>) : null}
+                    </form>
+                </div>
             </div>
-        </div>
-    )
+        )
 }
 
 export default EditEntry;
