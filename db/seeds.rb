@@ -24,7 +24,7 @@ madison = Author.create!(
         email: "madisonsorah@gmail.com",
         password: "catsarecute1",
         bio: "Hi there! I am a cat lover, anime watcher and front-end developer living in Brooklyn, NY.",
-        avatar_url: "https://previews.dropbox.com/p/thumb/ABYApU8ZoVmGrdyuxDxEoMfJGr02oOXx1vCRR9szHP5gnaYnzU045uQaYb-hvZYwujUGyVDl2c7PiCZwWINR2NRNgJMZlVGGRKRmNoWRn31j2vi3mRSemwklY-RSs_AxmS6gEuxVkG7RkxRJTq4twrlT_piM-_cR8VBVxV3jy6Lg5PeAiKNxqC4-tVl-XwTXUGOMVThvI68uu7smpGUt5nTXIFDYvTcJCFGkwNPt43ntqQHfmq76DoFlki3CSI26YEL30r3ullGnlcA2S55vbu7RtvEJYht1SkMpwzun_CTdGe2FecJU08AEDHx0PY_wpTGAqGH0vpAz6ipqyYg_LYCdLbLrdAfr5Pk1c-v4HXNV2Q/p.jpeg"
+        avatar_url: "https://previews.dropbox.com/p/thumb/ABdSLhejOkXnWgIe9P-liMU8eCXMohRT_Ral3XEzn2T8dOMIvednPQd1tkxqTSUgdfvudThpz99IPpZ_fGjtEljEZP24GdIzcHmYJiQbpE9ld6v-QT5jE-XT7uwxo_hdCrdsSU4eVvRCnDmkecyNpKx2wIZwz3ouFGDYMSRiTrWc1SQLOWi0RIS-DSYlhohpT1uxsLiHADtL1AEGFupyZ72Zqiy_DMkJjOxQ1pLdEjO_hCrLCgAvI1Fvf16ggVMibXvzIBCCXp5lITA_TcUD4S92wyT3PvyAKVFXEVau3JQfcyzGGel6j7zkpkGaz17k-q7IOuHoGoKMME1NiPRFI2EOhleavyOMPYLMO9Kbhvmx1g/p.jpeg"
     })
 
 # Sample journal entries
@@ -65,23 +65,14 @@ creativity = Theme.create!(
 
 # selfCare = Theme.create!(
 #     {
-#         category: "Self Care"
+#         category: "Positivity"
 #     })
 
 # healthyHabits = Theme.create!(
 #     {
-#         category: "Healthy Habits"
+#         category: "Self-Activity"
 #     })
 
-# gratitude = Theme.create!(
-#     {
-#         category: "Gratitude"
-#     })
-
-# selfReflection = Theme.create!(
-#     {
-#         category: "Self Reflection"
-#     })
 
 # Sample questions
 creativityQuestionOne = Question.create!(

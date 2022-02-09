@@ -22,16 +22,22 @@ function AuthorProfile({currentAuthor}) {
     return (
         <div>
             <div>
-                <div>
-                    <img src={currentAuthor.avatar_url}></img>
-                    <h3>{currentAuthor.first_name} {currentAuthor.last_name}</h3>
-                    <p>{currentAuthor.pen_name}</p>
-                    <p>{currentAuthor.email}</p>
-                    <p>{currentAuthor.bio}</p>
+                <div className='profiledetailsdiv'>
+                    <div className='profileleft'>
+                        <img className='profileavatar' src={currentAuthor.avatar_url}></img>
+                    </div>
+                    <div className='profileright'>
+                        <h3 className='profilename'>{currentAuthor.first_name} {currentAuthor.last_name}</h3>
+                        <p className='profilepenname'>{currentAuthor.pen_name}</p>
+                        <p className='profileemail'>{currentAuthor.email}</p>
+                        <p className='profilebio'>{currentAuthor.bio}</p>
+                        <Link className='profileeditlink' to='/account'>Edit Profile</Link>
+                    </div>
                 </div>
-                <div>
-                    <h3>Journal Entries</h3>
-                    <div className='journalentrycontainer'>
+                <div className='profileentrydiv'>
+                    <h3 className='profileentries'>Journal Entries</h3>
+                    <Link className='profilenewentrylink' to={'/publish'}>New Entry</Link>
+                    <div className='profileentrycontainer'>
                         {authorEntries}
                     </div>
                 </div>

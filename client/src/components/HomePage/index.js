@@ -38,8 +38,15 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                     <h1 className='homepageh1'>Welcome back, {currentAuthor.first_name}.</h1>
                     <p className='homepagep'>Publish daily journal entries and unlock rewards.</p>
                     <h2 className='homepageh2'>Ready to publish today's journal entry?</h2>
-                    <Link className='homepagelink' to='/publish'>Write down your thoughts.</Link>
-                    <Link className='homepagelink' to='/account'>Update your account details.</Link>
+                    <div className='homepageoptionsdiv'>
+                        <Link className='homepagelink' to='/publish'>Write down your thoughts.</Link>
+                    </div>
+                    <div className='homepageoptionsdiv'>
+                        <Link className='homepagelink' to='/account'>Update your account details.</Link>
+                    </div>
+                    <div className='homepageoptionsdiv'>
+                        <Link className='homepagelink' to='/profile'>View your profile.</Link>
+                    </div>
                 </div>
                 <div className='homepagefooter'>
                     <h2 className='footerheader'>About .DAY</h2>
