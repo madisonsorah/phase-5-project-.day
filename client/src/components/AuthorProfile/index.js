@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
+import dotdaygraphic from '../../images/dotdaygraphic.png';
 import './index.css';
 
 function AuthorProfile({currentAuthor}) {
@@ -12,15 +13,15 @@ function AuthorProfile({currentAuthor}) {
     }, [])
 
     const authorEntries = entries.map((entry) => {
-        return (<div className='journalentrydiv'>
-            <p>{entry.image_url}</p>
-            <p>{entry.date}</p>
-            <Link to={`/entries/${entry.id}`}>View Entry</Link>
+        return (<div className='profileentry'>
+            <img className='entrygraphic' src={dotdaygraphic}></img>
+            <p className='entrydate'>{entry.date}</p>
+            <Link className='entrylink' to={`/entries/${entry.id}`}>VIEW ENTRY</Link>
         </div>)
     })
 
     return (
-        <div>
+        <div className='profilemaindiv'>
             <div>
                 <div className='profiledetailsdiv'>
                     <div className='profileleft'>
@@ -31,12 +32,12 @@ function AuthorProfile({currentAuthor}) {
                         <p className='profilepenname'>{currentAuthor.pen_name}</p>
                         <p className='profileemail'>{currentAuthor.email}</p>
                         <p className='profilebio'>{currentAuthor.bio}</p>
-                        <Link className='profileeditlink' to='/account'>Edit Profile</Link>
+                        <Link className='profileeditlink' to='/account'>EDIT PROFILE</Link>
                     </div>
                 </div>
                 <div className='profileentrydiv'>
-                    <h3 className='profileentries'>Journal Entries</h3>
-                    <Link className='profilenewentrylink' to={'/publish'}>New Entry</Link>
+                    <h3 className='profileentryheader'>Journal Entries</h3>
+                    <Link className='profilenewentrylink' to={'/newentry'}>NEW ENTRY</Link>
                     <div className='profileentrycontainer'>
                         {authorEntries}
                     </div>

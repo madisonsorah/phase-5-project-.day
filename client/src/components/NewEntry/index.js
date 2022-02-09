@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import './index.css';
 
-function PublishEntry({currentAuthor}) {
+function NewEntry({currentAuthor}) {
     const [image_url, setImageUrl] = useState('');
     let today = new Date();
     let dd = String(today.getDate()).padStart(2, '0');
@@ -25,26 +25,29 @@ function PublishEntry({currentAuthor}) {
             }),
         })
         .then((r) => r.json())
-        .then((rData) => navigate(`/editentry/${rData.id}`, {replace: true}));
+        .then((rData) => navigate(`/entrydraft/${rData.id}`, {replace: true}));
     }
 
     return (
         <div>
-            <div className='editentrycontainer'>
-            <div className='editentryformcontainer'>
+            <div className='newentrycontainer'>
+            <div className='newentryformcontainer'>
                 <form onSubmit={handlePublishEntry}>
                     <span>
-                        <h4>Create a new entry</h4>
+                        <h4>Start a new entry</h4>
                     </span>
-                    <div>
-                        <p>Entry Image</p>
-                        <input value={image_url} onChange={(e) => setImageUrl(e.target.value)}></input>
+                    <div className='newentryinputdiv'>
+                        <p className='newentryformp'>HEADER IMAGE</p>
+                        <input 
+                        className='newentryinput'
+                        value={image_url} 
+                        onChange={(e) => setImageUrl(e.target.value)}></input>
                     </div>
                     <div>
-                        <p>Today's Date</p>
-                        <p>{today}</p>
+                        <p className='newentryformp'>ENTRY DATE</p>
+                        <p className='newentryformp'>{today}</p>
                     </div>
-                    <button className='editentrybutton'>CREATE ENTRY</button>
+                    <button className='newentrybutton'>NEW ENTRY</button>
                 </form>
             </div>
         </div>
@@ -52,4 +55,4 @@ function PublishEntry({currentAuthor}) {
     )
 }
 
-export default PublishEntry;
+export default NewEntry;

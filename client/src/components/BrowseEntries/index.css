@@ -1,0 +1,86 @@
+.browseentriesdiv {
+    padding-top: 2%;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.browseentriesnewlink {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px;
+    margin-left: 10%;
+    border: 1px solid rgb(243, 238, 232);
+    background-color: rgb(243, 238, 232);
+    color: #000;
+}
+
+.browseentriesnewlink:hover {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px;
+    margin-left: 10%;
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #000;
+}
+
+
+.browseentriesheader {
+    padding-left: 10%;
+}
+
+.browseentriescontainer {
+    margin-top: 2%;
+    padding-left: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px 1em;
+}
+
+.browseentriesentry {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 50px;
+    margin: 10px;
+    display: inline-block;
+    border: 1px solid rgb(243, 238, 232);
+    background-color: rgb(243, 238, 232);
+    text-align: center;
+  }
+  
+  .browseentriesentry:hover {
+    border: 1px solid #fff;
+    background-color: #fff;
+  }
+
+  .browseentriesgraphic {
+      height: 100px;
+      width: 75px;
+  }
+
+  .browseentriesdate {
+      font-size: 14px;
+  }
+
+  .browseentriesviewlink {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px;
+    border: 1px solid rgb(243, 238, 232);
+    background-color: rgb(243, 238, 232);
+    color: #000;
+  }
+
+  .browseentriesviewlink:hover {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px;
+    border: 1px solid rgb(241, 232, 223);
+    background-color: rgb(241, 232, 223);;
+    color: #000;
+}

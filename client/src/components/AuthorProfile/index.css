@@ -1,4 +1,10 @@
+.profilemaindiv {
+    width: 100%;
+}
+
 .profiledetailsdiv {
+    display: inline-flex;
+    flex-direction: row;
     width: 100%;
     height: 150px;
     padding-top: 5%;
@@ -8,16 +14,18 @@
 
 .profileeditlink {
     text-decoration: none;
-    font-size: 15px;
+    font-size: 12px;
+    font-weight: 600;
     padding: 5px;
-    border: 1px solid rgb(241, 232, 223);
-    background-color: #fff;
+    border: 1px solid rgb(243, 238, 232);
+    background-color: rgb(243, 238, 232);
     color: #000;
 }
 
 .profileeditlink:hover {
     text-decoration: none;
-    font-size: 15px;
+    font-size: 12px;
+    font-weight: 600;
     padding: 5px;
     border: 1px solid rgb(241, 232, 223);
     background-color: rgb(241, 232, 223);;
@@ -26,38 +34,40 @@
 
 .profilenewentrylink {
     text-decoration: none;
-    font-size: 15px;
+    font-size: 12px;
+    font-weight: 600;
     padding: 5px;
-    border: 1px solid rgb(241, 232, 223);
-    background-color: #fff;
+    margin-left: 10%;
+    border: 1px solid rgb(243, 238, 232);
+    background-color: rgb(243, 238, 232);
     color: #000;
 }
 
 .profilenewentrylink:hover {
     text-decoration: none;
-    font-size: 15px;
+    font-size: 12px;
+    font-weight: 600;
     padding: 5px;
-    border: 1px solid rgb(241, 232, 223);
-    background-color: rgb(241, 232, 223);;
+    margin-left: 10%;
+    border: 1px solid #fff;
+    background-color: #fff;
     color: #000;
 }
 
 .profileavatar {
     width: 155px;
     height: 145px;
-    border-radius: 50%;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .profileleft {
-    float: left;
-    padding-top: 20px;
-    padding-right: 30px;
-    width: 10%;
+    padding-top: 3px;
+    padding-left: 40px;
+    padding-right: 20px;
 }
 
 .profileright {
-    float: right;
-    width: 84%;
     padding-left: 50px;
     border-left: 1px solid rgb(241, 232, 223);
 }
@@ -84,13 +94,64 @@
 
 .profileentrydiv {
     padding-top: 2%;
+    margin: auto;
     width: 100%;
     height: 100%;
 }
 
+.profileentryheader {
+    padding-left: 10%;
+}
+
 .profileentrycontainer {
-    margin-top: 5%;
+    margin-top: 2%;
+    padding-left: 10%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1px 1em;
+}
+
+.profileentry {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 50px;
+    margin: 10px;
+    display: inline-block;
+    border: 1px solid rgb(243, 238, 232);
+    background-color: rgb(243, 238, 232);
+    text-align: center;
+  }
+  
+  .profileentry:hover {
+    border: 1px solid #fff;
+    background-color: #fff;
+  }
+
+  .entrygraphic {
+      height: 100px;
+      width: 75px;
+  }
+
+  .entrydate {
+      font-size: 14px;
+  }
+
+  .entrylink {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px;
+    border: 1px solid rgb(243, 238, 232);
+    background-color: rgb(243, 238, 232);
+    color: #000;
+  }
+
+  .entrylink:hover {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px;
+    border: 1px solid rgb(241, 232, 223);
+    background-color: rgb(241, 232, 223);;
+    color: #000;
 }

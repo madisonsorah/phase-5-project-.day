@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import './index.css';
 
-function EditEntry() {
+function EntryDraft() {
     const {id} = useParams();
     const [entry, setEntry] = useState(null);
     const [answers, setAnswers] = useState({});
@@ -63,4 +63,4 @@ function EditEntry() {
         )
 }
 
-export default EditEntry;
+export default EntryDraft;
