@@ -35,13 +35,12 @@
 .browseentriescontainer {
     margin-top: 2%;
     padding-left: 10%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
     gap: 1px 1em;
 }
 
 .browseentriesentry {
-    flex: 0 0 25%;
     max-width: 25%;
     padding: 50px;
     margin: 10px;

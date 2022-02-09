@@ -19,18 +19,27 @@ function EntryPage() {
 
     return (
         <div>
-            <div>
-                <img src={entry.image_url}></img>
-                <p>{entry.date}</p>
-                {
-                    answers.map((answer) => {
-                        return (<div className='entrydiv' key={answer.id}>
-                                    <h5 className='entryh5'>{answer.question.question}</h5>
-                                    <p className='entryp'>{answer.answer}</p>
-                                </div>)
-                        })
-                }
-                <Link to={`/editentry/${id}`}>Edit Entry</Link>
+            <div className='entrypagecontainer'>
+                <div className='entrypageleft'>
+                    <img className='entrypageimage' src={entry.image_url}></img>
+                    <p className='entrypagedate'>{entry.date}</p>
+                    <Link className='entrypagelink' to={`/editentry/${id}`}>Edit Entry</Link>
+                </div>
+                <div className='entrypagemiddle'>
+                    {
+                        answers.map((answer) => {
+                            return (<div key={answer.id}>
+                                        <h5 className='entrypagequestion'>{answer.question.question}</h5>
+                                        <p className='entrypageanswer'>{answer.answer}</p>
+                                    </div>)
+                            })
+                    }
+                </div>
+                <div classname='entrypageright'>
+                    <p>XX</p>
+                    <p>XX</p>
+                    <p>XX</p>
+                </div>
             </div>
         </div>
     )

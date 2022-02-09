@@ -19,6 +19,12 @@
 
 .newentryformp {
     font-size: 12px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.newentrydatep {
+    font-size: 12px;
     width: 100%;
 }
 
@@ -33,6 +39,10 @@
     margin: 10px;
 }
 
+.newentrydatediv {
+    margin: 10px;
+}
+
 .newentrybutton {
     padding: 10px;
     margin-left: 10px;
@@ -40,7 +50,7 @@
     width: 80.5%;
     border: none;
     background-color: #000;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 600;
     color: #fff;
 }

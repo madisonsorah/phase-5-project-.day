@@ -37,17 +37,17 @@ function NewEntry({currentAuthor}) {
                         <h4>Start a new entry</h4>
                     </span>
                     <div className='newentryinputdiv'>
-                        <p className='newentryformp'>HEADER IMAGE</p>
+                        <p className='newentryformp'>HEADER IMAGE URL</p>
                         <input 
                         className='newentryinput'
                         value={image_url} 
                         onChange={(e) => setImageUrl(e.target.value)}></input>
                     </div>
-                    <div>
+                    <div className='newentrydatediv'>
                         <p className='newentryformp'>ENTRY DATE</p>
-                        <p className='newentryformp'>{today}</p>
+                        <p className='newentrydatep'>{today}</p>
                     </div>
-                    <button className='newentrybutton'>NEW ENTRY</button>
+                    <button className='newentrybutton'>START DRAFT</button>
                 </form>
             </div>
         </div>
