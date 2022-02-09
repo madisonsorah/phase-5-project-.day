@@ -23,8 +23,9 @@ function PublishEntry({currentAuthor}) {
             date: today,
             author_id: currentAuthor.id 
             }),
-        });
-        navigate('/profile', {replace: true});
+        })
+        .then((r) => r.json())
+        .then((rData) => navigate(`/editentry/${rData.id}`, {replace: true}));
     }
 
     return (

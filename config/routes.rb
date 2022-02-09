@@ -10,7 +10,10 @@ Rails.application.routes.draw do
   get "/currentauthor", to: "authors#currentauthor"
 
   # Answers that belong to a journal entry
-    get '/journal_entries/:journal_entry_id/answers', to: 'answers#entryanswers'
+  get '/journal_entries/:journal_entry_id/answers', to: 'answers#entryanswers'
+
+  # Adding answers to a journal entry
+  post '/journal_entries/:journal_entry_id/answers', to: 'answers#create_entry_answers'
 
   # Theme & questions that belong to an author
   get '/authors/:author_id/themes', to: 'themes#authortheme'

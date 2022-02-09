@@ -5,8 +5,7 @@ import './index.css';
 function EditEntry() {
     const {id} = useParams();
     const [entry, setEntry] = useState(null);
-    const [answers, setAnswers] = useState([]);
-    const [answer, setAnswer] = useState('');
+    const [answers, setAnswers] = useState({});
     const [entryUpdatedNote, setEntryUpdatedNote] = useState('');
     
    useEffect(() => {
@@ -18,14 +17,16 @@ function EditEntry() {
     function handleUpdatedAnswers(e) {
         e.preventDefault();
         fetch(`/journal_entries/${id}/answers`, {
-          method: 'PATCH',
+          method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({answer}),
+          body: JSON.stringify({ answers }),
         })
         setEntryUpdatedNote('Entry updates saved.')
     }
+
+    console.log(answers);
     
     if (entry === null) {
         return (
@@ -44,7 +45,12 @@ function EditEntry() {
                                 entry.questions.map((question) => {
                                     return (<div className='editentryinputdiv' key={question.id}>
                                         <p className='editentryformp'>{question.question}</p>
-                                        <input className='editentryinput' onChange={(e) => setAnswer(e.target.value)}></input>
+                                        <input 
+                                        className='editentryinput' 
+                                        onChange={(e) => setAnswers((answers) => {
+                                            answers[question.id] = e.target.value;
+                                            return answers;
+                                        })}></input>
                                     </div>)
                                 })
                             }
