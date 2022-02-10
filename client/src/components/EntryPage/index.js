@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Link, useParams} from 'react-router-dom';
+import dotdaycoffeegraphic from '/../../images/dotdaycoffeegraphic.png';
 import './index.css';
 
 function EntryPage() {
@@ -21,14 +22,14 @@ function EntryPage() {
         <div>
             <div className='entrypagecontainer'>
                 <div className='entrypageleft'>
-                    <img className='entrypageimage' src={entry.image_url}></img>
+                    <img className='entrypageimage' alt='entry head' src={dotdaycoffeegraphic}></img>
                     <p className='entrypagedate'>{entry.date}</p>
                     <Link className='entrypagelink' to={`/editentry/${id}`}>Edit Entry</Link>
                 </div>
                 <div className='entrypagemiddle'>
                     {
                         answers.map((answer) => {
-                            return (<div key={answer.id}>
+                            return (<div className='entrypageinnercolumn' key={answer.id}>
                                         <h5 className='entrypagequestion'>{answer.question.question}</h5>
                                         <p className='entrypageanswer'>{answer.answer}</p>
                                     </div>)
@@ -36,9 +37,9 @@ function EntryPage() {
                     }
                 </div>
                 <div classname='entrypageright'>
-                    <p>XX</p>
-                    <p>XX</p>
-                    <p>XX</p>
+                    <p className='entrypageanswer'>XX</p>
+                    <p className='entrypageanswer'>XX</p>
+                    <p className='entrypageanswer'>XX</p>
                 </div>
             </div>
         </div>

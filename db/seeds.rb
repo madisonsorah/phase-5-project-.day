@@ -84,7 +84,7 @@ creativityQuestionOne = Question.create!(
 
 creativityQuestionTwo = Question.create!(
     {
-        question: "What's one creative thought you had today?",
+        question: "What is one creative thought you had today?",
         theme_id: creativity.id
     }
 )
