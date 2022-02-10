@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import {useParams} from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 import './index.css';
 
 function EntryDraft() {
     const {id} = useParams();
     const [entry, setEntry] = useState(null);
     const [answers, setAnswers] = useState({});
-    const [entryPublishedNote, setEntryPublishedNote] = useState('');
+    const navigate = useNavigate();
     
    useEffect(() => {
        fetch(`/journal_entries/${id}`)
@@ -23,7 +23,7 @@ function EntryDraft() {
           },
           body: JSON.stringify({ answers }),
         })
-        setEntryPublishedNote('Entry published.')
+        navigate(`/entries/${id}`)
     }
 
     console.log(answers);
@@ -56,7 +56,6 @@ function EntryDraft() {
                             }
                         </div>
                         <button className='entrydraftbutton'>PUBLISH ENTRY</button>
-                        {entryPublishedNote ? (<p className='entrydraftpublishedp'>{entryPublishedNote}</p>) : null}
                     </form>
                 </div>
             </div>

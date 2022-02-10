@@ -33,6 +33,7 @@
 .entrypagecoffeeimage {
     width: 100px;
     height: 120px;
+    margin-top: 50px;
     margin-bottom: 20px;
 }
 
@@ -46,9 +47,8 @@
     font-weight: 600;
     padding: 5px;
     border: 1px solid fff;
-    opacity: 0.7;
-    background-color: #fff;
-    color: #000;
+    background-color: #000;
+    color: #fff;
 }
 
 .entrypagelink:hover {
@@ -57,9 +57,8 @@
     font-weight: 600;
     padding: 5px;
     border: 1px solid fff;
-    background-color: #fff;
-    opacity: 1;
-    color: #000;
+    background-color: #000;
+    color: #fff;
 }
 
 .entrypagemiddle {
@@ -89,12 +88,12 @@
 }
 
 .entrypagequestion {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
 }
 
 .entrypageanswer {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .entrypageright {
@@ -111,10 +110,9 @@
     font-weight: 600;
     padding: 5px;
     margin-top: 10px;
-    opacity: 0.7;
-    background-color: #fff;
+    background-color: #000;
     border: none;
-    color: #000;
+    color: #fff;
 }
 
 .entrypagebutton:hover {
@@ -126,8 +124,8 @@
     margin-top: 10px;
     border: none;
     opacity: 1;
-    background-color: #fff;
-    color: #000;
+    background-color: #000;
+    color: #fff;
 }
 
 .deletepopup {
@@ -144,27 +142,30 @@
 
 .entrypagep {
     color: #fff;
+    font-size: 15px;
 }
 
 .entrypagedeletebutton {
     text-decoration: none;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     padding: 5px;
     margin-top: 10px;
     border: none;
     background-color: #000;
     color: #fff;
+    cursor: pointer;
 }
 
 .entrypagedeletebutton:hover {
     text-decoration: underline;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     padding: 5px;
     margin-top: 10px;
     border: none;
     background-color: #000;
     color: #fff;
+    cursor: pointer;
 }
 

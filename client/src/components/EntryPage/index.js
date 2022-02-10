@@ -28,8 +28,8 @@ function EntryPage() {
         const config = {
           method: 'DELETE',
         }
-        fetch(`/journal_entries/${id}`, config);
-        navigate('/profile')
+        fetch(`/journal_entries/${id}`, config)
+        .then(() => navigate('/profile'));
       };
 
       console.log(deletePopUp);
@@ -64,7 +64,7 @@ function EntryPage() {
                         }
                     </div>
                     <div className='entrypageright'>
-                        <div className='entrypagetitle'>Creativity Check List</div>
+                        <div className='entrypagetitle'>Entry Check List</div>
                         <div className='entrypageinnercolumn'>
                             <p className='entrypageanswer'>Doodled or sketched</p>
                         </div>
@@ -106,7 +106,7 @@ function EntryPage() {
                     }
                 </div>
                 <div className='entrypageright'>
-                    <div className='entrypagetitle'>Creativity Check List</div>
+                    <div className='entrypagetitle'>Entry Check List</div>
                     <div className='entrypageinnercolumn'>
                         <p className='entrypageanswer'>Doodled or sketched</p>
                     </div>

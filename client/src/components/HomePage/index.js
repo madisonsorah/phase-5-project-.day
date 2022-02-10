@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import './index.css';
+import dotdaybwsquigglegraphic from '../../images/dotdaybwsquigglegraphic.png';
 
 function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dropDown, setDropDown}) {
     const [pen_name, setPenName] = useState('');
@@ -36,17 +37,22 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dro
         return (
             <div className='homepagedivloggedin'>
                 <div className='homepagecontainerloggedin'>
-                    <h2 className='homepageh2'>Welcome back, {currentAuthor.first_name}.</h2>
-                    <p className='homepagep'>Publish daily journal entries and unlock rewards.</p>
-                    <h3 className='homepageh3'>Ready to publish today's journal entry?</h3>
-                    <div className='homepageoptionsdiv'>
-                        <Link className='homepagelink' to='/publish'>Write down your thoughts.</Link>
+                    <div className='homepageloggedinleft'>
+                        <h2 className='homepageh2loggedin'>Welcome back, {currentAuthor.first_name}.</h2>
+                        <p className='homepageploggedin'>Publish daily journal entries and unlock rewards.</p>
+                        <h3 className='homepageh3loggedin'>Ready to publish today's journal entry?</h3>
+                        <div className='homepageoptionsdivloggedin'>
+                            <Link className='homepagelinkloggedin' to='/newentry'>Write down your thoughts.</Link>
+                        </div>
+                        <div className='homepageoptionsdivloggedin'>
+                            <Link className='homepagelinkloggedin' to='/account'>Update your account details.</Link>
+                        </div>
+                        <div className='homepageoptionsdivloggedin'>
+                            <Link className='homepagelinkloggedin' to='/profile'>View your profile.</Link>
+                        </div>
                     </div>
-                    <div className='homepageoptionsdiv'>
-                        <Link className='homepagelink' to='/account'>Update your account details.</Link>
-                    </div>
-                    <div className='homepageoptionsdiv'>
-                        <Link className='homepagelink' to='/profile'>View your profile.</Link>
+                    <div className='homepageloggedinright'>
+                        <img className='homepagesquiggle' src={dotdaybwsquigglegraphic}></img>
                     </div>
                 </div>
                 <div className='homepagefooter'>
@@ -67,7 +73,7 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dro
                         <div className='loginformcontainer'>
                             <form onSubmit={handleSubmit}>
                                 <span>
-                                    <h2 className='homepageh2'>Welcome back</h2>
+                                    <h2 className='loginh2'>Welcome back</h2>
                                     <p className='loginp'>Please log in.</p>
                                 </span>
                                 <div className='logininputdiv'>
@@ -89,17 +95,17 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dro
                                     />
                                 </div>
                                 <button className='loginbutton'>LOG IN</button>
-                                {errorMessage ? (<p>{errorMessage}</p>) : null}
+                                {errorMessage ? (<p className='loginerror'>{errorMessage}</p>) : null}
                             </form>
                             <span>
                                 <p className='loginbottomp'>Don't have an account?</p>
-                                <Link className='loginlink' to='/signup'>Sign Up</Link><p className='homepagedivider'>|</p><button className='loginlink' onClick={() => setLogInForm(false)}>Back</button>
+                                <Link className='loginlink' to='/signup'>Sign Up</Link><p className='logindivider'>|</p><button className='loginlink' onClick={() => setLogInForm(false)}>Back</button>
                             </span>
                         </div>
                         <div className='homepageblur'>
                         <h2 className='homepageh2'>Welcome to .DAY</h2>
                             <p className='homepagep'>Customize and track your daily habits in your very own private, digital bullet journal.</p>
-                            <button onClick={handleLogInForm} className='homepagelink' to='/login'>Log In</button><p className='homepagedivider'>|</p><button className='homepagelink' to='/signup'>Sign Up</button>
+                            <button onClick={handleLogInForm} className='homepagelink' to='/login'>Log In</button><p className='homepagedivider'>|</p><Link className='homepagelink' to='/signup'>Sign Up</Link>
                             <div className='homepageaboutcontainer'>
                                 <h3 className='homepageh3'>How .DAY works</h3>
                                 <div className='homepageaboutleft'>
@@ -153,7 +159,7 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dro
                     <div className='homepagecontainer'>
                         <h2 className='homepageh2'>Welcome to .DAY</h2>
                         <p className='homepagep'>Customize and track your daily habits in your very own private, digital bullet journal.</p>
-                        <button onClick={handleLogInForm} className='homepagelink' to='/login'>Log In</button><p className='homepagedivider'>|</p><button className='homepagelink' to='/signup'>Sign Up</button>
+                        <button onClick={handleLogInForm} className='homepagelink'>Log In</button><p className='homepagedivider'>|</p><Link className='homepagelink' to='/signup'>Sign Up</Link>
                         <div className='homepageaboutcontainer'>
                             <h3 className='homepageh3'>How .DAY works</h3>
                             <div className='homepageaboutleft'>
