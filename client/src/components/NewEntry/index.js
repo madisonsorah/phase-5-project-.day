@@ -34,7 +34,7 @@ function NewEntry({currentAuthor}) {
             <div className='newentryformcontainer'>
                 <form onSubmit={handlePublishEntry}>
                     <span>
-                        <h4>Start a new entry</h4>
+                        <h4 className='newentryformheader'>Start a new entry</h4>
                     </span>
                     <div className='newentryinputdiv'>
                         <p className='newentryformp'>HEADER IMAGE URL</p>

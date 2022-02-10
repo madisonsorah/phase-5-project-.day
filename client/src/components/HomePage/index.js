@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import './index.css';
 
-function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
+function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dropDown, setDropDown}) {
     const [pen_name, setPenName] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
@@ -20,6 +20,7 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
         if (r.ok) {
           r.json().then((author) => setCurrentAuthor(author))
           navigate('/', {replace: true})
+          setDropDown(false)
         } else {
           setErrorMessage('Incorrect pen name or password.')
         }
@@ -49,11 +50,11 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                     </div>
                 </div>
                 <div className='homepagefooter'>
-                    <h2 className='footerheader'>About .DAY</h2>
+                    <h3 className='footerheader'>About .DAY</h3>
                     <ul className='footerul'>
-                        <div className='footerp'>.DAY is a project concept created by @madisonsorah.</div>
-                        <div className='footerp'>A girl with many thoughts, Madison always tried to get into bullet journaling, but never stuck with it and instead chose to habit track digitally. .DAY is her best-of-both solution.</div>
-                        <div className='footerp2'>As Madison grows as a developer, updates will be continuously made to .DAY to improve the author's experience.</div>
+                        <div className='footerp'>.DAY is a project concept created by @madisonsorah, who recently kicked off her career as a front-end developer.</div>
+                        <div className='footerp'>Created with a clean interface and minimalist design, .DAY is your digital solution to bullet journaling on a daily basis.</div>
+                        <div className='footerp2'>Feature updates will continuously be made to .DAY to improve your journaling experience.</div>
                     </ul>
                 </div>
             </div>
@@ -99,6 +100,61 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                         <h1 className='homepageh1'>Welcome to .DAY</h1>
                             <p className='homepagep'>Customize and track your daily habits in your very own private, digital bullet journal.</p>
                             <button onClick={handleLogInForm} className='homepagelink' to='/login'>Log In</button><p className='homepagedivider'>|</p><button className='homepagelink' to='/signup'>Sign Up</button>
+                            <div className='homepageaboutcontainer'>
+                                <h2 className='homepageh2'>How .DAY works</h2>
+                                <div className='homepageaboutleft'>
+                                    <div className='homepageaboutleftsection'>
+                                        <h4 className='homepageh4'>Create an account with your author details.</h4>
+                                        <p className='homepagep'>Sign up with your name, a pen name of your choice and email.</p>
+                                    </div>
+                                    <div className='homepageaboutleftsection'>
+                                        <h4 className='homepageh4'>Choose a journal theme.</h4>
+                                        <p className='homepagep'>Select one of our six custom themes based on your habit tracking preferences, or build your own.</p>
+                                    </div>
+                                    <div className='homepageaboutleftsection'>
+                                        <h4 className='homepageh4'>Publish a journal entry every day and unlock author rewards.</h4>
+                                        <p className='homepagep'>Rewards include new stickers, bullets and theme designs for your journal.</p>
+                                    </div>
+                                    <div className='homepageaboutleftsection'>
+                                        <h4 className='homepageh4'>Edit and delete entries whenever you want.</h4>
+                                        <p className='homepagep'>Get full access to your account and update the appearance of your profile.</p>
+                                    </div>
+                                </div>
+                                <div className='homepageaboutright'>
+                                    <div className='homepageaboutrightsection'>
+                                        <img className='homepageaboutpreview' alt='author details preview'></img>
+                                    </div>
+                                    <div className='homepageaboutrightsection'>
+                                        <img className='homepageaboutpreview' alt='theme preview'></img>
+                                    </div>
+                                    <div className='homepageaboutrightsection'>
+                                        <img className='homepageaboutpreview' alt='rewards preview'></img>
+                                    </div>
+                                    <div className='homepageaboutrightsection'>
+                                        <img className='homepageaboutpreview' alt='profile preview'></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='homepagefooter'>
+                        <h3 className='footerheader'>About .DAY</h3>
+                        <ul className='footerul'>
+                            <div className='footerp'>.DAY is a project concept created by @madisonsorah, who recently kicked off her career as a front-end developer.</div>
+                            <div className='footerp'>Created with a clean interface and minimalist design, .DAY is your digital solution to bullet journaling on a daily basis.</div>
+                            <div className='footerp2'>Feature updates will continuously be made to .DAY to improve your journaling experience.</div>
+                        </ul>
+                    </div>
+                </div>
+            )
+        } else {
+            return (
+                <div className='homepagediv'>
+                    <div className='homepagecontainer'>
+                        <h1 className='homepageh1'>Welcome to .DAY</h1>
+                        <p className='homepagep'>Customize and track your daily habits in your very own private, digital bullet journal.</p>
+                        <button onClick={handleLogInForm} className='homepagelink' to='/login'>Log In</button><p className='homepagedivider'>|</p><button className='homepagelink' to='/signup'>Sign Up</button>
+                        <div className='homepageaboutcontainer'>
                             <h2 className='homepageh2'>How .DAY works</h2>
                             <div className='homepageaboutleft'>
                                 <div className='homepageaboutleftsection'>
@@ -135,62 +191,11 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                         </div>
                     </div>
                     <div className='homepagefooter'>
-                        <h2 className='footerheader'>About .DAY</h2>
+                        <h3 className='footerheader'>About .DAY</h3>
                         <ul className='footerul'>
-                            <div className='footerp'>.DAY is a project concept created by @madisonsorah.</div>
-                            <div className='footerp'>A girl with many thoughts, Madison always tried to get into bullet journaling, but never stuck with it and instead chose to habit track digitally. .DAY is her best-of-both solution.</div>
-                            <div className='footerp2'>As Madison grows as a developer, updates will be continuously made to .DAY to improve the author's experience.</div>
-                        </ul>
-                    </div>
-                </div>
-            )
-        } else {
-            return (
-                <div className='homepagediv'>
-                    <div className='homepagecontainer'>
-                        <h1 className='homepageh1'>Welcome to .DAY</h1>
-                        <p className='homepagep'>Customize and track your daily habits in your very own private, digital bullet journal.</p>
-                        <button onClick={handleLogInForm} className='homepagelink' to='/login'>Log In</button><p className='homepagedivider'>|</p><button className='homepagelink' to='/signup'>Sign Up</button>
-                        <h2 className='homepageh2'>How .DAY works</h2>
-                        <div className='homepageaboutleft'>
-                            <div className='homepageaboutleftsection'>
-                                <h4 className='homepageh4'>Create an account with your author details.</h4>
-                                <p className='homepagep'>Sign up with your name, a pen name of your choice and email.</p>
-                            </div>
-                            <div className='homepageaboutleftsection'>
-                                <h4 className='homepageh4'>Choose a journal theme.</h4>
-                                <p className='homepagep'>Select one of our six custom themes based on your habit tracking preferences, or build your own.</p>
-                            </div>
-                            <div className='homepageaboutleftsection'>
-                                <h4 className='homepageh4'>Publish a journal entry every day and unlock author rewards.</h4>
-                                <p className='homepagep'>Rewards include new stickers, bullets and theme designs for your journal.</p>
-                            </div>
-                            <div className='homepageaboutleftsection'>
-                                <h4 className='homepageh4'>Edit and delete entries whenever you want.</h4>
-                                <p className='homepagep'>Get full access to your account and update the appearance of your profile.</p>
-                            </div>
-                        </div>
-                        <div className='homepageaboutright'>
-                            <div className='homepageaboutrightsection'>
-                                <img className='homepageaboutpreview' alt='author details preview'></img>
-                            </div>
-                            <div className='homepageaboutrightsection'>
-                                <img className='homepageaboutpreview' alt='theme preview'></img>
-                            </div>
-                            <div className='homepageaboutrightsection'>
-                                <img className='homepageaboutpreview' alt='rewards preview'></img>
-                            </div>
-                            <div className='homepageaboutrightsection'>
-                                <img className='homepageaboutpreview' alt='profile preview'></img>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='homepagefooter'>
-                        <h2 className='footerheader'>About .DAY</h2>
-                        <ul className='footerul'>
-                            <div className='footerp'>.DAY is a project concept created by @madisonsorah.</div>
-                            <div className='footerp'>A girl with many thoughts, Madison always tried to get into bullet journaling, but never stuck with it and instead chose to habit track digitally. .DAY is her best-of-both solution.</div>
-                            <div className='footerp2'>As Madison grows as a developer, updates will be continuously made to .DAY to improve the author's experience.</div>
+                            <div className='footerp'>.DAY is a project concept created by @madisonsorah, who recently kicked off her career as a front-end developer.</div>
+                            <div className='footerp'>Created with a clean interface and minimalist design, .DAY is your digital solution to bullet journaling on a daily basis.</div>
+                            <div className='footerp2'>Feature updates will continuously be made to .DAY to improve your journaling experience.</div>
                         </ul>
                     </div>
                 </div>

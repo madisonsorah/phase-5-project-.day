@@ -6,7 +6,7 @@ function EntryDraft() {
     const {id} = useParams();
     const [entry, setEntry] = useState(null);
     const [answers, setAnswers] = useState({});
-    const [entryUpdatedNote, setEntryUpdatedNote] = useState('');
+    const [entryPublishedNote, setEntryPublishedNote] = useState('');
     
    useEffect(() => {
        fetch(`/journal_entries/${id}`)
@@ -23,7 +23,7 @@ function EntryDraft() {
           },
           body: JSON.stringify({ answers }),
         })
-        setEntryUpdatedNote('Entry updates saved.')
+        setEntryPublishedNote('Entry published.')
     }
 
     console.log(answers);
@@ -34,19 +34,19 @@ function EntryDraft() {
         )
     }
         return (
-            <div className='editentrycontainer'>
-                <div className='editentryformcontainer'>
+            <div className='entrydraftcontainer'>
+                <div className='entrydraftformcontainer'>
                     <form onSubmit={handleUpdatedAnswers}>
                         <span>
-                            <h4>Update your journal entry</h4>
+                            <h4>Daily entry questions</h4>
                         </span>
                         <div>
                             {
                                 entry.questions.map((question) => {
-                                    return (<div className='editentryinputdiv' key={question.id}>
-                                        <p className='editentryformp'>{question.question}</p>
+                                    return (<div className='entrydraftinputdiv' key={question.id}>
+                                        <p className='entrydraftformp'>{question.question}</p>
                                         <input 
-                                        className='editentryinput' 
+                                        className='entrydraftinput' 
                                         onChange={(e) => setAnswers((answers) => {
                                             answers[question.id] = e.target.value;
                                             return answers;
@@ -55,8 +55,8 @@ function EntryDraft() {
                                 })
                             }
                         </div>
-                        <button className='editentrybutton'>UPDATE</button>
-                        {entryUpdatedNote ? (<p className='entrysavedp'>{entryUpdatedNote}</p>) : null}
+                        <button className='entrydraftbutton'>PUBLISH ENTRY</button>
+                        {entryPublishedNote ? (<p className='entrysavedp'>{entryPublishedNote}</p>) : null}
                     </form>
                 </div>
             </div>

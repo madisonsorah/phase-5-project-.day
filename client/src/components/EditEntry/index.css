@@ -1,4 +1,4 @@
-.newentrycontainer {
+.editentrycontainer {
     position: fixed;
     margin: auto;
     left: 0;
@@ -9,7 +9,7 @@
     background-color: #fff;
 }
 
-.newentryformcontainer {
+.editentryformcontainer {
     width: 50%;
     margin: auto;
     top: 0;
@@ -17,36 +17,31 @@
     background-color: #fff;
 }
 
-.newentryformheader {
+.editentryform {
+    padding: auto;
+}
+
+.editentryformheader {
     padding-left: 20px;
 }
 
-.newentryformp {
-    font-size: 12px;
+.editentryformp {
+    font-size: 14px;
     width: 100%;
 }
 
-.newentrydatep {
-    font-size: 12px;
-    width: 100%;
-}
-
-.newentryinput {
+.editentryinput {
     padding: 10px;
     width: 100%;
     background-color: rgb(241, 232, 223);
     border: none;
 }
 
-.newentryinputdiv {
+.editentryinputdiv {
     margin: 20px;
 }
 
-.newentrydatediv {
-    margin: 20px;
-}
-
-.newentrybutton {
+.editentrybutton {
     padding: 10px;
     margin: 20px;
     width: 97.5%;

@@ -1,4 +1,4 @@
-.editentrycontainer {
+.entrydraftcontainer {
     position: fixed;
     margin: auto;
     left: 0;
@@ -9,7 +9,7 @@
     background-color: #fff;
 }
 
-.editentryformcontainer {
+.entrydraftformcontainer {
     width: 50%;
     margin: auto;
     top: 0;
@@ -17,30 +17,30 @@
     background-color: #fff;
 }
 
-.editentryformp {
+.entrydraftformp {
     font-size: 12px;
     width: 100%;
 }
 
-.editentryinput {
+.entrydraftinput {
     padding: 10px;
     width: 80%;
     background-color: rgb(241, 232, 223);
     border: none;
 }
 
-.editentryinputdiv {
+.entrydraftinputdiv {
     margin: 10px;
 }
 
-.editentrybutton {
+.entrydraftbutton {
     padding: 10px;
     margin-left: 10px;
     margin-top: 10px;
     width: 80.5%;
     border: none;
     background-color: #000;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 600;
     color: #fff;
 }

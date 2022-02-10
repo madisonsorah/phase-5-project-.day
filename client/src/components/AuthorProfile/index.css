@@ -17,8 +17,8 @@
     font-size: 12px;
     font-weight: 600;
     padding: 5px;
-    border: 1px solid rgb(243, 238, 232);
-    background-color: rgb(243, 238, 232);
+    border: 1px solid rgb(243, 240, 235);
+    background-color: rgb(243, 240, 235);
     color: #000;
 }
 
@@ -27,8 +27,8 @@
     font-size: 12px;
     font-weight: 600;
     padding: 5px;
-    border: 1px solid rgb(241, 232, 223);
-    background-color: rgb(241, 232, 223);;
+    border: 1px solid rgb(235, 231, 225);
+    background-color: rgb(235, 231, 225);
     color: #000;
 }
 
@@ -38,8 +38,8 @@
     font-weight: 600;
     padding: 5px;
     margin-left: 10%;
-    border: 1px solid rgb(243, 238, 232);
-    background-color: rgb(243, 238, 232);
+    border: 1px solid rgb(243, 240, 235);
+    background-color: rgb(243, 240, 235);
     color: #000;
 }
 
@@ -69,7 +69,7 @@
 
 .profileright {
     padding-left: 50px;
-    border-left: 1px solid rgb(241, 232, 223);
+    border-left: 1px solid rgb(243, 240, 235);
 }
 
 .profilename {
@@ -116,8 +116,8 @@
     padding: 50px;
     margin: 10px;
     display: inline-block;
-    border: 1px solid rgb(243, 238, 232);
-    background-color: rgb(243, 238, 232);
+    border: 1px solid rgb(243, 240, 235);
+    background-color: rgb(243, 240, 235);
     text-align: center;
   }
   
@@ -140,8 +140,8 @@
     font-size: 12px;
     font-weight: 600;
     padding: 5px;
-    border: 1px solid rgb(243, 238, 232);
-    background-color: rgb(243, 238, 232);
+    border: 1px solid rgb(243, 240, 235);
+    background-color: rgb(243, 240, 235);
     color: #000;
   }
 
@@ -150,7 +150,7 @@
     font-size: 12px;
     font-weight: 600;
     padding: 5px;
-    border: 1px solid rgb(241, 232, 223);
-    background-color: rgb(241, 232, 223);;
+    border: 1px solid rgb(235, 231, 225);
+    background-color: rgb(235, 231, 225);
     color: #000;
 }

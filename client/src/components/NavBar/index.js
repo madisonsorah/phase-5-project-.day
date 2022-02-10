@@ -3,9 +3,8 @@ import {Link, useNavigate} from 'react-router-dom';
 import dotdaylogo from '../../images/dotdaylogo.png'
 import './index.css';
 
-function NavBar({currentAuthor, setCurrentAuthor, setLogInForm, setErrorMessage}) {
+function NavBar({currentAuthor, setCurrentAuthor, setLogInForm, setErrorMessage, dropDown, setDropDown}) {
     const navigate = useNavigate();
-    const [dropDown, setDropDown] = useState(false);
 
     function handleLogOut() {
         fetch('/logout', {method: 'DELETE'}).then((r) => {
