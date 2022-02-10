@@ -23,12 +23,15 @@ function BrowseEntries() {
     return (
         <div>
             <div className='browseentriesdiv'>
+                <div className='browseentriesdetailsdiv'>
                     <h3 className='browseentriesheader'>Journal Entries</h3>
+                    <p className='browseentriesp'>View all published entries below.</p>
                     <Link className='browseentriesnewlink' to={'/newentry'}>NEW ENTRY</Link>
-                    <div className='browseentriescontainer'>
-                        {authorEntries}
-                    </div>
                 </div>
+                <div className='browseentriescontainer'>
+                    {authorEntries}
+                </div>
+            </div>
         </div>
     )
 }

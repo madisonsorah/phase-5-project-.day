@@ -38,7 +38,7 @@ function EntryDraft() {
                 <div className='entrydraftformcontainer'>
                     <form onSubmit={handleUpdatedAnswers}>
                         <span>
-                            <h4>Daily entry questions</h4>
+                            <h4 className='entrydraftformheader'>Entry prompts</h4>
                         </span>
                         <div>
                             {
@@ -56,7 +56,7 @@ function EntryDraft() {
                             }
                         </div>
                         <button className='entrydraftbutton'>PUBLISH ENTRY</button>
-                        {entryPublishedNote ? (<p className='entrysavedp'>{entryPublishedNote}</p>) : null}
+                        {entryPublishedNote ? (<p className='entrydraftpublishedp'>{entryPublishedNote}</p>) : null}
                     </form>
                 </div>
             </div>

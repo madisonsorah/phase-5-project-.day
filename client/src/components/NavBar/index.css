@@ -20,7 +20,7 @@
     display: inline-block;
     padding: 20px;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 13px;
     border: none;
     background-color: #fff;
     color: #000;
@@ -29,7 +29,7 @@
 .navbarlink:hover {
     display: inline-block;
     text-decoration: underline;
-    font-size: 15px;
+    font-size: 13px;
     border: none;
     background-color: #fff;
     color: #000;
@@ -37,7 +37,7 @@
 
 .navbardivider {
     display: inline-block;
-    font-size: 15px;
+    font-size: 13px;
     margin-left: 20px;
     margin-right: 20px;
     color: #000;
@@ -56,8 +56,8 @@
     height: .4%;
     padding-top: 1.5%;
     display: inline-block;
-    margin-left: 25%;
-    margin-right: 30%;
+    margin-left: 24%;
+    margin-right: 29%;
 }
 
 .navbardropdown {
@@ -71,14 +71,14 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-color: #fff;
-    border: 1px solid rgb(241, 232, 223);
+    border: 1px solid rgb(235, 231, 225);
     z-index: -1;
 }
 
 .dropdowndiv {
     margin: 20px;
     width: 90%;
-    border-bottom: 1px solid rgb(241, 232, 223);
+    border-bottom: 1px solid rgb(235, 231, 225);
 }
 
 .dropdownclosediv {

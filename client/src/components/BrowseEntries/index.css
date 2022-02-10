@@ -1,8 +1,15 @@
 .browseentriesdiv {
-    padding-top: 2%;
     margin: auto;
     width: 100%;
     height: 100%;
+}
+
+.browseentriesdetailsdiv {
+    width: 100%;
+    height: 100px;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    background-color: #fff;
 }
 
 .browseentriesnewlink {
@@ -22,8 +29,8 @@
     font-weight: 600;
     padding: 5px;
     margin-left: 10%;
-    border: 1px solid #fff;
-    background-color: #fff;
+    border: 1px solid rgb(235, 231, 225);
+    background-color: rgb(235, 231, 225);
     color: #000;
 }
 
@@ -32,13 +39,19 @@
     padding-left: 10%;
 }
 
+.browseentriesp {
+    padding-left: 10%;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
 .browseentriescontainer {
     margin-top: 2%;
     padding-left: 10%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 1px 1em;
-    border-top: 1px solid rgb(243, 240, 235);
 }
 
 .browseentriesentry {

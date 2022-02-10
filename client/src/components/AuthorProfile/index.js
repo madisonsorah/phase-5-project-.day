@@ -29,7 +29,7 @@ function AuthorProfile({currentAuthor}) {
                     </div>
                     <div className='profileright'>
                         <h3 className='profilename'>{currentAuthor.first_name} {currentAuthor.last_name}</h3>
-                        <p className='profilepenname'>{currentAuthor.pen_name}</p>
+                        <p className='profilepenname'>@{currentAuthor.pen_name}</p>
                         <p className='profileemail'>{currentAuthor.email}</p>
                         <p className='profilebio'>{currentAuthor.bio}</p>
                         <Link className='profileeditlink' to='/account'>EDIT PROFILE</Link>

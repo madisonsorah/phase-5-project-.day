@@ -34,11 +34,11 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dro
 
     if (currentAuthor) {
         return (
-            <div className='homepagediv'>
-                <div className='homepagecontainer'>
-                    <h1 className='homepageh1'>Welcome back, {currentAuthor.first_name}.</h1>
+            <div className='homepagedivloggedin'>
+                <div className='homepagecontainerloggedin'>
+                    <h2 className='homepageh2'>Welcome back, {currentAuthor.first_name}.</h2>
                     <p className='homepagep'>Publish daily journal entries and unlock rewards.</p>
-                    <h2 className='homepageh2'>Ready to publish today's journal entry?</h2>
+                    <h3 className='homepageh3'>Ready to publish today's journal entry?</h3>
                     <div className='homepageoptionsdiv'>
                         <Link className='homepagelink' to='/publish'>Write down your thoughts.</Link>
                     </div>
@@ -67,7 +67,7 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dro
                         <div className='loginformcontainer'>
                             <form onSubmit={handleSubmit}>
                                 <span>
-                                    <h1 className='homepageh1'>Welcome back</h1>
+                                    <h2 className='homepageh2'>Welcome back</h2>
                                     <p className='loginp'>Please log in.</p>
                                 </span>
                                 <div className='logininputdiv'>
@@ -88,7 +88,7 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dro
                                         onChange={(e) => setPassword(e.target.value)}
                                     />
                                 </div>
-                                <button className='loginbutton'>Log In</button>
+                                <button className='loginbutton'>LOG IN</button>
                                 {errorMessage ? (<p>{errorMessage}</p>) : null}
                             </form>
                             <span>
@@ -97,11 +97,11 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dro
                             </span>
                         </div>
                         <div className='homepageblur'>
-                        <h1 className='homepageh1'>Welcome to .DAY</h1>
+                        <h2 className='homepageh2'>Welcome to .DAY</h2>
                             <p className='homepagep'>Customize and track your daily habits in your very own private, digital bullet journal.</p>
                             <button onClick={handleLogInForm} className='homepagelink' to='/login'>Log In</button><p className='homepagedivider'>|</p><button className='homepagelink' to='/signup'>Sign Up</button>
                             <div className='homepageaboutcontainer'>
-                                <h2 className='homepageh2'>How .DAY works</h2>
+                                <h3 className='homepageh3'>How .DAY works</h3>
                                 <div className='homepageaboutleft'>
                                     <div className='homepageaboutleftsection'>
                                         <h4 className='homepageh4'>Create an account with your author details.</h4>
@@ -151,11 +151,11 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dro
             return (
                 <div className='homepagediv'>
                     <div className='homepagecontainer'>
-                        <h1 className='homepageh1'>Welcome to .DAY</h1>
+                        <h2 className='homepageh2'>Welcome to .DAY</h2>
                         <p className='homepagep'>Customize and track your daily habits in your very own private, digital bullet journal.</p>
                         <button onClick={handleLogInForm} className='homepagelink' to='/login'>Log In</button><p className='homepagedivider'>|</p><button className='homepagelink' to='/signup'>Sign Up</button>
                         <div className='homepageaboutcontainer'>
-                            <h2 className='homepageh2'>How .DAY works</h2>
+                            <h3 className='homepageh3'>How .DAY works</h3>
                             <div className='homepageaboutleft'>
                                 <div className='homepageaboutleftsection'>
                                     <h4 className='homepageh4'>Create an account with your author details.</h4>

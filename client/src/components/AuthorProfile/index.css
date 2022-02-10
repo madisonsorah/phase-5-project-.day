@@ -14,7 +14,7 @@
 
 .profileeditlink {
     text-decoration: none;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     padding: 5px;
     border: 1px solid rgb(243, 240, 235);
@@ -24,7 +24,7 @@
 
 .profileeditlink:hover {
     text-decoration: none;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     padding: 5px;
     border: 1px solid rgb(235, 231, 225);
@@ -34,7 +34,7 @@
 
 .profilenewentrylink {
     text-decoration: none;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     padding: 5px;
     margin-left: 10%;
@@ -45,7 +45,7 @@
 
 .profilenewentrylink:hover {
     text-decoration: none;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     padding: 5px;
     margin-left: 10%;
@@ -55,10 +55,11 @@
 }
 
 .profileavatar {
-    width: 155px;
+    width: 156px;
     height: 145px;
     padding-left: 30px;
     padding-right: 30px;
+    border-radius: 50%;
 }
 
 .profileleft {
@@ -77,18 +78,18 @@
 }
 
 .profilepenname {
-    font-weight: 300;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 13px;
 }
 
 .profileemail {
     font-weight: 200;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .profilebio {
     font-weight: 200;
-    font-size: 15px;
+    font-size: 13px;
     padding-bottom: 20px;
 }
 
@@ -108,6 +109,7 @@
     padding-left: 10%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 1px 1em;
 }
 

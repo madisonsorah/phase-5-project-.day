@@ -30,19 +30,20 @@
 }
 
 .accountp {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     width: 100%;
 }
 
 .accountsavedp {
-    font-size: 12px;
+    font-size: 11px;
     margin-left: 10px;
     width: 100%;
 }
 
 .accountinput {
     padding: 10px;
+    font-size: 12px;
     width: 80%;
     background-color: rgb(243, 240, 235);
     border: none;
@@ -55,7 +56,7 @@
 .accountlink {
     color: #000;
     background-color: #fff;
-    font-size: 14px;
+    font-size: 13px;
     border: none;
     text-decoration: none;
 }
@@ -63,7 +64,7 @@
 .accountlink:hover {
     color: #000;
     background-color: #fff;
-    font-size: 14px;
+    font-size: 13px;
     border: none;
     text-decoration: underline;
 }

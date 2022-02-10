@@ -34,7 +34,7 @@ function NewEntry({currentAuthor}) {
             <div className='newentryformcontainer'>
                 <form onSubmit={handlePublishEntry}>
                     <span>
-                        <h4 className='newentryformheader'>Start a new entry</h4>
+                        <h4 className='newentryformheader'>New entry</h4>
                     </span>
                     <div className='newentryinputdiv'>
                         <p className='newentryformp'>HEADER IMAGE URL</p>
@@ -47,7 +47,7 @@ function NewEntry({currentAuthor}) {
                         <p className='newentryformp'>ENTRY DATE</p>
                         <p className='newentrydatep'>{today}</p>
                     </div>
-                    <button className='newentrybutton'>START DRAFT</button>
+                    <button className='newentrybutton'>NEXT</button>
                 </form>
             </div>
         </div>
