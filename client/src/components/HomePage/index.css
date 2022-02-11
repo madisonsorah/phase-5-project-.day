@@ -4,7 +4,8 @@ body {
     width: 100%;
     background-color: rgb(235, 231, 225);
     color: #000;
-    font-family: graphik, Arial, sans-serif;
+    font-family: Corbert, Arial, Helvetica, sans-serif;
+    font-smooth: always;
   }
 
 .homepagediv {
@@ -18,7 +19,7 @@ body {
     padding-top: 5%;
     padding-left: 10%;
     height: 1200px;
-    background-color: #000;
+    background-color: rgb(235, 231, 225);
 }
 
 .homepagedivloggedin {
@@ -29,67 +30,64 @@ body {
 }
 
 .homepageloggedinleft {
+    position: absolute;
+    z-index: 100;
+    margin-left: 30%;
+    margin-top: 7%;
     width: 40%;
-    height: 500px;
-    background-color: #000;
+    height: 432px;
+    background-color:rgba(0, 0, 0, 0.904);
+    text-align:center;
 }
 
-.homepagesquiggle {
+.homepagegrid {
     height: 100%;
     width: 100%;
 }
 
-.homepageloggedinright {
-    width: 60%;
-    height: 500px;
-}
-
 .homepagecontainerloggedin {
     margin: auto;
-    height: 500px;
+    height: 640px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .homepageh2 {
-    color: #fff;
+    color: #000;
     font-weight: 600;
 }
 
 .homepageh2loggedin {
-    color: #fff;
+    color: rgb(235, 231, 225);
     font-weight: 600;
-    padding-top: 40px;
-    padding-left: 80px;
+    padding-top: 80px;
 }
 
 .homepageh3 {
-    color: #fff;
+    color: #000;
     padding-top: 5%;
     font-weight: 600;
 }
 
 .homepageh3loggedin {
-    color: #fff;
+    color: rgb(235, 231, 225);
     font-weight: 600;
     padding-top: 30px;
-    padding-left: 80px;
 }
 
 .homepageh4 { 
-    color: #fff;
+    color: #000;
     font-weight: 600;
 }
 
 .homepagep {
-    color: #fff;
+    color: #000;
     font-size: 14px;
 }
 
 .homepageploggedin {
-    color: #fff;
-    font-size: 14px;
-    padding-left: 80px;
+    color: rgb(235, 231, 225);
+    font-size: 13px;
 }
 
 .homepagelink {
@@ -97,8 +95,8 @@ body {
     text-decoration: none;
     font-size: 13px;
     border: none;
-    background-color: #000;
-    color: #fff;
+    background-color: rgb(235, 231, 225);
+    color: #000;
     cursor: pointer;
 }
 
@@ -117,8 +115,7 @@ body {
     text-decoration: none;
     font-size: 13px;
     border: none;
-    background-color: #000;
-    color: rgb(223, 213, 198);
+    color: rgb(235, 231, 225);
 }
 
 .homepagelinkloggedin:hover {
@@ -126,8 +123,7 @@ body {
     text-decoration: underline;
     font-size: 13px;
     border: none;
-    background-color: #000;;
-    color: rgb(235, 231, 225);
+    color: rgb(201, 195, 184);
 }
 
 .homepagedivider {
@@ -176,7 +172,6 @@ body {
 
 .homepageoptionsdivloggedin {
     margin-bottom: 10px;
-    padding-left: 80px;
 }
 
 .homepageblur {
@@ -269,7 +264,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 250px;
+    height: 180px;
     background-color: rgb(235, 231, 225);
 }
 
@@ -280,11 +275,12 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1px 1em;
+    padding-left: 80px;
 }
 
 .footerheader {
-    padding-left: 40px;
-    padding-top: 60px;
+    padding-left: 80px;
+    padding-top: 30px;
     padding-bottom: 10px;
     color: #000;
 }

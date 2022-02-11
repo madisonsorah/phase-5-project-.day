@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import './index.css';
-import dotdaybwsquigglegraphic from '../../images/dotdaybwsquigglegraphic.png';
+import dotdaybeigegridgraphic from '../../images/dotdaybeigegridgraphic.png';
 
 function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dropDown, setDropDown}) {
     const [pen_name, setPenName] = useState('');
@@ -37,22 +37,20 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dro
         return (
             <div className='homepagedivloggedin'>
                 <div className='homepagecontainerloggedin'>
+                <img className='homepagegrid' src={dotdaybeigegridgraphic}></img>
                     <div className='homepageloggedinleft'>
                         <h2 className='homepageh2loggedin'>Welcome back, {currentAuthor.first_name}.</h2>
                         <p className='homepageploggedin'>Publish daily journal entries and unlock rewards.</p>
-                        <h3 className='homepageh3loggedin'>Ready to publish today's journal entry?</h3>
+                        <h3 className='homepageh3loggedin'>Ready to start today's journal entry?</h3>
                         <div className='homepageoptionsdivloggedin'>
-                            <Link className='homepagelinkloggedin' to='/newentry'>Write down your thoughts.</Link>
+                            <Link className='homepagelinkloggedin' to='/newentry'>Write down your thoughts {">"}</Link>
                         </div>
                         <div className='homepageoptionsdivloggedin'>
-                            <Link className='homepagelinkloggedin' to='/account'>Update your account details.</Link>
+                            <Link className='homepagelinkloggedin' to='/account'>Update your account details {">"}</Link>
                         </div>
                         <div className='homepageoptionsdivloggedin'>
-                            <Link className='homepagelinkloggedin' to='/profile'>View your profile.</Link>
+                            <Link className='homepagelinkloggedin' to='/profile'>View your profile {">"}</Link>
                         </div>
-                    </div>
-                    <div className='homepageloggedinright'>
-                        <img className='homepagesquiggle' src={dotdaybwsquigglegraphic}></img>
                     </div>
                 </div>
                 <div className='homepagefooter'>

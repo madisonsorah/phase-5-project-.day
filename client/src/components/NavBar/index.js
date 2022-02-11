@@ -37,9 +37,10 @@ function NavBar({currentAuthor, setCurrentAuthor, setLogInForm, setErrorMessage,
                     <Link className='navbarlink' to='/profile'>Profile</Link>
                     <Link className='navbarlink' to='/entries'>View Entries</Link>
                     <img className='navbarlogologgedin' alt='.Day logo' src={dotdaylogo}></img>
-                    <button onClick={() => setDropDown(!dropDown)} className='navbarlink'>Hi, {currentAuthor.first_name}.</button>
-                    <p className='navbardivider'>|</p>
-                    <button className='navbarlink' onClick={handleLogOut}>Log Out</button>
+                    <p className='navbarcircle'>⬤</p>
+                    <button onClick={() => setDropDown(!dropDown)} className='navbarlink'>Hello, {currentAuthor.first_name}.</button>
+                    {/* <p className='navbardivider'>|</p>
+                    <button className='navbarlink' onClick={handleLogOut}>Log Out</button> */}
                     {dropDown === true ? (
                         <div className='navbardropdown'>
                             <div className='dropdowndiv'>

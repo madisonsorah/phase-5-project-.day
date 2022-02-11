@@ -43,12 +43,21 @@
     color: #000;
 }
 
+.navbarcircle {
+    display: inline-block;
+    font-size: 8px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #000;
+}
+
 .navbarlogo {
     width: 4.5%;
     height: .4%;
     padding-top: 1.5%;
     display: inline-block;
-    margin-left: 27%;
+    margin-left: 19%;
+    margin-right: 37%;
 }
 
 .navbarlogologgedin {
@@ -57,7 +66,7 @@
     padding-top: 1.5%;
     display: inline-block;
     margin-left: 24%;
-    margin-right: 29%;
+    margin-right: 38%;
 }
 
 .navbardropdown {
