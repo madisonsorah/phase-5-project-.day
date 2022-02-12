@@ -23,7 +23,7 @@ function EntryDraft() {
           },
           body: JSON.stringify({ answers }),
         })
-        navigate(`/entries/${id}`)
+        .then(() => navigate(`/entries/${id}`))
     }
 
     console.log(answers);
@@ -36,9 +36,9 @@ function EntryDraft() {
         return (
             <div className='entrydraftcontainer'>
                 <div className='entrydraftformcontainer'>
-                    <form onSubmit={handleUpdatedAnswers}>
+                    <form className='entrydraftform' onSubmit={handleUpdatedAnswers}>
                         <span>
-                            <h4 className='entrydraftformheader'>Entry prompts</h4>
+                            <h4 className='entrydraftformheader'>Entry Prompts</h4>
                         </span>
                         <div>
                             {

@@ -6,7 +6,6 @@
     top: 0;
     bottom: 0;
     padding-top: 8%;
-    background-color: #fff;
 }
 
 .accountlinkscontainer {
@@ -15,7 +14,6 @@
     float: left;
     top: 0;
     bottom: 0;
-    background-color: #fff;
 }
 
 .accountformcontainer {
@@ -25,7 +23,6 @@
     float: right;
     top: 0;
     bottom: 0;
-    background-color: #fff;
     border-left: 1px solid #000;
 }
 
@@ -45,8 +42,9 @@
     padding: 10px;
     font-size: 12px;
     width: 80%;
-    background-color: rgb(243, 240, 235);
-    border: none;
+    background-color: rgb(235, 231, 225);
+    border: 1px solid #000;
+    color: #000;
 }
 
 .accountinputdiv {
@@ -54,19 +52,19 @@
 }
 
 .accountlink {
+    background-color: rgb(235, 231, 225);
     color: #000;
-    background-color: #fff;
-    font-size: 13px;
+    font-size: 12px;
     border: none;
     text-decoration: none;
 }
 
 .accountlink:hover {
-    color: #000;
-    background-color: #fff;
-    font-size: 13px;
+    background-color: rgb(235, 231, 225);
+    color: rgb(139, 135, 124);
+    font-size: 12px;
     border: none;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .accountlinkdiv {
@@ -77,10 +75,26 @@
     padding: 10px;
     margin-left: 10px;
     margin-top: 10px;
-    width: 80.5%;
+    width: 81%;
     border: none;
-    background-color: #000;
+    background-color: rgb(235, 231, 225);
+    border: 1px solid #000;
+    color: #000;
     font-size: 12px;
     font-weight: 600;
-    color: #fff;
+    cursor: pointer;
+}
+
+.accountbutton:hover {
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 81%;
+    border: none;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: rgb(226, 223, 219);
+    cursor: pointer;
 }

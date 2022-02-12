@@ -32,9 +32,9 @@ function NewEntry({currentAuthor}) {
         <div>
             <div className='newentrycontainer'>
             <div className='newentryformcontainer'>
-                <form onSubmit={handlePublishEntry}>
+                <form className='newentryform' onSubmit={handlePublishEntry}>
                     <span>
-                        <h4 className='newentryformheader'>New entry</h4>
+                        <h4 className='newentryformheader'>New Entry</h4>
                     </span>
                     <div className='newentryinputdiv'>
                         <p className='newentryformp'>HEADER IMAGE URL</p>

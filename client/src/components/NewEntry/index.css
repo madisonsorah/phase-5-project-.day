@@ -6,19 +6,31 @@
     top: 0;
     bottom: 0;
     padding-top: 8%;
-    background-color: #fff;
 }
 
 .newentryformcontainer {
     width: 50%;
     margin: auto;
-    top: 0;
+    margin-top: 2.5%;
     bottom: 0;
-    background-color: #fff;
+    padding: 20px;
+    background-color: rgb(235, 231, 225);
+    border: 1px solid #000;
 }
 
-.newentryformheader {
-    padding-left: 20px;
+.newentryform {
+    height: 300px;
+    margin-left: 90px;
+    margin-top: 40px;
+}
+
+.newentryinputdiv {
+    margin-top: 20px;
+}
+
+.newentrydatediv {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .newentryformp {
@@ -29,31 +41,35 @@
 
 .newentrydatep {
     font-size: 12px;
-    width: 100%;
+    width: 80%;
 }
 
 .newentryinput {
     padding: 10px;
-    width: 100%;
+    width: 80%;
     background-color: rgb(235, 231, 225);
-    border: none;
-}
-
-.newentryinputdiv {
-    margin: 20px;
-}
-
-.newentrydatediv {
-    margin: 20px;
+    border: 1px solid #000;
+    color: #000;
 }
 
 .newentrybutton {
     padding: 10px;
-    margin: 20px;
-    width: 97.5%;
+    width: 83%;
     border: none;
-    background-color: #000;
     font-size: 12px;
     font-weight: 600;
-    color: #fff;
+    background-color: rgb(235, 231, 225);
+    border: 1px solid #000;
+    color: #000;
+}
+
+.newentrybutton:hover {
+    padding: 10px;
+    width: 83%;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: rgb(226, 223, 219);
+    border: 1px solid #000;
+    color: #000;
 }

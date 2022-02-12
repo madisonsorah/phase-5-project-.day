@@ -43,13 +43,13 @@ function NavBar({currentAuthor, setCurrentAuthor, setLogInForm, setErrorMessage,
                     {dropDown === true ? (
                         <div className='navbardropdown'>
                             <div className='dropdowndiv'>
-                                <Link className='navbarlink' onClick={() => setDropDown(!dropDown)} to={`/account`}>Account</Link>
+                                <Link className='dropdownlink' onClick={() => setDropDown(!dropDown)} to={`/account`}>Account</Link>
                             </div>
                             <div className='dropdowndiv'>
-                                <button className='navbarlink' onClick={handleLogOut}>Log Out</button>
+                                <button className='dropdownlink' onClick={handleLogOut}>Log Out</button>
                             </div>
                             <div className='dropdownclosediv'>
-                                <button className='navbarlink' onClick={() => setDropDown(!dropDown)}>Close</button>
+                                <button className='dropdownlink' onClick={() => setDropDown(!dropDown)}>Close</button>
                             </div>
                         </div>) : null}
                 </ul>

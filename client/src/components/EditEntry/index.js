@@ -38,7 +38,7 @@ function EditEntry() {
                 <div className='editentryformcontainer'>
                     <form className='editentryform' onSubmit={handleUpdatedAnswers}>
                         <span>
-                            <h4 className='editentryformheader'>Update your journal entry</h4>
+                            <h4 className='editentryformheader'>Update Journal Entry</h4>
                         </span>
                         <div>
                             {
