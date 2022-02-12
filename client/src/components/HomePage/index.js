@@ -70,71 +70,79 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
         if (logInForm === true) {
             return (
                 <div className='homepagediv'>
-                    <div className='homepagecontainersignedout'>
-                        <div className='loginformcontainer'>
-                            <form onSubmit={handleSubmit}>
-                                <span>
-                                    <h3 className='loginh3'>Welcome back</h3>
-                                    <p className='loginp'>Please log in.</p>
-                                </span>
-                                <p className='logintitle'>PEN NAME</p>
-                                <div className='logininputdiv'>
-                                    <input className='logininput'
-                                        type='text'
-                                        placeholder='Enter Pen Name_'
-                                        autoComplete='off'
-                                        value={pen_name}
-                                        onChange={(e) => setPenName(e.target.value)}
-                                    />
-                                </div>
-                                <p className='logintitle'>PASSWORD</p>
-                                <div className='logininputdiv'>
-                                    <input className='logininput'
-                                        type='password'
-                                        placeholder='Enter Password_'
-                                        autoComplete='off'
-                                        value={password}
-                                        onChange={(e) => setPassword(e.target.value)}
-                                    />
-                                </div>
-                                <button className='loginbutton'>LOG IN</button>
-                                {errorMessage ? (<p className='loginerror'>{errorMessage}</p>) : null}
-                            </form>
+                    <div className='loginformcontainer'>
+                        <form onSubmit={handleSubmit}>
                             <span>
-                                <p className='loginbottomp'>Don't have an account?</p>
-                                <Link className='loginlink' to='/signup'>Sign Up</Link><p className='logindivider'>|</p><button className='loginlink' onClick={() => setLogInForm(false)}>Back</button>
+                                <h3 className='loginh3'>Welcome back</h3>
+                                <p className='loginp'>Please log in.</p>
                             </span>
-                        </div>
+                            <p className='logintitle'>PEN NAME</p>
+                            <div className='logininputdiv'>
+                                <input className='logininput'
+                                    type='text'
+                                    placeholder='Enter Pen Name_'
+                                    autoComplete='off'
+                                    value={pen_name}
+                                    onChange={(e) => setPenName(e.target.value)}
+                                />
+                            </div>
+                            <p className='logintitle'>PASSWORD</p>
+                            <div className='logininputdiv'>
+                                <input className='logininput'
+                                    type='password'
+                                    placeholder='Enter Password_'
+                                    autoComplete='off'
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                />
+                            </div>
+                            <button className='loginbutton'>LOG IN</button>
+                            {errorMessage ? (<p className='loginerror'>{errorMessage}</p>) : null}
+                        </form>
+                        <span>
+                            <p className='loginbottomp'>Don't have an account?</p>
+                            <Link className='loginlink' to='/signup'>Sign Up</Link><p className='logindivider'>|</p><button className='loginlink' onClick={() => setLogInForm(false)}>Back</button>
+                        </span>
+                    </div>
+                    <div className='homepagecontainersignedoutblur'>
                         <img className='homepagesignedoutgrid' src={dotdayblackgridgraphic}></img>
                         <div className='homepagesignedoutleft'>
                             <h2 className='homepageh2signedout'>Welcome to .DAY</h2>
                             <p className='homepagepsignedout'>Track your daily habits and thoughts in a digital, customizable journal format.</p>
                             <button onClick={handleLogInForm} className='homepagebuttonsignedout'>Log In</button><p className='homepagedividersignedout'>|</p><Link className='homepagelinksignedout' to='/signup'>Sign Up</Link>
                         </div>
-                    </div>
-                    <div className='homepageaboutcontainer'>
-                            <h3 className='homepageh3'>How .DAY works</h3>
+                        <h3 className='homepageh3'>How .DAY works</h3>
+                        <div className='homepageaboutcontainer'>
                             <div className='homepageaboutleft'>
-                                    <div className='homepageaboutleftsection'>
-                                        <h4 className='homepageh4'>Create an account with your author details.</h4>
-                                        <p className='homepagep'>Sign up with your name, a pen name of your choice and email.</p>
-                                    </div>
-                                    <div className='homepageaboutleftsection'>
-                                        <h4 className='homepageh4'>Choose a journal theme.</h4>
-                                        <p className='homepagep'>Select from three pre-built journal themes or build your own.</p>
-                                    </div>
-                                    <div className='homepageaboutleftsection'>
-                                        <h4 className='homepageh4'>Track your habits on your grid.</h4>
-                                        <p className='homepagep'>View your tracked habits over the course of the month to identify trends.</p>
-                                    </div>
+                                <div className='homepageaboutleftsection'>
+                                    <h4 className='homepageh4'>Create an account with your author details.</h4>
+                                    <p className='homepagep'>Sign up with your name, a pen name of your choice and email.</p>
                                 </div>
+                                <div className='homepageaboutleftsection'>
+                                    <h4 className='homepageh4'>Choose a journal theme.</h4>
+                                    <p className='homepagep'>Select from three pre-built journal themes or build your own.</p>
+                                </div>
+                                <div className='homepageaboutleftsection2'>
+                                    <h4 className='homepageh4'>Track your habits on your grid.</h4>
+                                    <p className='homepagep'>View your tracked habits over the course of the month to identify trends.</p>
+                                 </div>
+                            </div>
                             <div className='homepageaboutright'>
                                 <img className='homepageaboutpreview' alt='profile preview' src={dotdayprofilegraphic}></img>
                                 <img className='homepageaboutpreview' alt='theme preview' src={dotdaythemegraphic}></img>
                                 <img className='homepageaboutpreview' alt='grid preview' src={dotdaygridgraphic}></img>
                             </div>
                         </div>
+                        <div className='homepagefooter'>
+                            <h3 className='footerheader'>About .DAY</h3>
+                            <ul className='footerul'>
+                                <div className='footerp'>.DAY is a project concept created by @madisonsorah, who recently kicked off her career as a front-end developer.</div>
+                                <div className='footerp'>Created with a clean interface and minimalist design, .DAY is your digital solution to bullet journaling on a daily basis.</div>
+                                <div className='footerp2'>Feature updates will continuously be made to .DAY to improve your journaling experience.</div>
+                            </ul>
+                        </div>
                     </div>
+                </div>
             )
         } else {
             return (
@@ -158,7 +166,7 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                                         <h4 className='homepageh4'>Choose a journal theme.</h4>
                                         <p className='homepagep'>Select from three pre-built journal themes or build your own.</p>
                                     </div>
-                                    <div className='homepageaboutleftsection'>
+                                    <div className='homepageaboutleftsection2'>
                                         <h4 className='homepageh4'>Track your habits on your grid.</h4>
                                         <p className='homepagep'>View your tracked habits over the course of the month to identify trends.</p>
                                     </div>
