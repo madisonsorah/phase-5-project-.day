@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
-import dotdaygraphic from '../../images/dotdaygraphic.png';
+import dotdayjournalgraphic from '../../images/dotdayjournalgraphic.png';
 import './index.css';
 
 function BrowseEntries() {
@@ -14,7 +14,7 @@ function BrowseEntries() {
 
     const authorEntries = entries.map((entry) => {
         return (<div className='browseentriesentry'>
-            <img className='browseentriesgraphic' src={dotdaygraphic}></img>
+            <img className='browseentriesgraphic' src={dotdayjournalgraphic}></img>
             <p className='browseentriesdate'>{entry.date}</p>
             <Link className='browseentriesviewlink' to={`/entries/${entry.id}`}>VIEW ENTRY</Link>
         </div>)

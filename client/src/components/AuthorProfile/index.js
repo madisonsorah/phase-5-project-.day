@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
-import dotdaygraphic from '../../images/dotdaygraphic.png';
+import dotdayjournalgraphic from '../../images/dotdayjournalgraphic.png';
 import './index.css';
 
 function AuthorProfile({currentAuthor}) {
@@ -14,7 +14,7 @@ function AuthorProfile({currentAuthor}) {
 
     const authorEntries = entries.map((entry) => {
         return (<div className='profileentry'>
-            <img className='entrygraphic' src={dotdaygraphic}></img>
+            <img className='entrygraphic' src={dotdayjournalgraphic}></img>
             <p className='entrydate'>{entry.date}</p>
             <Link className='entrylink' to={`/entries/${entry.id}`}>VIEW ENTRY</Link>
         </div>)
@@ -36,8 +36,10 @@ function AuthorProfile({currentAuthor}) {
                     </div>
                 </div>
                 <div className='profileentrydiv'>
-                    <h3 className='profileentryheader'>Journal Entries</h3>
-                    <Link className='profilenewentrylink' to={'/newentry'}>NEW ENTRY</Link>
+                    <div className='profileentryheaderdiv'>
+                        <h3 className='profileentryheader'>Journal Entries</h3>
+                        <Link className='profilenewentrylink' to={'/newentry'}>NEW ENTRY</Link>
+                    </div>
                     <div className='profileentrycontainer'>
                         {authorEntries}
                     </div>

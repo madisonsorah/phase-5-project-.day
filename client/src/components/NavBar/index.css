@@ -20,7 +20,7 @@
     display: inline-block;
     padding: 20px;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 12px;
     border: none;
     background-color: rgb(235, 231, 225);
     color: #000;
@@ -28,11 +28,11 @@
 
 .navbarlink:hover {
     display: inline-block;
-    text-decoration: underline;
-    font-size: 13px;
+    text-decoration: none;
+    font-size: 12px;
     border: none;
     background-color: rgb(235, 231, 225);
-    color: #000;
+    color: rgb(139, 135, 124);
 }
 
 .navbardivider {
@@ -40,14 +40,6 @@
     font-size: 13px;
     margin-left: 20px;
     margin-right: 20px;
-    color: #000;
-}
-
-.navbarcircle {
-    display: inline-block;
-    font-size: 8px;
-    padding-top: 20px;
-    padding-bottom: 20px;
     color: #000;
 }
 
@@ -65,7 +57,7 @@
     height: .4%;
     padding-top: 1.5%;
     display: inline-block;
-    margin-left: 24%;
+    margin-left: 25%;
     margin-right: 38%;
 }
 

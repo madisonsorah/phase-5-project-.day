@@ -65,16 +65,16 @@ function EntryPage() {
                     </div>
                     <div className='entrypageright'>
                         <div className='entrypagetitle'>Entry Check List</div>
-                        <div className='entrypageinnercolumn'>
+                        <div className='entrypagechecklistcolumn'>
                             <p className='entrypageanswer'>Doodled or sketched</p>
                         </div>
-                        <div className='entrypageinnercolumn'>
+                        <div className='entrypagechecklistcolumn'>
                             <p className='entrypageanswer'>Wrote down an idea</p>
                         </div>
-                        <div className='entrypageinnercolumn'>
+                        <div className='entrypagechecklistcolumn'>
                             <p className='entrypageanswer'>Worked on a passion project</p>
                         </div>
-                        <div className='entrypageinnercolumn'>
+                        <div className='entrypagechecklistcolumn'>
                             <p className='entrypageanswer'>Set aside time to brainstorm</p>
                         </div>
                     </div>
@@ -107,16 +107,16 @@ function EntryPage() {
                 </div>
                 <div className='entrypageright'>
                     <div className='entrypagetitle'>Entry Check List</div>
-                    <div className='entrypageinnercolumn'>
+                    <div className='entrypagechecklistcolumn'>
                         <p className='entrypageanswer'>Doodled or sketched</p>
                     </div>
-                    <div className='entrypageinnercolumn'>
+                    <div className='entrypagechecklistcolumn'>
                         <p className='entrypageanswer'>Wrote down an idea</p>
                     </div>
-                    <div className='entrypageinnercolumn'>
+                    <div className='entrypagechecklistcolumn'>
                         <p className='entrypageanswer'>Worked on a passion project</p>
                     </div>
-                    <div className='entrypageinnercolumn'>
+                    <div className='entrypagechecklistcolumn'>
                         <p className='entrypageanswer'>Set aside time to brainstorm</p>
                     </div>
                 </div>

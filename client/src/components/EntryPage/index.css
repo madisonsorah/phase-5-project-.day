@@ -16,7 +16,8 @@
 }
 
 .entrypagetitle {
-    background-color: #fff;
+    background-color: rgb(235, 231, 225);
+    border-bottom: 1px solid #000;
     font-size: 14px;
     font-weight: 600;
     text-align: center;
@@ -25,16 +26,19 @@
 }
 
 .entrypageleft {
-    background-color: rgb(243, 240, 235);
+    background-color: rgb(235, 231, 225);
+    border: 1px solid #000;
     width: 20%;
     text-align: center;
 }
 
 .entrypagecoffeeimage {
-    width: 100px;
-    height: 120px;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    width: 80px;
+    height: 70px;
+    padding: 30px;
+    margin-top: 60px;
+    border: 1px solid #000;
+    background-color: #000;
 }
 
 .entrypagedate {
@@ -46,9 +50,9 @@
     font-size: 12px;
     font-weight: 600;
     padding: 5px;
-    border: 1px solid fff;
-    background-color: #000;
-    color: #fff;
+    border: 1px solid #000;
+    background-color: rgb(235, 231, 225);
+    color: #000;
 }
 
 .entrypagelink:hover {
@@ -56,13 +60,14 @@
     font-size: 12px;
     font-weight: 600;
     padding: 5px;
-    border: 1px solid fff;
-    background-color: #000;
-    color: #fff;
+    border: 1px solid #000;
+    background-color: rgb(226, 223, 219);
+    color: #000;
 }
 
 .entrypagemiddle {
-    background-color: rgb(243, 240, 235);
+    background-color: rgb(235, 231, 225);
+    border: 1px solid #000;
     width: 50%;
     height: 500px;
     gap: 20px 1em;
@@ -71,7 +76,8 @@
 }
 
 .entrypagemiddletitle {
-    background-color: #fff;
+    background-color: rgb(235, 231, 225);
+    border-bottom: 1px solid #000;
     font-size: 14px;
     font-weight: 600;
     text-align: center;
@@ -80,10 +86,19 @@
 }
 
 .entrypageinnercolumn {
-    background-color: #fff;
+    background-color: rgb(235, 231, 225);
+    color: #000;
     margin-left: 20px;
     margin-right: 20px;
     padding-bottom: 20px;
+    text-align: center;
+}
+
+.entrypagechecklistcolumn {
+    background-color: rgb(235, 231, 225);
+    color: #000;
+    margin-left: 20px;
+    margin-right: 20px;
     text-align: center;
 }
 
@@ -97,9 +112,10 @@
 }
 
 .entrypageright {
-    background-color: rgb(243, 240, 235);
+    background-color: rgb(235, 231, 225);
+    border: 1px solid #000;
     width: 20%;
-    gap: 10px 1em;
+    gap: 1px 1em;
     display: flex;
     flex-direction: column;
 }
@@ -110,9 +126,9 @@
     font-weight: 600;
     padding: 5px;
     margin-top: 10px;
-    background-color: #000;
-    border: none;
-    color: #fff;
+    border: 1px solid #000;
+    background-color: rgb(235, 231, 225);
+    color: #000;
 }
 
 .entrypagebutton:hover {
@@ -122,18 +138,18 @@
     font-weight: 600;
     padding: 5px;
     margin-top: 10px;
-    border: none;
     opacity: 1;
-    background-color: #000;
-    color: #fff;
+    border: 1px solid #000;
+    background-color: rgb(226, 223, 219);
+    color: #000;
 }
 
 .deletepopup {
     position: fixed;
     z-index: 100;
-    margin-left: 35%;
+    margin-left: 40%;
     margin-top: 100px;
-    width: 30%;
+    width: 20%;
     height: 200px;
     padding-top: 80px;
     text-align: center;
@@ -141,7 +157,7 @@
 }
 
 .entrypagep {
-    color: #fff;
+    color: rgb(235, 231, 225);
     font-size: 15px;
 }
 
@@ -150,22 +166,22 @@
     font-size: 11px;
     font-weight: 600;
     padding: 5px;
-    margin-top: 10px;
-    border: none;
+    margin: 5px;
+    border: 1px solid rgb(235, 231, 225);
     background-color: #000;
-    color: #fff;
+    color: rgb(235, 231, 225);
     cursor: pointer;
 }
 
 .entrypagedeletebutton:hover {
-    text-decoration: underline;
+    text-decoration: none;
     font-size: 11px;
     font-weight: 600;
     padding: 5px;
-    margin-top: 10px;
-    border: none;
-    background-color: #000;
-    color: #fff;
+    margin: 5px;
+    border: 1px solid rgb(235, 231, 225);
+    background-color: rgb(37, 37, 37);
+    color: rgb(235, 231, 225);
     cursor: pointer;
 }
 
