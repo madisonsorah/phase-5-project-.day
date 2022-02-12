@@ -70,7 +70,7 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
         if (logInForm === true) {
             return (
                 <div className='homepagediv'>
-                    <div className='homepagecontainer'>
+                    <div className='homepagecontainersignedout'>
                         <div className='loginformcontainer'>
                             <form onSubmit={handleSubmit}>
                                 <span>
@@ -105,56 +105,36 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                                 <Link className='loginlink' to='/signup'>Sign Up</Link><p className='logindivider'>|</p><button className='loginlink' onClick={() => setLogInForm(false)}>Back</button>
                             </span>
                         </div>
-                        <div className='homepageblur'>
-                        <h2 className='homepageh2'>Welcome to .DAY</h2>
-                            <p className='homepagep'>Track your daily habits and thoughts in a digital, customizable journal format.</p>
-                            <button onClick={handleLogInForm} className='homepagelink' to='/login'>Log In</button><p className='homepagedivider'>|</p><Link className='homepagelink' to='/signup'>Sign Up</Link>
-                            <div className='homepageaboutcontainer'>
-                                <h3 className='homepageh3'>How .DAY works</h3>
-                                <div className='homepageaboutleft'>
+                        <img className='homepagesignedoutgrid' src={dotdayblackgridgraphic}></img>
+                        <div className='homepagesignedoutleft'>
+                            <h2 className='homepageh2signedout'>Welcome to .DAY</h2>
+                            <p className='homepagepsignedout'>Track your daily habits and thoughts in a digital, customizable journal format.</p>
+                            <button onClick={handleLogInForm} className='homepagebuttonsignedout'>Log In</button><p className='homepagedividersignedout'>|</p><Link className='homepagelinksignedout' to='/signup'>Sign Up</Link>
+                        </div>
+                    </div>
+                    <div className='homepageaboutcontainer'>
+                            <h3 className='homepageh3'>How .DAY works</h3>
+                            <div className='homepageaboutleft'>
                                     <div className='homepageaboutleftsection'>
                                         <h4 className='homepageh4'>Create an account with your author details.</h4>
                                         <p className='homepagep'>Sign up with your name, a pen name of your choice and email.</p>
                                     </div>
-                                    <div className='homepageaboutrightsection'>
-                                        <img className='homepageaboutpreview' alt='theme preview'></img>
-                                    </div>
-                                    <div className='homepageaboutleftsection'>
-                                        <h4 className='homepageh4'>Publish a journal entry every day and unlock author rewards.</h4>
-                                        <p className='homepagep'>Rewards include new stickers, bullets and theme designs for your journal.</p>
-                                    </div>
-                                    <div className='homepageaboutrightsection'>
-                                        <img className='homepageaboutpreview' alt='profile preview'></img>
-                                    </div>
-                                </div>
-                                <div className='homepageaboutright'>
-                                    <div className='homepageaboutrightsection'>
-                                        <img className='homepageaboutpreview' alt='author details preview'></img>
-                                    </div>
                                     <div className='homepageaboutleftsection'>
                                         <h4 className='homepageh4'>Choose a journal theme.</h4>
-                                        <p className='homepagep'>Select one of four pre-built themes based on your journaling preferences, or build your own from scratch.</p>
-                                    </div>
-                                    <div className='homepageaboutrightsection'>
-                                        <img className='homepageaboutpreview' alt='rewards preview'></img>
+                                        <p className='homepagep'>Select from three pre-built journal themes or build your own.</p>
                                     </div>
                                     <div className='homepageaboutleftsection'>
-                                        <h4 className='homepageh4'>Freely edit your journal entries and profile at any time.</h4>
-                                        <p className='homepagep'>Get full access to your account, author profile and entry history.</p>
+                                        <h4 className='homepageh4'>Track your habits on your grid.</h4>
+                                        <p className='homepagep'>View your tracked habits over the course of the month to identify trends.</p>
                                     </div>
                                 </div>
+                            <div className='homepageaboutright'>
+                                <img className='homepageaboutpreview' alt='profile preview' src={dotdayprofilegraphic}></img>
+                                <img className='homepageaboutpreview' alt='theme preview' src={dotdaythemegraphic}></img>
+                                <img className='homepageaboutpreview' alt='grid preview' src={dotdaygridgraphic}></img>
                             </div>
                         </div>
                     </div>
-                    <div className='homepagefooter'>
-                        <h3 className='footerheader'>About .DAY</h3>
-                        <ul className='footerul'>
-                            <div className='footerp'>.DAY is a project concept created by @madisonsorah, who recently kicked off her career as a front-end developer.</div>
-                            <div className='footerp'>Created with a clean interface and minimalist design, .DAY is your digital solution to bullet journaling on a daily basis.</div>
-                            <div className='footerp2'>Feature updates will continuously be made to .DAY to improve your journaling experience.</div>
-                        </ul>
-                    </div>
-                </div>
             )
         } else {
             return (
@@ -167,33 +147,35 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                             <button onClick={handleLogInForm} className='homepagebuttonsignedout'>Log In</button><p className='homepagedividersignedout'>|</p><Link className='homepagelinksignedout' to='/signup'>Sign Up</Link>
                         </div>
                     </div>
+                    <h3 className='homepageh3'>How .DAY works</h3>
                     <div className='homepageaboutcontainer'>
-                            <h3 className='homepageh3'>How .DAY works</h3>
                             <div className='homepageaboutleft'>
-                                    <div className='homepageaboutleftsection1'>
+                                    <div className='homepageaboutleftsection'>
                                         <h4 className='homepageh4'>Create an account with your author details.</h4>
                                         <p className='homepagep'>Sign up with your name, a pen name of your choice and email.</p>
                                     </div>
                                     <div className='homepageaboutleftsection'>
                                         <h4 className='homepageh4'>Choose a journal theme.</h4>
-                                        <p className='homepagep'>Select one of four pre-built themes based on your journaling preferences, or build your own.</p>
+                                        <p className='homepagep'>Select from three pre-built journal themes or build your own.</p>
                                     </div>
                                     <div className='homepageaboutleftsection'>
-                                        <h4 className='homepageh4'>Track your habits on a grid each day.</h4>
-                                        <p className='homepagep'>View your tracked habits over the course of the current month to identify trends.</p>
+                                        <h4 className='homepageh4'>Track your habits on your grid.</h4>
+                                        <p className='homepagep'>View your tracked habits over the course of the month to identify trends.</p>
                                     </div>
                                 </div>
                             <div className='homepageaboutright'>
-                                <div className='homepageaboutrightsection'>
-                                    <img className='homepageaboutpreview' alt='profile preview' src={dotdayprofilegraphic}></img>
-                                </div>
-                                <div className='homepageaboutrightsection'>
-                                        <img className='homepageaboutpreview' alt='theme preview' src={dotdaythemegraphic}></img>
-                                    </div>
-                                <div className='homepageaboutrightsection'>
-                                    <img className='homepageaboutpreview' alt='grid preview' src={dotdaygridgraphic}></img>
-                                </div>
+                                <img className='homepageaboutpreview' alt='profile preview' src={dotdayprofilegraphic}></img>
+                                <img className='homepageaboutpreview' alt='theme preview' src={dotdaythemegraphic}></img>
+                                <img className='homepageaboutpreview' alt='grid preview' src={dotdaygridgraphic}></img>
                             </div>
+                        </div>
+                        <div className='homepagefooter'>
+                            <h3 className='footerheader'>About .DAY</h3>
+                            <ul className='footerul'>
+                                <div className='footerp'>.DAY is a project concept created by @madisonsorah, who recently kicked off her career as a front-end developer.</div>
+                                <div className='footerp'>Created with a clean interface and minimalist design, .DAY is your digital solution to bullet journaling on a daily basis.</div>
+                                <div className='footerp2'>Feature updates will continuously be made to .DAY to improve your journaling experience.</div>
+                            </ul>
                         </div>
                 </div>
             )
