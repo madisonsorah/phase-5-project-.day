@@ -20,11 +20,13 @@
 
 .entrydraftform {
     height: 400px;
-    margin-left: 30px;
+    margin-top: 50px;
+    margin-left: 40px;
 }
 
 .entrydraftformheader {
     color: #000;
+    letter-spacing: 1px;
 }
 
 .entrydraftformp {
@@ -48,10 +50,11 @@
     width: 93.5%;
     border: none;
     background-color: rgb(235, 231, 225);
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     border: 1px solid #000;
     color: #000;
+    cursor: pointer;
 }
 
 .entrydraftbutton:hover {
@@ -60,8 +63,9 @@
     width: 93.5%;
     border: none;
     background-color: rgb(226, 223, 219);
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     border: 1px solid #000;
     color: #000;
+    cursor: pointer;
 }

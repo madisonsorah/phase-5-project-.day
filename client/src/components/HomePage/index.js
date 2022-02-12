@@ -3,7 +3,7 @@ import {Link, useNavigate} from 'react-router-dom';
 import './index.css';
 import dotdaybeigegridgraphic from '../../images/dotdaybeigegridgraphic.png';
 
-function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dropDown, setDropDown}) {
+function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
     const [pen_name, setPenName] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
@@ -21,7 +21,6 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dro
         if (r.ok) {
           r.json().then((author) => setCurrentAuthor(author))
           navigate('/', {replace: true})
-          setDropDown(false)
         } else {
           setErrorMessage('Incorrect pen name or password.')
         }
@@ -71,7 +70,7 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dro
                         <div className='loginformcontainer'>
                             <form onSubmit={handleSubmit}>
                                 <span>
-                                    <h2 className='loginh2'>Welcome back</h2>
+                                    <h3 className='loginh3'>Welcome back</h3>
                                     <p className='loginp'>Please log in.</p>
                                 </span>
                                 <p className='logintitle'>PEN NAME</p>
@@ -104,7 +103,7 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dro
                         </div>
                         <div className='homepageblur'>
                         <h2 className='homepageh2'>Welcome to .DAY</h2>
-                            <p className='homepagep'>Customize and track your daily habits in your very own private, digital bullet journal.</p>
+                            <p className='homepagep'>Track your daily habits and thoughts in a digital, customizable journal format.</p>
                             <button onClick={handleLogInForm} className='homepagelink' to='/login'>Log In</button><p className='homepagedivider'>|</p><Link className='homepagelink' to='/signup'>Sign Up</Link>
                             <div className='homepageaboutcontainer'>
                                 <h3 className='homepageh3'>How .DAY works</h3>
@@ -113,31 +112,31 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dro
                                         <h4 className='homepageh4'>Create an account with your author details.</h4>
                                         <p className='homepagep'>Sign up with your name, a pen name of your choice and email.</p>
                                     </div>
-                                    <div className='homepageaboutleftsection'>
-                                        <h4 className='homepageh4'>Choose a journal theme.</h4>
-                                        <p className='homepagep'>Select one of our six custom themes based on your habit tracking preferences, or build your own.</p>
+                                    <div className='homepageaboutrightsection'>
+                                        <img className='homepageaboutpreview' alt='theme preview'></img>
                                     </div>
                                     <div className='homepageaboutleftsection'>
                                         <h4 className='homepageh4'>Publish a journal entry every day and unlock author rewards.</h4>
                                         <p className='homepagep'>Rewards include new stickers, bullets and theme designs for your journal.</p>
                                     </div>
-                                    <div className='homepageaboutleftsection'>
-                                        <h4 className='homepageh4'>Edit and delete entries whenever you want.</h4>
-                                        <p className='homepagep'>Get full access to your account and update the appearance of your profile.</p>
+                                    <div className='homepageaboutrightsection'>
+                                        <img className='homepageaboutpreview' alt='profile preview'></img>
                                     </div>
                                 </div>
                                 <div className='homepageaboutright'>
                                     <div className='homepageaboutrightsection'>
                                         <img className='homepageaboutpreview' alt='author details preview'></img>
                                     </div>
-                                    <div className='homepageaboutrightsection'>
-                                        <img className='homepageaboutpreview' alt='theme preview'></img>
+                                    <div className='homepageaboutleftsection'>
+                                        <h4 className='homepageh4'>Choose a journal theme.</h4>
+                                        <p className='homepagep'>Select one of four pre-built themes based on your journaling preferences, or build your own from scratch.</p>
                                     </div>
                                     <div className='homepageaboutrightsection'>
                                         <img className='homepageaboutpreview' alt='rewards preview'></img>
                                     </div>
-                                    <div className='homepageaboutrightsection'>
-                                        <img className='homepageaboutpreview' alt='profile preview'></img>
+                                    <div className='homepageaboutleftsection'>
+                                        <h4 className='homepageh4'>Freely edit your journal entries and profile at any time.</h4>
+                                        <p className='homepagep'>Get full access to your account, author profile and entry history.</p>
                                     </div>
                                 </div>
                             </div>
@@ -163,35 +162,35 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dro
                         <div className='homepageaboutcontainer'>
                             <h3 className='homepageh3'>How .DAY works</h3>
                             <div className='homepageaboutleft'>
-                                <div className='homepageaboutleftsection'>
-                                    <h4 className='homepageh4'>Create an account with your author details.</h4>
-                                    <p className='homepagep'>Sign up with your name, a pen name of your choice and email.</p>
+                                    <div className='homepageaboutleftsection'>
+                                        <h4 className='homepageh4'>Create an account with your author details.</h4>
+                                        <p className='homepagep'>Sign up with your name, a pen name of your choice and email.</p>
+                                    </div>
+                                    <div className='homepageaboutrightsection'>
+                                        <img className='homepageaboutpreview' alt='theme preview'></img>
+                                    </div>
+                                    <div className='homepageaboutleftsection'>
+                                        <h4 className='homepageh4'>Publish a journal entry every day and unlock author rewards.</h4>
+                                        <p className='homepagep'>Rewards include new stickers, bullets and theme designs for your journal.</p>
+                                    </div>
+                                    <div className='homepageaboutrightsection'>
+                                        <img className='homepageaboutpreview' alt='profile preview'></img>
+                                    </div>
                                 </div>
-                                <div className='homepageaboutleftsection'>
-                                    <h4 className='homepageh4'>Choose a journal theme.</h4>
-                                    <p className='homepagep'>Select one of our six custom themes based on your habit tracking preferences, or build your own.</p>
-                                </div>
-                                <div className='homepageaboutleftsection'>
-                                    <h4 className='homepageh4'>Publish a journal entry every day and unlock author rewards.</h4>
-                                    <p className='homepagep'>Rewards include new stickers, bullets and theme designs for your journal.</p>
-                                </div>
-                                <div className='homepageaboutleftsection'>
-                                    <h4 className='homepageh4'>Edit and delete entries whenever you want.</h4>
-                                    <p className='homepagep'>Get full access to your account and update the appearance of your profile.</p>
-                                </div>
-                            </div>
                             <div className='homepageaboutright'>
                                 <div className='homepageaboutrightsection'>
                                     <img className='homepageaboutpreview' alt='author details preview'></img>
                                 </div>
-                                <div className='homepageaboutrightsection'>
-                                    <img className='homepageaboutpreview' alt='theme preview'></img>
+                                <div className='homepageaboutleftsection'>
+                                    <h4 className='homepageh4'>Choose a journal theme.</h4>
+                                    <p className='homepagep'>Select one of four pre-built themes based on your journaling preferences, or build your own from scratch.</p>
                                 </div>
                                 <div className='homepageaboutrightsection'>
                                     <img className='homepageaboutpreview' alt='rewards preview'></img>
                                 </div>
-                                <div className='homepageaboutrightsection'>
-                                    <img className='homepageaboutpreview' alt='profile preview'></img>
+                                <div className='homepageaboutleftsection'>
+                                    <h4 className='homepageh4'>Freely edit your journal entries and profile at any time.</h4>
+                                    <p className='homepagep'>Get full access to your account, author profile and entry history.</p>
                                 </div>
                             </div>
                         </div>

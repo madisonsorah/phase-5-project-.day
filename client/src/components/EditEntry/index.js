@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
 import {useParams} from 'react-router-dom';
 import './index.css';
 
@@ -6,7 +7,7 @@ function EditEntry() {
     const {id} = useParams();
     const [entry, setEntry] = useState(null);
     const [updatedAnswers, setUpdatedAnswers] = useState({});
-    const [entryUpdatedNote, setEntryUpdatedNote] = useState('');
+    const navigate = useNavigate;
     
    useEffect(() => {
        fetch(`/journal_entries/${id}/answers`)
@@ -23,10 +24,8 @@ function EditEntry() {
           },
           body: JSON.stringify({updatedAnswers}),
         })
-        setEntryUpdatedNote('Entry updates saved.')
+        .then(navigate(`/journal_entries/${id}`))
     }
-
-    console.log(entry);
     
     if (entry === null) {
         return (
@@ -38,7 +37,7 @@ function EditEntry() {
                 <div className='editentryformcontainer'>
                     <form className='editentryform' onSubmit={handleUpdatedAnswers}>
                         <span>
-                            <h4 className='editentryformheader'>Update Journal Entry</h4>
+                            <h4 className='editentryformheader'>Update Entry</h4>
                         </span>
                         <div>
                             {
@@ -57,7 +56,6 @@ function EditEntry() {
                             }
                         </div>
                         <button className='editentrybutton'>UPDATE ENTRY</button>
-                        {entryUpdatedNote ? (<p className='entrysavedp'>{entryUpdatedNote}</p>) : null}
                     </form>
                 </div>
             </div>

@@ -84,6 +84,7 @@
 
 .profilename {
     font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .profilepenname {
@@ -111,10 +112,11 @@
 
 .profileentryheader {
     color: rgb(235, 231, 225);
+    letter-spacing: 1px;
 }
 
 .profileentrycontainer {
-    padding-left: 10%;
+    padding-left: 5%;
     padding-top: 2%;
     padding-bottom: 5%;
     display: flex;

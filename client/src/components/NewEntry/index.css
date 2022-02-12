@@ -33,6 +33,10 @@
     margin-bottom: 20px;
 }
 
+.newentryformheader {
+    letter-spacing: 1px;
+}
+
 .newentryformp {
     font-size: 11px;
     font-weight: 600;
@@ -45,6 +49,7 @@
 }
 
 .newentryinput {
+    font-size: 12px;
     padding: 10px;
     width: 80%;
     background-color: rgb(235, 231, 225);
@@ -56,20 +61,22 @@
     padding: 10px;
     width: 83%;
     border: none;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     background-color: rgb(235, 231, 225);
     border: 1px solid #000;
     color: #000;
+    cursor: pointer;
 }
 
 .newentrybutton:hover {
     padding: 10px;
     width: 83%;
     border: none;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     background-color: rgb(226, 223, 219);
     border: 1px solid #000;
     color: #000;
+    cursor: pointer;
 }

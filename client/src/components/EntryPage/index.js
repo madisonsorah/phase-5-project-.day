@@ -44,7 +44,7 @@ function EntryPage() {
                 </div>
                 <div className='entrypagecontainerblur'>
                     <div className='entrypageleft'>
-                        <div className='entrypagetitle'>Entry Details</div>
+                        <div className='entrypagetitle'>Details</div>
                         <img className='entrypagecoffeeimage' alt='entry head' src={dotdaycoffeegraphic}></img>
                         <p className='entrypagedate'>Published: {entry.date}</p>
                         <Link className='entrypagelink' to={`/editentry/${id}`}>EDIT ENTRY</Link>
@@ -53,7 +53,7 @@ function EntryPage() {
                         </div>
                     </div>
                     <div className='entrypagemiddle'>
-                        <div className='entrypagemiddletitle'>Entry Answers</div>
+                        <div className='entrypagemiddletitle'>Prompts</div>
                         {
                             answers.map((answer) => {
                                 return (<div className='entrypageinnercolumn' key={answer.id}>
@@ -64,7 +64,7 @@ function EntryPage() {
                         }
                     </div>
                     <div className='entrypageright'>
-                        <div className='entrypagetitle'>Entry Check List</div>
+                        <div className='entrypagetitle'>Check List</div>
                         <div className='entrypagechecklistcolumn'>
                             <p className='entrypageanswer'>Doodled or sketched</p>
                         </div>
@@ -86,7 +86,7 @@ function EntryPage() {
             <div>
             <div className='entrypagecontainer'>
                 <div className='entrypageleft'>
-                    <div className='entrypagetitle'>Entry Details</div>
+                    <div className='entrypagetitle'>Details</div>
                     <img className='entrypagecoffeeimage' alt='entry head' src={dotdaycoffeegraphic}></img>
                     <p className='entrypagedate'>Published: {entry.date}</p>
                     <Link className='entrypagelink' to={`/editentry/${id}`}>EDIT ENTRY</Link>
@@ -95,7 +95,7 @@ function EntryPage() {
                     </div>
                 </div>
                 <div className='entrypagemiddle'>
-                    <div className='entrypagemiddletitle'>Entry Answers</div>
+                    <div className='entrypagemiddletitle'>Prompts</div>
                     {
                         answers.map((answer) => {
                             return (<div className='entrypageinnercolumn' key={answer.id}>
@@ -106,7 +106,7 @@ function EntryPage() {
                     }
                 </div>
                 <div className='entrypageright'>
-                    <div className='entrypagetitle'>Entry Check List</div>
+                    <div className='entrypagetitle'>Check List</div>
                     <div className='entrypagechecklistcolumn'>
                         <p className='entrypageanswer'>Doodled or sketched</p>
                     </div>

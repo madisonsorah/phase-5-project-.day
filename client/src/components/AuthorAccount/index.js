@@ -30,7 +30,7 @@ function AuthorAccount({currentAuthor}) {
         <div>
             <div className='accountpagecontainer'>
                 <div className='accountlinkscontainer'>
-                    <h4>Account</h4>
+                    <h4 className='accountheader'>Account</h4>
                     <div className='accountlinkdiv'>
                         <Link className='accountlink' to='/profile'>Profile</Link>
                     </div>
@@ -50,7 +50,7 @@ function AuthorAccount({currentAuthor}) {
                 <div className='accountformcontainer'>
                     <form onSubmit={handleUpdateAccount}>
                         <span>
-                            <h4>Update your account details</h4>
+                            <h4 className='accountheader'>Update your account details</h4>
                         </span>
                         <div className='accountinputdiv'>
                             <p className='accountp'>FIRST NAME</p>

@@ -24,6 +24,7 @@
     border: none;
     background-color: rgb(235, 231, 225);
     color: #000;
+    cursor: pointer;
 }
 
 .navbarlink:hover {
@@ -33,6 +34,7 @@
     border: none;
     background-color: rgb(235, 231, 225);
     color: rgb(139, 135, 124);
+    cursor: pointer;
 }
 
 .navbardivider {
@@ -48,8 +50,7 @@
     height: .4%;
     padding-top: 1.5%;
     display: inline-block;
-    margin-left: 19%;
-    margin-right: 37%;
+    margin-left: 27%;
 }
 
 .navbarlogologgedin {
@@ -62,6 +63,7 @@
 }
 
 .navbardropdown {
+    display: none;
     position: absolute;
     top: 100%;
     right: 0;
@@ -73,6 +75,10 @@
     background-color: #000;
     border: 1px solid rgb(235, 231, 225);
     z-index: -1;
+}
+
+.navbardropdownspan:hover .navbardropdown {
+    display: block;
 }
 
 .dropdowndiv {
