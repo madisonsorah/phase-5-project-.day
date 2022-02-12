@@ -133,12 +133,12 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                                 <img className='homepageaboutpreview' alt='grid preview' src={dotdaygridgraphic}></img>
                             </div>
                         </div>
-                        <div className='homepagefooter'>
-                            <h3 className='footerheader'>About .DAY</h3>
-                            <ul className='footerul'>
-                                <div className='footerp'>.DAY is a project concept created by @madisonsorah, who recently kicked off her career as a front-end developer.</div>
-                                <div className='footerp'>Created with a clean interface and minimalist design, .DAY is your digital solution to bullet journaling on a daily basis.</div>
-                                <div className='footerp2'>Feature updates will continuously be made to .DAY to improve your journaling experience.</div>
+                        <div className='homepagefooter2'>
+                            <h3 className='footerheader2'>About .DAY</h3>
+                            <ul className='footerul2'>
+                                <div className='footerp12'>.DAY is a project concept created by @madisonsorah, who recently kicked off her career as a front-end developer.</div>
+                                <div className='footerp12'>Created with a clean interface and minimalist design, .DAY is your digital solution to bullet journaling on a daily basis.</div>
+                                <div className='footerp22'>Feature updates will continuously be made to .DAY to improve your journaling experience.</div>
                             </ul>
                         </div>
                     </div>
@@ -177,12 +177,12 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                                 <img className='homepageaboutpreview' alt='grid preview' src={dotdaygridgraphic}></img>
                             </div>
                         </div>
-                        <div className='homepagefooter'>
-                            <h3 className='footerheader'>About .DAY</h3>
-                            <ul className='footerul'>
-                                <div className='footerp'>.DAY is a project concept created by @madisonsorah, who recently kicked off her career as a front-end developer.</div>
-                                <div className='footerp'>Created with a clean interface and minimalist design, .DAY is your digital solution to bullet journaling on a daily basis.</div>
-                                <div className='footerp2'>Feature updates will continuously be made to .DAY to improve your journaling experience.</div>
+                        <div className='homepagefooter2'>
+                            <h3 className='footerheader2'>About .DAY</h3>
+                            <ul className='footerul2'>
+                                <div className='footerp12'>.DAY is a project concept created by @madisonsorah, who recently kicked off her career as a front-end developer.</div>
+                                <div className='footerp12'>Created with a clean interface and minimalist design, .DAY is your digital solution to bullet journaling on a daily basis.</div>
+                                <div className='footerp22'>Feature updates will continuously be made to .DAY to improve your journaling experience.</div>
                             </ul>
                         </div>
                 </div>
