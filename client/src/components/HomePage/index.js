@@ -74,19 +74,21 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm, dro
                                     <h2 className='loginh2'>Welcome back</h2>
                                     <p className='loginp'>Please log in.</p>
                                 </span>
+                                <p className='logintitle'>PEN NAME</p>
                                 <div className='logininputdiv'>
                                     <input className='logininput'
                                         type='text'
-                                        placeholder='Enter Pen Name'
+                                        placeholder='Enter Pen Name_'
                                         autoComplete='off'
                                         value={pen_name}
                                         onChange={(e) => setPenName(e.target.value)}
                                     />
                                 </div>
+                                <p className='logintitle'>PASSWORD</p>
                                 <div className='logininputdiv'>
                                     <input className='logininput'
                                         type='password'
-                                        placeholder='Enter Password'
+                                        placeholder='Enter Password_'
                                         autoComplete='off'
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)}

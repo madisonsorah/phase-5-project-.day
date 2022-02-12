@@ -88,17 +88,16 @@
 
 .profilepenname {
     font-weight: 600;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .profileemail {
-    font-weight: 200;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .profilebio {
     font-weight: 200;
-    font-size: 13px;
+    font-size: 12px;
     padding-bottom: 20px;
 }
 
@@ -147,7 +146,7 @@
 
   .entrylink {
     text-decoration: none;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     padding: 5px;
     border: 1px solid rgb(235, 231, 225);
@@ -157,7 +156,7 @@
 
   .entrylink:hover {
     text-decoration: none;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     padding: 5px;
     border: 1px solid rgb(235, 231, 225);
