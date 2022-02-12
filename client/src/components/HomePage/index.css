@@ -41,14 +41,14 @@ body {
 
 .homepagecontainersignedout {
     margin: auto;
-    height: 680px;
+    height: 650px;
     display: flex;
     flex-direction: column;
 }
 
 .homepagecontainersignedoutblur {
     margin: auto;
-    height: 680px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     filter: blur(3px);
@@ -105,7 +105,7 @@ body {
 .homepagebuttonsignedout:hover {
     display: inline-block;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 13px;
     border: none;
     padding: 1px;
     color: rgb(139, 135, 124);
@@ -374,7 +374,7 @@ body {
 .homepagelinkloggedin {
     display: inline-block;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 13px;
     border: none;
     color: #000;
 }
@@ -382,7 +382,7 @@ body {
 .homepagelinkloggedin:hover {
     display: inline-block;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 13px;
     border: none;
     color: rgb(139, 135, 124);
 }
