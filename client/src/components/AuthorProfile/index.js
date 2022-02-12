@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import dotdayjournalgraphic from '../../images/dotdayjournalgraphic.png';
+import dotdayavatargraphic from '../../images/dotdayavatargraphic.png';
 import './index.css';
 
 function AuthorProfile({currentAuthor}) {
@@ -25,7 +26,7 @@ function AuthorProfile({currentAuthor}) {
             <div>
                 <div className='profiledetailsdiv'>
                     <div className='profileleft'>
-                        <img className='profileavatar' src={currentAuthor.avatar_url}></img>
+                        <img className='profileavatar' src={dotdayavatargraphic}></img>
                     </div>
                     <div className='profileright'>
                         <h3 className='profilename'>{currentAuthor.first_name} {currentAuthor.last_name}</h3>

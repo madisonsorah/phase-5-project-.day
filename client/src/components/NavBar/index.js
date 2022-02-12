@@ -35,7 +35,7 @@ function NavBar({currentAuthor, setCurrentAuthor, setLogInForm, setErrorMessage}
                     <Link to='/' className='navbarlink'>Home</Link>
                     <p className='navbardivider'>|</p>
                     <Link className='navbarlink' to='/profile'>Profile</Link>
-                    <Link className='navbarlink' to='/entries'>View Entries</Link>
+                    <Link className='navbarlink' to='/entries'>Entries</Link>
                     <img className='navbarlogologgedin' alt='.Day logo' src={dotdaylogo}></img>
                     <span className='navbardropdownspan'>
                         <button className='navbarlink'>Hello, {currentAuthor.first_name}.</button>

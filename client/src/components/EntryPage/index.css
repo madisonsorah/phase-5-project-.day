@@ -34,12 +34,9 @@
 }
 
 .entrypagecoffeeimage {
-    width: 80px;
-    height: 70px;
-    padding: 30px;
+    width: 150px;
+    height: 150px;
     margin-top: 60px;
-    border: 1px solid #000;
-    background-color: #000;
 }
 
 .entrypagedate {
