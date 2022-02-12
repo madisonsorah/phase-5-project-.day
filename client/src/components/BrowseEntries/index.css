@@ -21,8 +21,8 @@
     padding: 5px;
     margin-left: 10%;
     border: 1px solid #000;
-    background-color: #000;
-    color: #fff;
+    background-color: rgb(235, 231, 225);
+    color: #000;
 }
 
 .browseentriesnewlink:hover {
@@ -32,8 +32,8 @@
     padding: 5px;
     margin-left: 10%;
     border: 1px solid #000;
-    background-color: #000;
-    color: #fff;
+    background-color: rgb(226, 223, 219);
+    color: #000;
 }
 
 
@@ -65,13 +65,8 @@
     margin: 10px;
     display: inline-block;
     border: 1px solid rgb(235, 231, 225);
-    background-color: rgb(235, 231, 225);
+    background-color: #000;
     text-align: center;
-  }
-  
-  .browseentriesentry:hover {
-    border: 1px solid rgb(243, 240, 235);
-    background-color: rgb(243, 240, 235);
   }
 
   .browseentriesgraphic {
@@ -80,7 +75,9 @@
   }
 
   .browseentriesdate {
-      font-size: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(235, 231, 225);
   }
 
   .browseentriesviewlink {
@@ -88,7 +85,7 @@
     font-size: 12px;
     font-weight: 600;
     padding: 5px;
-    border: 1px solid #000;
+    border: 1px solid rgb(235, 231, 225);
     background-color: #000;
     color: rgb(235, 231, 225);
   }
@@ -98,7 +95,7 @@
     font-size: 12px;
     font-weight: 600;
     padding: 5px;
-    border: 1px solid #000;
-    background-color: #000;
-    color: #fff;
+    border: 1px solid rgb(235, 231, 225);
+    background-color: rgb(37, 37, 37);
+    color: rgb(235, 231, 225);
 }
