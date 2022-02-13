@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_03_210452) do
+ActiveRecord::Schema.define(version: 2022_02_13_010240) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2022_02_03_210452) do
     t.string "bio"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "theme_id"
   end
 
   create_table "journal_entries", force: :cascade do |t|
@@ -52,7 +53,6 @@ ActiveRecord::Schema.define(version: 2022_02_03_210452) do
 
   create_table "themes", force: :cascade do |t|
     t.string "category"
-    t.integer "author_id"
     t.integer "journal_entry_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

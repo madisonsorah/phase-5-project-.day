@@ -14,6 +14,21 @@ Question.destroy_all
 Answer.destroy_all
 puts "🌱 Seeding data..."
 
+# Sample themes
+creativity = Theme.create!(
+    {
+        category: "Creativity"
+    })
+
+productivity = Theme.create!(
+    {
+        category: "Productivity"
+    })
+
+positivity = Theme.create!(
+    {
+        category: "Positivity"
+    })
 
 # Sample authors
 madison = Author.create!(
@@ -24,7 +39,8 @@ madison = Author.create!(
         email: "madisonsorah@gmail.com",
         password: "catsarecute1",
         bio: "Hi there! I am a cat lover, anime watcher and front-end developer living in Brooklyn, NY.",
-        avatar_url: "https://previews.dropbox.com/p/thumb/ABdSLhejOkXnWgIe9P-liMU8eCXMohRT_Ral3XEzn2T8dOMIvednPQd1tkxqTSUgdfvudThpz99IPpZ_fGjtEljEZP24GdIzcHmYJiQbpE9ld6v-QT5jE-XT7uwxo_hdCrdsSU4eVvRCnDmkecyNpKx2wIZwz3ouFGDYMSRiTrWc1SQLOWi0RIS-DSYlhohpT1uxsLiHADtL1AEGFupyZ72Zqiy_DMkJjOxQ1pLdEjO_hCrLCgAvI1Fvf16ggVMibXvzIBCCXp5lITA_TcUD4S92wyT3PvyAKVFXEVau3JQfcyzGGel6j7zkpkGaz17k-q7IOuHoGoKMME1NiPRFI2EOhleavyOMPYLMO9Kbhvmx1g/p.jpeg"
+        avatar_url: "https://previews.dropbox.com/p/thumb/ABdSLhejOkXnWgIe9P-liMU8eCXMohRT_Ral3XEzn2T8dOMIvednPQd1tkxqTSUgdfvudThpz99IPpZ_fGjtEljEZP24GdIzcHmYJiQbpE9ld6v-QT5jE-XT7uwxo_hdCrdsSU4eVvRCnDmkecyNpKx2wIZwz3ouFGDYMSRiTrWc1SQLOWi0RIS-DSYlhohpT1uxsLiHADtL1AEGFupyZ72Zqiy_DMkJjOxQ1pLdEjO_hCrLCgAvI1Fvf16ggVMibXvzIBCCXp5lITA_TcUD4S92wyT3PvyAKVFXEVau3JQfcyzGGel6j7zkpkGaz17k-q7IOuHoGoKMME1NiPRFI2EOhleavyOMPYLMO9Kbhvmx1g/p.jpeg",
+        theme: creativity
     })
 
 # Sample journal entries
@@ -32,7 +48,7 @@ entryOne = JournalEntry.create!(
     {
         image_url: "XX",
         date: "02/02/2022",
-        author_id: madison.id
+        author: madison
     }
 )
 
@@ -48,29 +64,6 @@ entryOne = JournalEntry.create!(
 #         image_url: "XX"
 #         date: Date.strptime("02/04/2022", "%m/%d/%Y")
 #         author_id: madison.id
-#     })
-
-# Sample themes
-creativity = Theme.create!(
-    {
-        category: "Creativity",
-        author_id: madison.id,
-        journal_entry_id: entryOne.id
-    })
-
-# productivity = Theme.create!(
-#     {
-#         category: "Productivity"
-#     })
-
-# selfCare = Theme.create!(
-#     {
-#         category: "Positivity"
-#     })
-
-# healthyHabits = Theme.create!(
-#     {
-#         category: "Self-Activity"
 #     })
 
 
@@ -95,6 +88,49 @@ creativityQuestionThree = Question.create!(
         theme_id: creativity.id
     }
 )
+
+productivityQuestionOne = Question.create!(
+    {
+        question: "How productive were you today?",
+        theme_id: productivity.id
+    }
+)
+
+productivityQuestionTwo = Question.create!(
+    {
+        question: "What was the most productive thing you accomplished?",
+        theme_id: productivity.id
+    }
+)
+
+productivityQuestionThree = Question.create!(
+    {
+        question: "How do you plan on being productive tomorrow?",
+        theme_id: productivity.id
+    }
+)
+
+positivityQuestionOne = Question.create!(
+    {
+        question: "How were your positivity levels today?",
+        theme_id: positivity.id
+    }
+)
+
+positivityQuestionTwo = Question.create!(
+    {
+        question: "What is one positive thing that happened that made you happy?",
+        theme_id: positivity.id
+    }
+)
+
+positivityQuestionThree = Question.create!(
+    {
+        question: "What are you most looking forward to tomorrow?",
+        theme_id: positivity.id
+    }
+)
+
 
 # Sample answers
 Answer.create!(

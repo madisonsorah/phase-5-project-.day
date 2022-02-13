@@ -17,7 +17,7 @@ class AuthorsController < ApplicationController
     end
 
     def create
-        author = Author.create(newauthor_params)
+        author = Author.create(author_params)
         if author.valid?
           render json: author, status: :created
         else
@@ -40,10 +40,6 @@ class AuthorsController < ApplicationController
     private
     def find_author
         Author.find(params[:id])
-    end
-
-    def newauthor_params
-        params.permit(:first_name, :last_name, :pen_name, :email, :password, :password_confirmation, :bio, :avatar_url)
     end
 
     def author_params

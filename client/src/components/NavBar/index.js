@@ -41,7 +41,7 @@ function NavBar({currentAuthor, setCurrentAuthor, setLogInForm, setErrorMessage}
                         <button className='navbarlink'>Hello, {currentAuthor.first_name}.</button>
                         <div className='navbardropdown'>
                             <div className='dropdowndiv'>
-                                <Link className='dropdownlink' onClick={() => setDropDown(!dropDown)} to={`/account`}>Account</Link>
+                                <Link className='dropdownlink' to={`/account`}>Account</Link>
                             </div>
                             <div className='dropdowndiv'>
                                 <button className='dropdownlink' onClick={handleLogOut}>Log Out</button>

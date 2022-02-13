@@ -10,8 +10,8 @@ function SignUpPage({currentAuthor, setCurrentAuthor}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
-    const [bio, setBio] = useState('')
-    const [avatar_url, setAvatarUrl] = ('')
+    const [bio, setBio] = useState('');
+    const [avatar_url, setAvatar] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
 
@@ -43,110 +43,103 @@ function SignUpPage({currentAuthor, setCurrentAuthor}) {
   }
 
   const slideRight = () => {
-    setIndex((index + 1)); // increases index by 1
+    const nextIndex = index + 1
+    if (nextIndex <= 2) {
+      setIndex(nextIndex);
+    }
   };
 
   const slideLeft = () => {
-    const nextIndex = index - 1;
-    if (nextIndex > 0) {
-        setIndex(nextIndex);
+    const prevIndex = index - 1;
+    if (prevIndex >= 0) {
+        setIndex(prevIndex);
     } 
   };
 
-
-    if (index === 0) {
-        return (
-            <div>
-                <form>
-                <h3>Enter your name</h3>
-                <p>FIRST NAME</p>
-                <input 
-                    placeholder='First Name_'
-                    type='text'
-                    autoComplete='off'
-                    value={first_name}
-                    onChange={(e) => setFirstName(e.target.value)}>
-                </input>
-                <p>LAST NAME</p>
-                <input 
-                    placeholder='Last Name_'
-                    type='text'
-                    autoComplete='off'
-                    value={last_name}
-                    onChange={(e) => setLastName(e.target.value)}>
-                </input>
-                <p>PEN NAME</p>
-                <input 
-                placeholder='Pen Name_'
-                type='text'
-                autoComplete='off'
-                value={pen_name}
-                onChange={(e) => setPenName(e.target.value)}>
-                </input>
-                </form>
-                <button onClick={slideLeft}>{"<"}</button>
-                <button onClick={slideRight}>{">"}</button>
-            </div>
-        )
-    } else if (index === 1) {
-        return (
-            <div>
-                <form>
-                <h3>Enter your details</h3>
-                <p>EMAIL</p>
-                <input 
-                    placeholder='Email_'
-                    type='text'
-                    autoComplete='off'
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}>
-                </input>
-                <p>PASSWORD</p>
-                <input 
-                    placeholder='Password_'
-                    type='text'
-                    autoComplete='off'
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}>
-                </input>
-                <input 
-                    placeholder='Password Confirmation_'
-                    type='text'
-                    autoComplete='off'
-                    value={passwordConfirmation}
-                    onChange={(e) => setPasswordConfirmation(e.target.value)}>
-                </input>
-                </form>
-                <button onClick={slideLeft}>{"<"}</button>
-                <button onClick={slideRight}>{">"}</button>
-            </div>
-        )
-    } else if (index === 2) {
-        <div>
-            <form>
-                <h3>Profile Information</h3>
-                <p>BIO</p>
-                <input 
-                    placeholder='Bio_'
-                    type='text'
-                    autoComplete='off'
-                    value={bio}
-                    onChange={(e) => setBio(e.target.value)}>
-                </input>
-                <p>PASSWORD</p>
-                <input 
-                    placeholder='Avatar URL_'
-                    type='text'
-                    autoComplete='off'
-                    value={avatar_url}
-                    onChange={(e) => setAvatarUrl(e.target.value)}>
-                </input>
-                <button onClick={slideLeft}>{"<"}</button>
-                <button onClick={slideRight}>{">"}</button>
-                <button type='submit' onSubmit={handleSubmit}>CREATE ACCOUNT</button>
-                </form>
-            </div>
-    }
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <h3 style={{display: index === 0 ? "block" : "none" }}>Enter your name</h3>
+        <p style={{display: index === 0 ? "block" : "none" }}>FIRST NAME</p>
+        <input style={{display: index === 0 ? "block" : "none" }}
+            placeholder='First Name_'
+            type='text'
+            autoComplete='off'
+            value={first_name}
+            onChange={(e) => setFirstName(e.target.value)}>
+        </input>
+        <p style={{display: index === 0 ? "block" : "none" }}>LAST NAME</p>
+        <input 
+            style={{display: index === 0 ? "block" : "none" }}
+            placeholder='Last Name_'
+            type='text'
+            autoComplete='off'
+            value={last_name}
+            onChange={(e) => setLastName(e.target.value)}>
+        </input>
+        <p style={{display: index === 0 ? "block" : "none" }}>PEN NAME</p>
+        <input 
+            style={{display: index === 0 ? "block" : "none" }}
+            placeholder='Pen Name_'
+            type='text'
+            autoComplete='off'
+            value={pen_name}
+            onChange={(e) => setPenName(e.target.value)}>
+        </input>
+        <h3 style={{display: index === 1 ? "block" : "none" }}>Enter your details</h3>
+        <p style={{display: index === 1 ? "block" : "none" }}>EMAIL</p>
+        <input 
+            style={{display: index === 1 ? "block" : "none" }}
+            placeholder='Email_'
+            type='text'
+            autoComplete='off'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}>
+        </input>
+        <p style={{display: index === 1 ? "block" : "none" }}>PASSWORD</p>
+        <input 
+            style={{display: index === 1 ? "block" : "none" }}
+            placeholder='Password_'
+            type='text'
+            autoComplete='off'
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}>
+        </input>
+        <p style={{display: index === 1 ? "block" : "none" }}>CONFIRM PASSWORD</p>
+        <input 
+            style={{display: index === 1 ? "block" : "none" }}
+            placeholder='Password Confirmation_'
+            type='text'
+            autoComplete='off'
+            value={passwordConfirmation}
+            onChange={(e) => setPasswordConfirmation(e.target.value)}>
+        </input>
+        <h3 style={{display: index === 2 ? "block" : "none" }}>Profile Information</h3>
+        <p style={{display: index === 2 ? "block" : "none" }}>BIO</p>
+        <input 
+            style={{display: index === 2 ? "block" : "none" }}
+            placeholder='Bio_'
+            type='text'
+            autoComplete='off'
+            value={bio}
+            onChange={(e) => setBio(e.target.value)}>
+        </input>
+        <p style={{display: index === 2 ? "block" : "none" }}>AVATAR URL</p>
+        <input 
+            style={{display: index === 2 ? "block" : "none" }}
+            placeholder='Avatar URL_'
+            type='text'
+            autoComplete='off'
+            value={avatar_url}
+            onChange={(e) => setAvatar(e.target.value)}>
+        </input>
+        <button style={{display: index === 2 ? "block" : "none" }} type='submit'>CREATE ACCOUNT</button>
+        {errorMessage ? (<p className='signuperror'>{errorMessage}</p>) : null}
+      </form>
+      <button onClick={slideLeft}>{"<"}</button>
+      <button onClick={slideRight}>{">"}</button>
+    </div>
+  )
 }
 
 export default SignUpPage;
