@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   # Adding answers to a journal entry
   post '/journal_entries/:journal_entry_id/answers', to: 'answers#create_entry_answers'
 
+  # Adding theme to an author
+  patch '/authors/:id/theme', to: 'authors#addtheme'
+
   # Editing a journal entry's answers
   patch '/journal_entries/:journal_entry_id/answers', to: 'answers#update_entry_answers'
 

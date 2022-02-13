@@ -77,12 +77,15 @@
 
 .profileright {
     padding-left: 50px;
+    margin-top: 10px;
     border-left: 1px solid #000;
 }
 
 .profilename {
     font-weight: 600;
     letter-spacing: 1px;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 .profilepenname {
@@ -97,7 +100,7 @@
 .profilebio {
     font-weight: 200;
     font-size: 12px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
 }
 
 .profileentrydiv {

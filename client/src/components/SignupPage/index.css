@@ -1,0 +1,98 @@
+.signupcontainer {
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding-top: 8%;
+}
+
+.signupformcontainer {
+    width: 50%;
+    margin: auto;
+    margin-top: 2.5%;
+    bottom: 0;
+    padding: 20px;
+    background-color: rgb(235, 231, 225);
+    border: 1px solid #000;
+}
+
+.signupform {
+    height: 250px;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.signupformheader {
+    color: #000;
+    letter-spacing: 1px;
+}
+
+.signupformp {
+    font-size: 11px;
+    font-weight: 600;
+    width: 100%;
+    color: #000;
+}
+
+.signupinput {
+    padding: 10px;
+    width: 90%;
+    background-color: rgb(235, 231, 225);
+    border: 1px solid #000;
+    font-size: 12px;
+    color: #000;
+}
+
+
+.signupbutton {
+    padding: 10px;
+    margin-top: 40px;
+    width: 93.5%;
+    background-color: rgb(235, 231, 225);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid #000;
+    color: #000;
+    cursor: pointer;
+}
+
+.signupbutton:hover {
+    padding: 10px;
+    margin-top: 40px;
+    width: 93.5%;
+    background-color: rgb(226, 223, 219);
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid #000;
+    color: #000;
+    cursor: pointer;
+}
+
+.signuparrow {
+    padding: 10px;
+    margin-top: 40px;
+    background-color: rgb(235, 231, 225);
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.signuparrow:hover {
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    background-color: rgb(235, 231, 225);
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    color: rgb(139, 135, 124);
+    cursor: pointer;
+}
+
+.arrowcontainer {
+    text-align: center;
+}

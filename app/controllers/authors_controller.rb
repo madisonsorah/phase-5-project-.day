@@ -21,13 +21,19 @@ class AuthorsController < ApplicationController
         if author.valid?
           render json: author, status: :created
         else
-          render json: {errors: user.errors.full_messages}, status: :unprocessable_entity
+          render json: {errors: author.errors.full_messages}, status: :unprocessable_entity
         end
       end
 
     def update
         author = find_author
         author.update!(author_params)
+        render json: author
+    end
+
+    def addtheme
+        author = find_author
+        author.update!(add_theme_params)
         render json: author
     end
 
@@ -43,7 +49,11 @@ class AuthorsController < ApplicationController
     end
 
     def author_params
-        params.permit(:first_name, :last_name, :pen_name, :email, :password, :bio, :avatar_url)
+        params.permit(:first_name, :last_name, :pen_name, :email, :password, :password_confirmation, :bio, :avatar_url)
+    end
+
+    def add_theme_params
+        params.permit(:theme_id)
     end
 
     def render_not_found_response
