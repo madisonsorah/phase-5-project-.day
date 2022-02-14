@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import './index.css';
 
-function SignUpPage({currentAuthor, setCurrentAuthor}) {
+function SignUpPage({setCurrentAuthor}) {
     const [index, setIndex] = useState(0); 
     const [pen_name, setPenName] = useState('');
     const [first_name, setFirstName] = useState('');
@@ -13,39 +13,52 @@ function SignUpPage({currentAuthor, setCurrentAuthor}) {
     const [bio, setBio] = useState('');
     const [avatar_url, setAvatarUrl] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    const [theme_id, setThemeId] = useState();
+    const [themes, setThemes] = useState([]);
     const navigate = useNavigate();
- 
+
+    useEffect(() =>
+    fetch('/themes')
+    .then((r) => r.json())
+    .then((themeData) => setThemes(themeData)), [])
+
+    const displayThemes = themes.map((theme) => (
+      <option style={{display: index === 3 ? "block" : "none" }} value={theme.id}>{theme.category}</option>
+    ));
+
+    console.log(themes)
   
     function handleSubmit(e) {
-    e.preventDefault();
-    fetch('/authors', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        first_name,
-        last_name,
-        pen_name,
-        email,
-        password,
-        password_confirmation: passwordConfirmation,
-        bio,
-        avatar_url,
-      }),
-    }).then((r) => {
-      if (r.ok) {
-        r.json().then((author) => setCurrentAuthor(author));
-        navigate(`/theme/${currentAuthor.id}`, {replace: true})
-      } else {
-        setErrorMessage('An account with these credentials already exists.')
+      e.preventDefault();
+      const author = {
+          first_name,
+          last_name,
+          pen_name,
+          email,
+          password,
+          password_confirmation: passwordConfirmation,
+          bio,
+          avatar_url,
+          theme_id
       }
-    });
+      fetch('/authors', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(author)
+      })
+      .then((r) => {
+        if (r.ok) {
+          r.json().then((author) => setCurrentAuthor(author))
+          .then(navigate('/account'))
+        } else {
+          setErrorMessage('Cannot sign up with these credentials.')
+        }
+      })
   }
 
   const slideRight = () => {
     const nextIndex = index + 1
-    if (nextIndex <= 2) {
+    if (nextIndex <= 3) {
       setIndex(nextIndex);
     }
   };
@@ -136,7 +149,11 @@ function SignUpPage({currentAuthor, setCurrentAuthor}) {
               value={avatar_url}
               onChange={(e) => setAvatarUrl(e.target.value)}>
           </input>
-          <button className='signupbutton' style={{display: index === 2 ? "block" : "none" }} type='submit'>CREATE ACCOUNT</button>
+          <p className='signupformp' style={{display: index === 3 ? "block" : "none" }}>THEME</p>
+            <select className='signupinput' style={{display: index === 3 ? "block" : "none" }} onChange={(e) => setThemeId(e.target.value)}>
+                {displayThemes}
+            </select>
+          <button className='signupbutton' style={{display: index === 3 ? "block" : "none" }} type='submit'>CREATE ACCOUNT</button>
           {errorMessage ? (<p className='signuperror'>{errorMessage}</p>) : null}
         </form>
         <div className='arrowcontainer'>

@@ -13,6 +13,7 @@ class JournalEntriesController < ApplicationController
     end
 
     def create
+        puts journalentry_params
         journalentry = JournalEntry.create!(journalentry_params)
         render json: journalentry, status: :created
     end
