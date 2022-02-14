@@ -26,7 +26,9 @@ function NewEntry({currentAuthor}) {
         })
         .then((r) => r.json())
         .then((rData) => navigate(`/entrydraft/${rData.id}`, {replace: true}));
-    }
+    };
+
+    console.log(today)
 
     return (
         <div>
