@@ -20,6 +20,14 @@ function EntryPage() {
         .then((answerData) => setAnswers(answerData))
      }, [id])
 
+     function formatDate(date) {
+        const today = new Date(date);
+        let dd = String(today.getDate()).padStart(2, '0');
+        let mm = String(today.getMonth() + 1).padStart(2, '0'); 
+        let yyyy = today.getFullYear();
+        return mm + '/' + dd + '/' + yyyy;
+    }
+
      function handleSetDelete() {
         setDeletePopUp(!deletePopUp);
      }
@@ -46,7 +54,7 @@ function EntryPage() {
                     <div className='entrypageleft'>
                         <div className='entrypagetitle'>Details</div>
                         <img className='entrypagecoffeeimage' alt='entry head' src={dotdaycoffeegraphic}></img>
-                        <p className='entrypagedate'>Published: {entry.date}</p>
+                        <p className='entrypagedate'>Published: {formatDate(entry.date)}</p>
                         <Link className='entrypagelink' to={`/editentry/${id}`}>EDIT ENTRY</Link>
                         <div>
                             <button className='entrypagebutton'>DELETE ENTRY</button>
