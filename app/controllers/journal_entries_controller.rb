@@ -9,7 +9,7 @@ class JournalEntriesController < ApplicationController
 
     def show
         journalentry = JournalEntry.find(params[:id])
-        render json: journalentry, include: [:questions]
+        render json: journalentry, include: [:questions, :answers]
     end
 
     def create

@@ -1,18 +1,17 @@
 import React, {useState, useEffect} from 'react';
-import {useNavigate} from 'react-router-dom';
-import {useParams} from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 import './index.css';
 
 function EditEntry() {
     const {id} = useParams();
     const [entry, setEntry] = useState(null);
     const [updatedAnswers, setUpdatedAnswers] = useState({});
-    const navigate = useNavigate;
+    const navigate = useNavigate();
     
    useEffect(() => {
-       fetch(`/journal_entries/${id}/answers`)
+       fetch(`/journal_entries/${id}`)
        .then((r) => r.json())
-       .then((answerData) => setEntry(answerData))
+       .then((entryData) => setEntry(entryData))
     }, [id])
 
     function handleUpdatedAnswers(e) {
@@ -24,38 +23,41 @@ function EditEntry() {
           },
           body: JSON.stringify({updatedAnswers}),
         })
-        .then(navigate(`/journal_entries/${id}`))
+        .then(() => navigate(`/entries/${id}`))
     }
+
+    console.log(entry);
     
     if (entry === null) {
         return (
             'Loading...'
         )
     }
+
         return (
-            <div className='editentrycontainer'>
-                <div className='editentryformcontainer'>
-                    <form className='editentryform' onSubmit={handleUpdatedAnswers}>
+            <div className='entrydraftcontainer'>
+                <div className='entrydraftformcontainer'>
+                    <form className='entrydraftform' onSubmit={handleUpdatedAnswers}>
                         <span>
-                            <h4 className='editentryformheader'>Update Entry</h4>
+                            <h4 className='entrydraftformheader'>Entry Prompts</h4>
                         </span>
                         <div>
-                            {
-                                entry.map((answer) => {
-                                    return (<div className='editentryinputdiv' key={answer.id}>
-                                        <p className='editentryformp'>{answer.question.question}</p>
+                        {
+                                entry.questions.map((question) => {
+                                    return (<div className='entrydraftinputdiv' key={question.id}>
+                                        <p className='entrydraftformp'>{question.question}</p>
                                         <input 
-                                        className='editentryinput' 
-                                        value={answer.answer}
+                                        className='entrydraftinput' 
+                                        value={entry.answers.find((answer) => answer.question_id === question.id).answer}
                                         onChange={(e) => setUpdatedAnswers((updatedAnswers) => {
-                                            updatedAnswers[answer.id] = e.target.value;
+                                            updatedAnswers[question.id] = e.target.value;
                                             return updatedAnswers;
                                         })}></input>
                                     </div>)
                                 })
                             }
                         </div>
-                        <button className='editentrybutton'>UPDATE ENTRY</button>
+                        <button className='entrydraftbutton'>PUBLISH ENTRY</button>
                     </form>
                 </div>
             </div>

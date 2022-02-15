@@ -29,7 +29,7 @@ class AnswersController < ApplicationController
         entry = JournalEntry.find(params[:journal_entry_id])
         answers = params[:answers]
         answers.each do |question_id, answer|
-            Answer.update!(answer: answer, question_id: question_id, journal_entry_id: entry.id)
+            Answer.update!(answer: answer)
         end
     end
 
