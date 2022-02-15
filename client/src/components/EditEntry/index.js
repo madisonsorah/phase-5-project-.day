@@ -11,7 +11,10 @@ function EditEntry() {
    useEffect(() => {
        fetch(`/journal_entries/${id}`)
        .then((r) => r.json())
-       .then((entryData) => setEntry(entryData))
+       .then((entryData) => {
+            setEntry(entryData)
+       })
+
     }, [id])
 
     function handleUpdatedAnswers(e) {
@@ -26,7 +29,7 @@ function EditEntry() {
         .then(() => navigate(`/entries/${id}`))
     }
 
-    console.log(entry);
+    console.log(updatedAnswers)
     
     if (entry === null) {
         return (
@@ -44,13 +47,14 @@ function EditEntry() {
                         <div>
                         {
                                 entry.questions.map((question) => {
+                                    const answer = entry.answers.find((answer) => answer.question_id === question.id);
                                     return (<div className='entrydraftinputdiv' key={question.id}>
                                         <p className='entrydraftformp'>{question.question}</p>
                                         <input 
                                         className='entrydraftinput' 
-                                        value={entry.answers.find((answer) => answer.question_id === question.id).answer}
+                                        placeholder={answer.answer}
                                         onChange={(e) => setUpdatedAnswers((updatedAnswers) => {
-                                            updatedAnswers[question.id] = e.target.value;
+                                            updatedAnswers[answer.id] = e.target.value;
                                             return updatedAnswers;
                                         })}></input>
                                     </div>)

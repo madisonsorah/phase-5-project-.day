@@ -26,10 +26,9 @@ class AnswersController < ApplicationController
     end
 
     def update_entry_answers
-        entry = JournalEntry.find(params[:journal_entry_id])
-        answers = params[:answers]
-        answers.each do |question_id, answer|
-            Answer.update!(answer: answer)
+        answers = params[:updatedAnswers]
+        answers.each do |answer_id, answer|
+            Answer.find(answer_id).update(answer: answer)
         end
     end
 
