@@ -1,9 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useNavigate} from 'react-router-dom';
 import './index.css';
 
 function NewEntry({currentAuthor}) {
-    const [image_url, setImageUrl] = useState('');
     const today = new Date();
     let dd = String(today.getDate()).padStart(2, '0');
     let mm = String(today.getMonth() + 1).padStart(2, '0'); 
@@ -19,7 +18,6 @@ function NewEntry({currentAuthor}) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ 
-            image_url,
             date: today.toString(),
             author_id: currentAuthor.id 
             }),
@@ -38,18 +36,11 @@ function NewEntry({currentAuthor}) {
                     <span>
                         <h4 className='newentryformheader'>New Entry</h4>
                     </span>
-                    <div className='newentryinputdiv'>
-                        <p className='newentryformp'>HEADER IMAGE URL</p>
-                        <input 
-                        className='newentryinput'
-                        value={image_url} 
-                        onChange={(e) => setImageUrl(e.target.value)}></input>
-                    </div>
                     <div className='newentrydatediv'>
                         <p className='newentryformp'>ENTRY DATE</p>
                         <p className='newentrydatep'>{fmt_today}</p>
                     </div>
-                    <button className='newentrybutton'>NEXT</button>
+                    <button className='newentrybutton'>START ENTRY</button>
                 </form>
             </div>
         </div>

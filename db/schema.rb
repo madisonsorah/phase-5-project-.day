@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_13_010240) do
+ActiveRecord::Schema.define(version: 2022_02_15_230533) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 2022_02_13_010240) do
     t.string "pen_name"
     t.string "email"
     t.string "password_digest"
-    t.string "avatar_url"
     t.string "bio"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -37,7 +36,6 @@ ActiveRecord::Schema.define(version: 2022_02_13_010240) do
   end
 
   create_table "journal_entries", force: :cascade do |t|
-    t.string "image_url"
     t.date "date"
     t.integer "author_id"
     t.datetime "created_at", precision: 6, null: false

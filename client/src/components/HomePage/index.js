@@ -46,13 +46,13 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                         <p className='homepageploggedin'>Publish daily journal entries and unlock rewards.</p>
                         <h3 className='homepageh3loggedin'>Ready to start a new entry?</h3>
                         <div className='homepageoptionsdivloggedin'>
-                            <Link className='homepagelinkloggedin' to='/newentry'>Write down your thoughts {">"}</Link>
+                            <Link className='homepagelinkloggedin' to='/newentry'>Write down your thoughts {'>'}</Link>
                         </div>
                         <div className='homepageoptionsdivloggedin'>
-                            <Link className='homepagelinkloggedin' to='/account'>Update your account details {">"}</Link>
+                            <Link className='homepagelinkloggedin' to='/account'>Update your account details {'>'}</Link>
                         </div>
                         <div className='homepageoptionsdivloggedin'>
-                            <Link className='homepagelinkloggedin' to='/profile'>View your profile {">"}</Link>
+                            <Link className='homepagelinkloggedin' to='/profile'>View your profile {'>'}</Link>
                         </div>
                     </div>
                 </div>

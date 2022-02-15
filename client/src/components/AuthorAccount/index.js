@@ -73,10 +73,6 @@ function AuthorAccount({currentAuthor}) {
                             <p className='accountp'>BIO</p>
                             <input className='accountinput' value={updatedAccount.bio} onChange={(e) => handleUpdate(e, 'bio')}></input>
                         </div>
-                        <div className='accountinputdiv'>
-                            <p className='accountp'>AVATAR</p>
-                            <input className='accountinput' value={updatedAccount.avatar_url} onChange={(e) => handleUpdate(e, 'avatar_url')}></input>
-                        </div>
                         <button className='accountbutton'>UPDATE</button>
                         {accountUpdatedNote ? (<p className='accountsavedp'>{accountUpdatedNote}</p>) : null}
                     </form>

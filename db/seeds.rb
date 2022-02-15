@@ -39,14 +39,12 @@ madison = Author.create!(
         email: "madisonsorah@gmail.com",
         password: "catsarecute1",
         bio: "Hi there! I am a cat lover, anime watcher and front-end developer living in Brooklyn, NY.",
-        avatar_url: "https://previews.dropbox.com/p/thumb/ABdSLhejOkXnWgIe9P-liMU8eCXMohRT_Ral3XEzn2T8dOMIvednPQd1tkxqTSUgdfvudThpz99IPpZ_fGjtEljEZP24GdIzcHmYJiQbpE9ld6v-QT5jE-XT7uwxo_hdCrdsSU4eVvRCnDmkecyNpKx2wIZwz3ouFGDYMSRiTrWc1SQLOWi0RIS-DSYlhohpT1uxsLiHADtL1AEGFupyZ72Zqiy_DMkJjOxQ1pLdEjO_hCrLCgAvI1Fvf16ggVMibXvzIBCCXp5lITA_TcUD4S92wyT3PvyAKVFXEVau3JQfcyzGGel6j7zkpkGaz17k-q7IOuHoGoKMME1NiPRFI2EOhleavyOMPYLMO9Kbhvmx1g/p.jpeg",
         theme_id: creativity.id
     })
 
 # Sample journal entries
 entryOne = JournalEntry.create!(
     {
-        image_url: "XX",
         date: "02/02/2022",
         author_id: madison.id
     }

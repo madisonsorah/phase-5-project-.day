@@ -36,7 +36,7 @@ class JournalEntriesController < ApplicationController
     end
 
     def journalentry_params
-        params.permit(:image_url, :date, :author_id)
+        params.permit(:date, :author_id)
     end
 
     def render_not_found_response

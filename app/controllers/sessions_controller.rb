@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
           session[:author_id] = author.id
           render json: author, status: :created
         else
-          render json: { error: "Invalid pen name or password" }, status: :unauthorized
+          render json: {error: 'Invalid pen name or password'}, status: :unauthorized
         end
     end
       

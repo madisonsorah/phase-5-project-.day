@@ -53,7 +53,7 @@ class AnswersController < ApplicationController
     end
 
     def render_not_found_response
-        render json: {error: "Answer not found"}, status: :not_found
+        render json: {error: 'Answer not found'}, status: :not_found
     end
 
     def render_unprocessable_entity_response(exception)

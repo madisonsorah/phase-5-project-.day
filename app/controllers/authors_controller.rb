@@ -12,14 +12,17 @@ class AuthorsController < ApplicationController
         if author
             render json: author
         else
-            render json: {error: "Not authorized"}, status: :unauthorized
+            render json: {error: 'Not authorized'}, status: :unauthorized
         end
     end
 
     def create
         author = Author.create!(author_params)
         if author.valid?
-          render json: author, status: :created
+            if author&.authenticate(author_params[:password])
+                session[:author_id] = author.id
+            end
+            render json: author, status: :created
         else
           render json: {errors: user.errors.full_messages}, status: :unprocessable_entity
         end
@@ -43,11 +46,11 @@ class AuthorsController < ApplicationController
     end
 
     def author_params
-        params.permit(:first_name, :last_name, :pen_name, :email, :password, :password_confirmation, :bio, :avatar_url, :theme_id)
+        params.permit(:first_name, :last_name, :pen_name, :email, :password, :password_confirmation, :bio, :theme_id)
     end
 
     def render_not_found_response
-        render json: {error: "Author not found"}, status: :not_found
+        render json: {error: 'Author not found'}, status: :not_found
     end
 
     def render_unprocessable_entity_response(exception)
