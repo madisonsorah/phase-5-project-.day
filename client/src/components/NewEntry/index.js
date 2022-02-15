@@ -4,11 +4,11 @@ import './index.css';
 
 function NewEntry({currentAuthor}) {
     const [image_url, setImageUrl] = useState('');
-    let today = new Date();
+    const today = new Date();
     let dd = String(today.getDate()).padStart(2, '0');
     let mm = String(today.getMonth() + 1).padStart(2, '0'); 
     let yyyy = today.getFullYear();
-    today = mm + '/' + dd + '/' + yyyy;
+    const fmt_today = mm + '/' + dd + '/' + yyyy;
     let navigate = useNavigate();
 
     function handlePublishEntry(e) {
@@ -20,7 +20,7 @@ function NewEntry({currentAuthor}) {
         },
         body: JSON.stringify({ 
             image_url,
-            date: today,
+            date: today.toString(),
             author_id: currentAuthor.id 
             }),
         })
@@ -47,7 +47,7 @@ function NewEntry({currentAuthor}) {
                     </div>
                     <div className='newentrydatediv'>
                         <p className='newentryformp'>ENTRY DATE</p>
-                        <p className='newentrydatep'>{today}</p>
+                        <p className='newentrydatep'>{fmt_today}</p>
                     </div>
                     <button className='newentrybutton'>NEXT</button>
                 </form>

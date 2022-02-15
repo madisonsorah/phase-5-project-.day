@@ -16,12 +16,6 @@ function App() {
   const [currentAuthor, setCurrentAuthor] = useState(null);
   const [logInForm, setLogInForm] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
-  const [themes, setThemes] = useState([]);
-
-  useEffect(() =>
-    fetch('/themes')
-    .then((r) => r.json())
-    .then((themeData) => setThemes(themeData)), [])
 
   useEffect(() => {
     fetch('/currentauthor')
@@ -38,7 +32,7 @@ function App() {
       <NavBar currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor} logInForm={logInForm} setLogInForm={setLogInForm} errorMessage={errorMessage} setErrorMessage={setErrorMessage}/>
         <Routes>
           <Route path='/' element={<HomePage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor} logInForm={logInForm} setLogInForm={setLogInForm}/>}/>
-          <Route path='/signup' element={<SignUpPage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor} themes={themes} setThemes={setThemes}/>}/>
+          <Route path='/signup' element={<SignUpPage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>
           <Route path='/profile' element={currentAuthor ? <AuthorProfile currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/> : <HomePage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor} logInForm={logInForm} setLogInForm={setLogInForm}/>}/>
           <Route path='/account' element={currentAuthor ? <AuthorAccount currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/> : <HomePage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor} logInForm={logInForm} setLogInForm={setLogInForm}/>}/>
           <Route path='/entries' element={currentAuthor ? <BrowseEntries currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/> : <HomePage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor} logInForm={logInForm} setLogInForm={setLogInForm}/>}/>

@@ -13,10 +13,18 @@ function AuthorProfile({currentAuthor}) {
         .then((entryData) => setEntries(entryData))
     }, [])
 
+    function formatDate(date) {
+        const today = new Date(date);
+        let dd = String(today.getDate()).padStart(2, '0');
+        let mm = String(today.getMonth() + 1).padStart(2, '0'); 
+        let yyyy = today.getFullYear();
+        return mm + '/' + dd + '/' + yyyy;
+    }
+
     const authorEntries = entries.map((entry) => {
         return (<div className='profileentry'>
             <img className='entrygraphic' src={dotdayjournalgraphic}></img>
-            <p className='entrydate'>{entry.date}</p>
+            <p className='entrydate'>{formatDate(entry.date)}</p>
             <Link className='entrylink' to={`/entries/${entry.id}`}>VIEW ENTRY</Link>
         </div>)
     })

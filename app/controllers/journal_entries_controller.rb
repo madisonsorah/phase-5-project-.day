@@ -3,7 +3,7 @@ class JournalEntriesController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
     def index
-        journalentries = JournalEntry.all
+        journalentries = JournalEntry.where(author_id: session[:author_id])
         render json: journalentries
     end
 
