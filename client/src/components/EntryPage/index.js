@@ -96,7 +96,7 @@ function EntryPage() {
                 <div className='entrypageleft'>
                     <div className='entrypagetitle'>Details</div>
                     <img className='entrypagecoffeeimage' alt='entry head' src={dotdaycoffeegraphic}></img>
-                    <p className='entrypagedate'>Published: {entry.date}</p>
+                    <p className='entrypagedate'>Published: {formatDate(entry.date.replace('-', '/'))}</p>
                     <Link className='entrypagelink' to={`/editentry/${id}`}>EDIT ENTRY</Link>
                     <div>
                         <button className='entrypagebutton' onClick={handleSetDelete}>DELETE ENTRY</button>

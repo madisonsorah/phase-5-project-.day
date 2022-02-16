@@ -6,28 +6,35 @@ import './index.css';
 
 function AuthorProfile({currentAuthor}) {
     const [entries, setEntries] = useState([])
+    const [postedToday, setPostedToday] = useState(false)
     
     useEffect(() => {
         fetch('/journal_entries')
         .then((r) => r.json())
-        .then((entryData) => setEntries(entryData))
+        .then((entryData) => {
+            const today = formatDate(new Date());
+
+            const authorEntries = entryData.map((entry) => {
+                if (formatDate(entry.date.replace('-', '/')) === today) {
+                    setPostedToday(true)
+                }
+                return (<div className='profileentry'>
+                    <img className='entrygraphic' src={dotdayjournalgraphic}></img>
+                    <p className='entrydate'>{formatDate(entry.date.replace('-', '/'))}</p>
+                    <Link className='entrylink' to={`/entries/${entry.id}`}>VIEW ENTRY</Link>
+                </div>)
+            })
+            setEntries(authorEntries);
+        })
     }, [])
 
     function formatDate(date) {
-        const today = new Date(date);
+        const today = new Date(date);   
         let dd = String(today.getDate()).padStart(2, '0');
         let mm = String(today.getMonth() + 1).padStart(2, '0'); 
         let yyyy = today.getFullYear();
         return mm + '/' + dd + '/' + yyyy;
     }
-
-    const authorEntries = entries.map((entry) => {
-        return (<div className='profileentry'>
-            <img className='entrygraphic' src={dotdayjournalgraphic}></img>
-            <p className='entrydate'>{formatDate(entry.date)}</p>
-            <Link className='entrylink' to={`/entries/${entry.id}`}>VIEW ENTRY</Link>
-        </div>)
-    })
 
     return (
         <div className='profilemaindiv'>
@@ -47,10 +54,10 @@ function AuthorProfile({currentAuthor}) {
                 <div className='profileentrydiv'>
                     <div className='profileentryheaderdiv'>
                         <h3 className='profileentryheader'>Journal Entries</h3>
-                        <Link className='profilenewentrylink' to={'/newentry'}>NEW ENTRY</Link>
+                        {postedToday ? null : <Link className='profilenewentrylink' to={'/newentry'}>NEW ENTRY</Link>}
                     </div>
                     <div className='profileentrycontainer'>
-                        {authorEntries}
+                        {entries}
                     </div>
                 </div>
             </div>

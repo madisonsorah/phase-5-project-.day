@@ -36,6 +36,7 @@ function NavBar({currentAuthor, setCurrentAuthor, setLogInForm, setErrorMessage}
                     <p className='navbardivider'>|</p>
                     <Link className='navbarlink' to='/profile'>Profile</Link>
                     <Link className='navbarlink' to='/entries'>Entries</Link>
+                    <Link className='navbarlink' to='/themes'>Themes</Link>
                     <img className='navbarlogologgedin' alt='.Day logo' src={dotdaylogo}></img>
                     <span className='navbardropdownspan'>
                         <button className='navbarlink'>Hello, {currentAuthor.first_name}.</button>
@@ -56,9 +57,12 @@ function NavBar({currentAuthor, setCurrentAuthor, setLogInForm, setErrorMessage}
                 <ul className='navbarul'>
                     <button className='navbarlink' onClick={handleRevertHome}>Home</button>
                     <p className='navbardivider'>|</p>
-                    <button className='navbarlink' onClick={handleLogInForm}>Log In</button>
-                    <Link className='navbarlink' to='/signup'>Sign Up</Link>
+                    <Link className='navbarlink' to='/about'>About</Link>
+                    <Link className='navbarlink' to='/themes'>Themes</Link>
                     <img className='navbarlogo' onClick={handleRevertHome} alt='.Day logo' src={dotdaylogo}></img>
+                    <button className='navbarlink' onClick={handleLogInForm}>Log In</button>
+                    <p className='navbardivider'>|</p>
+                    <Link className='navbarlink' to='/signup'>Sign Up</Link>
                 </ul>
             )}
         </div>

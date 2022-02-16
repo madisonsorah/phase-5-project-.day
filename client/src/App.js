@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
+import AboutPage from './components/AboutPage';
 import SignUpPage from './components/SignUpPage';
 import BrowseEntries from './components/BrowseEntries';
 import EntryPage from './components/EntryPage';
@@ -40,7 +41,8 @@ function App() {
           <Route path='/entries/:id' element={currentAuthor ? <EntryPage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/> : <HomePage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor} logInForm={logInForm} setLogInForm={setLogInForm}/>}/>
           <Route path='/editentry/:id' element={currentAuthor ? <EditEntry currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/> : <HomePage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor} logInForm={logInForm} setLogInForm={setLogInForm}/>}/>
           <Route path='/newentry' element={currentAuthor ? <NewEntry currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/> : <HomePage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor} logInForm={logInForm} setLogInForm={setLogInForm}/>}/>
-          <Route path='/theme/:id' element={currentAuthor ? <AuthorThemes currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/> : <HomePage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor} logInForm={logInForm} setLogInForm={setLogInForm}/>}/>
+          <Route path='/themes' element={<AuthorThemes currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>
+          <Route path='/about' element={<AboutPage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>
         </Routes>
       </BrowserRouter>
     </div>
