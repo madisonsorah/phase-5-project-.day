@@ -5,7 +5,7 @@ import './index.css';
 
 function EntryPage() {
     const {id} = useParams();
-    const [entry, setEntry] = useState([]);
+    const [entry, setEntry] = useState(null);
     const [answers, setAnswers] = useState([]);
     const [deletePopUp, setDeletePopUp] = useState(false);
     const navigate = useNavigate();
@@ -42,6 +42,12 @@ function EntryPage() {
 
       console.log(deletePopUp);
 
+    if (entry === null) {
+        return (
+            'Loading...'
+        )
+    }
+
     if (deletePopUp === true) {
         return (
             <div>
@@ -54,7 +60,7 @@ function EntryPage() {
                     <div className='entrypageleft'>
                         <div className='entrypagetitle'>Details</div>
                         <img className='entrypagecoffeeimage' alt='entry head' src={dotdaycoffeegraphic}></img>
-                        <p className='entrypagedate'>Published: {formatDate(entry.date)}</p>
+                        <p className='entrypagedate'>Published: {formatDate(entry.date.replace('-', '/'))}</p>
                         <Link className='entrypagelink' to={`/editentry/${id}`}>EDIT ENTRY</Link>
                         <div>
                             <button className='entrypagebutton'>DELETE ENTRY</button>
