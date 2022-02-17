@@ -123,8 +123,8 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                                     <p className='homepagep'>Select from three pre-built journal themes or build your own.</p>
                                 </div>
                                 <div className='homepageaboutleftsection2'>
-                                    <h4 className='homepageh4'>Track your habits on your grid.</h4>
-                                    <p className='homepagep'>View your tracked habits over the course of the month to identify trends.</p>
+                                    <h4 className='homepageh4'>Track published entries on your calendar grid.</h4>
+                                    <p className='homepagep'>View entries written over the course of the month to identify trends.</p>
                                  </div>
                             </div>
                             <div className='homepageaboutright'>
@@ -167,8 +167,8 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                                         <p className='homepagep'>Select from three pre-built journal themes or build your own.</p>
                                     </div>
                                     <div className='homepageaboutleftsection2'>
-                                        <h4 className='homepageh4'>Track your habits on your grid.</h4>
-                                        <p className='homepagep'>View your tracked habits over the course of the month to identify trends.</p>
+                                        <h4 className='homepageh4'>Track published entries on your calendar grid.</h4>
+                                        <p className='homepagep'>View entries written over the course of the month to identify trends.</p>
                                     </div>
                                 </div>
                             <div className='homepageaboutright'>

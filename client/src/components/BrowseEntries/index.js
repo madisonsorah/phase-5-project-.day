@@ -45,7 +45,7 @@ function BrowseEntries() {
             <div className='browseentriesdiv'>
                 <div className='browseentriesdetailsdiv'>
                     <h3 className='browseentriesheader'>Journal Entries</h3>
-                    <p className='browseentriesp'>View all published entries below.</p>
+                    <p className='browseentriesp'>Fill up your dates with dots and view all published entries below.</p>
                     <Link className='browseentriesnewlink' to={'/newentry'}>NEW ENTRY</Link>
                 </div>
                 <div className='browseentriescontainer'>
