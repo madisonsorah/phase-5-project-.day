@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Link, useNavigate, useParams} from 'react-router-dom';
 import dotdaycoffeegraphic from '../../images/dotdaycoffeegraphic.png';
+import dotdaydot from '../../images/dotdaydot.png';
 import './index.css';
 
 function EntryPage() {
@@ -130,10 +131,8 @@ function EntryPage() {
                                 checks.map((check) => {
                                     return (
                                         <div className='entrypageinnercolumn' key={check.id}>
-                                            <input
-                                            value={check.checked}
-                                            type="checkbox"/>
-                                            <span>{check.check_list_item.item}</span>
+                                            {check.checked === true ? <img className='entrypagedotdaydot' src={dotdaydot}></img> : null}
+                                            <span className='entrypagelistanswer'>{check.check_list_item.item}</span>
                                         </div>
                                     )
                             })}

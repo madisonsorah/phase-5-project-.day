@@ -184,3 +184,14 @@
     cursor: pointer;
 }
 
+.entrypagedotdaydot {
+    height: 7.5px;
+    width: 7.5px;
+    padding-top: 10px;
+}
+
+.entrypagelistanswer {
+    font-size: 12px;
+    padding-left: 10px;
+}
+
