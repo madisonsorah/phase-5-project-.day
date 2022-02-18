@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Link, useNavigate, useParams} from 'react-router-dom';
 import dotdaycoffeegraphic from '../../images/dotdaycoffeegraphic.png';
 import dotdaydot from '../../images/dotdaydot.png';
+import dotdayemptydot from '../../images/dotdayemptydot.png';
 import './index.css';
 
 function EntryPage() {
@@ -86,7 +87,7 @@ function EntryPage() {
                                 const check = checks.find((check) => check.check_list_item_id === item.id)
                                 return (
                                     <div className='entrypageinnercolumn' key={item.id}>
-                                        {check && check.checked ? <img className='entrypagedotdaydot' src={dotdaydot}></img> : null}
+                                        {check && check.checked ? <img className='entrypagedotdaydot' src={dotdaydot}></img> : <img className='entrypagedotdaydot' src={dotdayemptydot}></img>}
                                         <span className='entrypagelistanswer'>{item.item}</span>
                                     </div>
                                     )
@@ -123,7 +124,7 @@ function EntryPage() {
                         {entry.check_list_items.map((item) => {
                             const check = checks.find((check) => check.check_list_item_id === item.id)
                             return (<div className='entrypageinnercolumn' key={item.id}>
-                                        {check && check.checked ? <img className='entrypagedotdaydot' src={dotdaydot}></img> : null}
+                                        {check && check.checked ? <img className='entrypagedotdaydot' src={dotdaydot}></img> : <img className='entrypagedotdaydot' src={dotdayemptydot}></img>}
                                         <span className='entrypagelistanswer'>{item.item}</span>
                                     </div>
                                     )
