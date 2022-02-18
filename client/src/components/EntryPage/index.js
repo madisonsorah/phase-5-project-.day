@@ -85,18 +85,16 @@ function EntryPage() {
                     </div>
                     <div className='entrypageright'>
                         <div className='entrypagetitle'>Check List</div>
-                        <div className='entrypagechecklistcolumn'>
-                            <p className='entrypageanswer'>Doodled or sketched</p>
-                        </div>
-                        <div className='entrypagechecklistcolumn'>
-                            <p className='entrypageanswer'>Wrote down an idea</p>
-                        </div>
-                        <div className='entrypagechecklistcolumn'>
-                            <p className='entrypageanswer'>Worked on a passion project</p>
-                        </div>
-                        <div className='entrypagechecklistcolumn'>
-                            <p className='entrypageanswer'>Set aside time to brainstorm</p>
-                        </div>
+                            {
+                                    entry.check_list_items.map((item) => {
+                                        const check = checks.find((check) => check.check_list_item_id === item.id)
+                                        return (
+                                            <div className='entrypageinnercolumn' key={item.id}>
+                                                {check && check.checked ? <img className='entrypagedotdaydot' src={dotdaydot}></img> : null}
+                                                <span className='entrypagelistanswer'>{item.item}</span>
+                                            </div>
+                                        )
+                                })}
                     </div>
                 </div>
             </div>
@@ -132,7 +130,7 @@ function EntryPage() {
                                     const check = checks.find((check) => check.check_list_item_id === item.id)
                                     return (
                                         <div className='entrypageinnercolumn' key={item.id}>
-                                            {check ? <img className='entrypagedotdaydot' src={dotdaydot}></img> : null}
+                                            {check && check.checked ? <img className='entrypagedotdaydot' src={dotdaydot}></img> : null}
                                             <span className='entrypagelistanswer'>{item.item}</span>
                                         </div>
                                     )
