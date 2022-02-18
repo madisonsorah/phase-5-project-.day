@@ -40,9 +40,6 @@ function AuthorAccount({currentAuthor}) {
                     <div className='accountlinkdiv'>
                         <Link className='accountlink' to='/newentry'>New Entry</Link>
                     </div>
-                    <div className='accountlinkdiv'>
-                        <Link className='accountlink' to='/theme'>Theme</Link>
-                    </div>
                 </div>
                 <div className='accountformcontainer'>
                     <form onSubmit={handleUpdateAccount}>

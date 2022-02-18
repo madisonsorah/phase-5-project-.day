@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   patch '/authors/:id/theme', to: 'authors#addtheme'
 
   # Theme & questions that belong to an author
-  get '/authors/:author_id/themes', to: 'themes#authortheme'
+  get '/authors/:author_id/theme', to: 'authors#authortheme'
   
   # Author CRUD actions
   resources :authors, only: [:show, :create, :update, :destroy]

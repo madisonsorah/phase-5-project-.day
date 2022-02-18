@@ -14,7 +14,7 @@ class ThemesController < ApplicationController
 
     def authortheme
         theme = Theme.where(author_id: params[:author_id])
-        render json: theme, include: [:questions]
+        render json: theme, include: [:questions, :check_list_items]
     end
 
     def update

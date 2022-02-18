@@ -5,7 +5,7 @@ import dotdaypositivity from '../../images/dotdaypositivity.png';
 import dotdayproductivity from '../../images/dotdayproductivity.png';
 import dotdaycustom from '../../images/dotdaycustom.png';
 
-function AuthorThemes() {
+function Themes() {
     return (
       <div>
         <div className='themediv'>
@@ -44,4 +44,4 @@ function AuthorThemes() {
     )
 }
 
-export default AuthorThemes;
+export default Themes;
