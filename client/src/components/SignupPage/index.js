@@ -51,7 +51,7 @@ function SignUpPage({setCurrentAuthor}) {
           r.json().then((author) => setCurrentAuthor(author))
           .then(navigate('/account'))
         } else {
-          setErrorMessage('Cannot sign up with these credentials.')
+          setErrorMessage('The passwords you entered do not match. Try again.')
         }
       })
   };
