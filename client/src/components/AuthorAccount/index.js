@@ -3,13 +3,13 @@ import {Link, useNavigate} from 'react-router-dom';
 import './index.css';
 
 function AuthorAccount({currentAuthor}) {
-    const [updatedAccount, setUpdatedAccount] = useState(currentAuthor)
+    const [updatedAccount, setUpdatedAccount] = useState(currentAuthor);
     const [accountUpdatedNote, setAccountUpdatedNote] = useState('');
     const navigate = useNavigate();
 
     function handleUpdate(e, field) {
         setUpdatedAccount({...updatedAccount, [field]: e.target.value})
-    }
+    };
 
     function handleUpdateAccount(e) {
         e.preventDefault();
@@ -24,7 +24,7 @@ function AuthorAccount({currentAuthor}) {
           navigate('/account', {replace: true})
         })
         setAccountUpdatedNote('Account updates saved.')
-    }
+    };
 
     return (
         <div>

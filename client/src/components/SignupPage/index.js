@@ -17,15 +17,17 @@ function SignUpPage({setCurrentAuthor}) {
     const navigate = useNavigate();
 
     useEffect(() =>
-    fetch('/themes')
-    .then((r) => r.json())
-    .then((themeData) => setThemes(themeData)), [])
+      fetch('/themes')
+      .then((r) => r.json())
+      .then((themeData) => setThemes(themeData)), 
+    []);
 
     const displayThemes = themes.map((theme) => (
-      <option className='signupthemeinput' style={{display: index === 2 ? 'block' : 'none' }} value={theme.id}>{theme.category}</option>
+      <option 
+      className='signupthemeinput' 
+      style={{display: index === 2 ? 'block' : 'none' }} 
+      value={theme.id}>{theme.category}</option>
     ));
-
-    console.log(themes)
   
     function handleSubmit(e) {
       e.preventDefault();
@@ -52,7 +54,7 @@ function SignUpPage({setCurrentAuthor}) {
           setErrorMessage('Cannot sign up with these credentials.')
         }
       })
-  }
+  };
 
   const slideRight = () => {
     const nextIndex = index + 1
@@ -147,7 +149,7 @@ function SignUpPage({setCurrentAuthor}) {
         </form>
         <div className='arrowcontainer'>
           <button className='signuparrow' onClick={slideLeft}>{'<'}</button>
-          <button className='signuparrow' onClick={slideRight}>{'>'}</button>
+          <button className='signuparrow' style={{display: index <= 1 ? 'block' : 'none'}} onClick={slideRight}>{'>'}</button>
         </div>
       </div>
     </div>

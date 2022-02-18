@@ -16,18 +16,18 @@ function NavBar({currentAuthor, setCurrentAuthor, setLogInForm, setErrorMessage}
         });
         navigate('/', {replace: true});
         setLogInForm(false);
-    }
+    };
 
     function handleLogInForm() {
         navigate('/', {replace: true});
         setLogInForm(true);
         setErrorMessage('');
-    }
+    };
 
     function handleRevertHome() {
         navigate('/', {replace: true});
         setLogInForm(false);
-    }
+    };
 
     return (
         <div className='navbarcontainer'>

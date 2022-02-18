@@ -24,7 +24,7 @@ function EditCheckList() {
         fetch(`/journal_entries/${id}`)
         .then((r) => r.json())
         .then((entryData) => setEntry(entryData))
-    }, [id])
+    }, [id]);
  
      function handleUpdatedChecks(e) {
          e.preventDefault();
@@ -36,43 +36,41 @@ function EditCheckList() {
            body: JSON.stringify({checks}),
          })
          .then(() => navigate(`/entries/${id}`))
-     }
- 
-     console.log(checks);
+     };
      
      if (entry === null) {
          return (
              'Loading...'
          )
-     }
+     };
 
     return (
         <div className='entrydraftcontainer'>
-        <div className='entrydraftformcontainer'>
-            <form className='entrydraftform' onSubmit={handleUpdatedChecks}>
-                <span>
-                    <h4 className='entrydraftformheader'>Entry Check List</h4>
-                </span>
-                <div>
-                {entry.check_list_items.map((check_list_item) => {
-                    const checked = existing_checks.find((check) => check.check_list_item_id === check_list_item.id)
-                    return (<div key={check_list_item.id}>
+            <div className='entrydraftformcontainer'>
+                <form className='entrydraftform' onSubmit={handleUpdatedChecks}>
+                    <span>
+                        <h4 className='entrydraftformheader'>Entry Check List</h4>
+                    </span>
+                    <div>
+                        {entry.check_list_items.map((check_list_item) => {
+                        const checked = existing_checks.find((check) => check.check_list_item_id === check_list_item.id)
+                        return (<div key={check_list_item.id}>
                         <input
-                        checked={checked && checks[checked.id]}
-                        onChange={(e) => {
+                            checked={checked && checks[checked.id]}
+                            onChange={(e) => {
                             const value = e.target.checked;
                             setChecks((checks) => ({...checks, [checked.id]: value}))
                         }}
                         type="checkbox"/>
                         <span>{check_list_item.item}</span>
+                            </div>
+                        )
+                    })}
                     </div>
-                    )
-                })}
-                </div>
-                <button className='entrydraftbutton'>PUBLISH ENTRY</button>
-            </form>
+                    <button className='entrydraftbutton'>PUBLISH ENTRY</button>
+                </form>
+            </div>
         </div>
-    </div>
     )
 }
 

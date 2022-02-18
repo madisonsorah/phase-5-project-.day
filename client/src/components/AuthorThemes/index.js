@@ -1,9 +1,9 @@
 import React from 'react';
 import './index.css';
-import dotdaycreativity from '../../images/dotdaycreativity.png'
-import dotdaypositivity from '../../images/dotdaypositivity.png'
-import dotdayproductivity from '../../images/dotdayproductivity.png'
-import dotdaycustom from '../../images/dotdaycustom.png'
+import dotdaycreativity from '../../images/dotdaycreativity.png';
+import dotdaypositivity from '../../images/dotdaypositivity.png';
+import dotdayproductivity from '../../images/dotdayproductivity.png';
+import dotdaycustom from '../../images/dotdaycustom.png';
 
 function AuthorThemes() {
     return (

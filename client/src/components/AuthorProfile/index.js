@@ -5,8 +5,8 @@ import dotdayavatargraphic from '../../images/dotdayavatargraphic.png';
 import './index.css';
 
 function AuthorProfile({currentAuthor}) {
-    const [entries, setEntries] = useState([])
-    const [postedToday, setPostedToday] = useState(false)
+    const [entries, setEntries] = useState([]);
+    const [postedToday, setPostedToday] = useState(false);
     
     useEffect(() => {
         fetch('/journal_entries')
@@ -26,7 +26,7 @@ function AuthorProfile({currentAuthor}) {
             })
             setEntries(authorEntries);
         })
-    }, [])
+    }, []);
 
     function formatDate(date) {
         const today = new Date(date);   
@@ -34,7 +34,7 @@ function AuthorProfile({currentAuthor}) {
         let mm = String(today.getMonth() + 1).padStart(2, '0'); 
         let yyyy = today.getFullYear();
         return mm + '/' + dd + '/' + yyyy;
-    }
+    };
 
     return (
         <div className='profilemaindiv'>

@@ -6,14 +6,14 @@ import dotdaydot from '../../images/dotdaydot.png';
 import './index.css';
 
 function BrowseEntries() {
-    const [entries, setEntries] = useState([])
+    const [entries, setEntries] = useState([]);
     const navigate = useNavigate();
     
     useEffect(() => {
         fetch('/journal_entries')
         .then((r) => r.json())
         .then((entryData) => setEntries(entryData))
-    }, [])
+    }, []);
 
     entries.map((entry) => {
         return (<div className='browseentriesentry'>
@@ -21,8 +21,7 @@ function BrowseEntries() {
             <p className='browseentriesdate'>{entry.date}</p>
             <Link className='browseentriesviewlink' to={`/entries/${entry.id}`}>VIEW ENTRY</Link>
         </div>)
-    })
-
+    });
 
     function formatDate(date) {
         const today = new Date(date);
@@ -30,15 +29,15 @@ function BrowseEntries() {
         let mm = String(today.getMonth() + 1).padStart(2, '0'); 
         let yyyy = today.getFullYear();
         return yyyy + '-' + mm + '-' + dd;
-    }
+    };
 
     function journalEntryDot(date) {
         const formattedDate = formatDate(date);
         const entry = entries.find((entry) => entry.date === formattedDate)
         if (entry) {
             navigate(`/entries/${entry.id}`);
-    }
-    }
+        }
+    };
 
     return (
         <div>

@@ -29,12 +29,12 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
           setErrorMessage('Incorrect pen name or password.')
         }
       });
-    }
+    };
 
     function handleLogInForm() {
         setLogInForm(true);
         setErrorMessage('');
-    }
+    };
 
     if (currentAuthor) {
         return (
@@ -190,6 +190,5 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
         }
     }
 }
-
 
 export default HomePage;

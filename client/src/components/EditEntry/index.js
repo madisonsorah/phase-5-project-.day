@@ -14,8 +14,7 @@ function EditEntry() {
        .then((entryData) => {
             setEntry(entryData)
        })
-
-    }, [id])
+    }, [id]);
 
     function handleUpdatedAnswers(e) {
         e.preventDefault();
@@ -27,45 +26,42 @@ function EditEntry() {
           body: JSON.stringify({updatedAnswers}),
         })
         .then(() => navigate(`/editchecklist/${id}`))
-    }
-
-    console.log(updatedAnswers)
+    };
     
     if (entry === null) {
         return (
             'Loading...'
         )
-    }
+    };
 
-        return (
-            <div className='entrydraftcontainer'>
-                <div className='entrydraftformcontainer'>
-                    <form className='entrydraftform' onSubmit={handleUpdatedAnswers}>
-                        <span>
-                            <h4 className='entrydraftformheader'>Entry Prompts</h4>
-                        </span>
-                        <div>
-                        {
-                                entry.questions.map((question) => {
-                                    const answer = entry.answers.find((answer) => answer.question_id === question.id);
-                                    return (<div className='entrydraftinputdiv' key={question.id}>
-                                        <p className='entrydraftformp'>{question.question}</p>
-                                        <textarea 
+    return (
+        <div className='entrydraftcontainer'>
+            <div className='entrydraftformcontainer'>
+                <form className='entrydraftform' onSubmit={handleUpdatedAnswers}>
+                    <span>
+                        <h4 className='entrydraftformheader'>Entry Prompts</h4>
+                    </span>
+                    <div>
+                    {entry.questions.map((question) => {
+                        const answer = entry.answers.find((answer) => answer.question_id === question.id);
+                        return (<div className='entrydraftinputdiv' key={question.id}>
+                                    <p className='entrydraftformp'>{question.question}</p>
+                                    <textarea 
                                         className='entrydraftinput' 
                                         placeholder={answer.answer}
                                         onChange={(e) => setUpdatedAnswers((updatedAnswers) => {
                                             updatedAnswers[answer.id] = e.target.value;
                                             return updatedAnswers;
-                                        })}></textarea>
-                                    </div>)
-                                })
-                            }
-                        </div>
-                        <button className='entrydraftbutton'>NEXT</button>
-                    </form>
-                </div>
+                                    })}></textarea>
+                                </div>)
+                            })
+                    }
+                    </div>
+                    <button className='entrydraftbutton'>NEXT</button>
+                </form>
             </div>
-        )
+        </div>
+    )
 }
 
 export default EditEntry;
