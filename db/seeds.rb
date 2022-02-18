@@ -261,6 +261,34 @@ creativityItemSix = CheckListItem.create!(
     }
 )
 
+creativityItemSeven = CheckListItem.create!(
+    {
+        item: "Surrounded self with creative people.",
+        theme_id: creativity.id
+    }
+)
+
+creativityItemEight = CheckListItem.create!(
+    {
+        item: "Learned something new.",
+        theme_id: creativity.id
+    }
+)
+
+creativityItemNine = CheckListItem.create!(
+    {
+        item: "Read a fiction book.",
+        theme_id: creativity.id
+    }
+)
+
+creativityItemTen = CheckListItem.create!(
+    {
+        item: "Changed my routine.",
+        theme_id: creativity.id
+    }
+)
+
 positivityItemOne = CheckListItem.create!(
     {
         item: "Reflected on things that make me happy.",
@@ -303,6 +331,34 @@ positivityItemSix = CheckListItem.create!(
     }
 )
 
+positivityItemSeven = CheckListItem.create!(
+    {
+        item: "Made exciting plans.",
+        theme_id: positivity.id
+    }
+)
+
+positivityItemEight = CheckListItem.create!(
+    {
+        item: "Learned something new.",
+        theme_id: positivity.id
+    }
+)
+
+positivityItemNine = CheckListItem.create!(
+    {
+        item: "Remembered a happy memory.",
+        theme_id: positivity.id
+    }
+)
+
+positivityItemTen = CheckListItem.create!(
+    {
+        item: "Spent time with positive people.",
+        theme_id: positivity.id
+    }
+)
+
 productivityItemOne = CheckListItem.create!(
     {
         item: "Got 8 hours or more of sleep.",
@@ -340,8 +396,106 @@ productivityItemFive = CheckListItem.create!(
 
 productivityItemSix = CheckListItem.create!(
     {
-        item: "Organized your home or work space.",
+        item: "Organized home or work space.",
         theme_id: productivity.id
+    }
+)
+
+productivityItemSeven = CheckListItem.create!(
+    {
+        item: "Avoided procrastination.",
+        theme_id: productivity.id
+    }
+)
+
+productivityItemEight = CheckListItem.create!(
+    {
+        item: "Silenced computer and phone notifications.",
+        theme_id: productivity.id
+    }
+)
+
+productivityItemNine = CheckListItem.create!(
+    {
+        item: "Took a break outdoors to clear head.",
+        theme_id: productivity.id
+    }
+)
+
+productivityItemTen = CheckListItem.create!(
+    {
+        item: "Made bed.",
+        theme_id: productivity.id
+    }
+)
+
+generalItemOne = CheckListItem.create!(
+    {
+        item: "Woke up at at a decent time.",
+        theme_id: general.id
+    }
+)
+
+generalItemTwo = CheckListItem.create!(
+    {
+        item: "Ate three solid meals.",
+        theme_id: general.id
+    }
+)
+
+generalItemThree = CheckListItem.create!(
+    {
+        item: "Spent at least 30 minutes exercising.",
+        theme_id: general.id
+    }
+)
+
+generalItemFour = CheckListItem.create!(
+    {
+        item: "Connected with friends or family.",
+        theme_id: general.id
+    }
+)
+
+generalItemFive = CheckListItem.create!(
+    {
+        item: "Completed work for the day.",
+        theme_id: general.id
+    }
+)
+
+generalItemSix = CheckListItem.create!(
+    {
+        item: "Relaxed in the evening.",
+        theme_id: general.id
+    }
+)
+
+generalItemSeven = CheckListItem.create!(
+    {
+        item: "Listened to music.",
+        theme_id: general.id
+    }
+)
+
+generalItemEight = CheckListItem.create!(
+    {
+        item: "Set daily goals.",
+        theme_id: general.id
+    }
+)
+
+generalItemNine = CheckListItem.create!(
+    {
+        item: "Washed face/brushed teeth.",
+        theme_id: general.id
+    }
+)
+
+generalItemTen = CheckListItem.create!(
+    {
+        item: "Meditated.",
+        theme_id: general.id
     }
 )
 
@@ -396,6 +550,38 @@ Check.create!(
 
 Check.create!(
     {
+        checked: false,
+        check_list_item_id: creativityItemSeven.id,
+        journal_entry_id: entryOne.id
+    }
+)
+
+Check.create!(
+    {
+        checked: false,
+        check_list_item_id: creativityItemEight.id,
+        journal_entry_id: entryOne.id
+    }
+)
+
+Check.create!(
+    {
+        checked: true,
+        check_list_item_id: creativityItemNine.id,
+        journal_entry_id: entryOne.id
+    }
+)
+
+Check.create!(
+    {
+        checked: true,
+        check_list_item_id: creativityItemTen.id,
+        journal_entry_id: entryOne.id
+    }
+)
+
+Check.create!(
+    {
         checked: true,
         check_list_item_id: creativityItemOne.id,
         journal_entry_id: entryTwo.id
@@ -444,6 +630,38 @@ Check.create!(
 
 Check.create!(
     {
+        checked: false,
+        check_list_item_id: creativityItemSeven.id,
+        journal_entry_id: entryTwo.id
+    }
+)
+
+Check.create!(
+    {
+        checked: false,
+        check_list_item_id: creativityItemEight.id,
+        journal_entry_id: entryTwo.id
+    }
+)
+
+Check.create!(
+    {
+        checked: true,
+        check_list_item_id: creativityItemNine.id,
+        journal_entry_id: entryTwo.id
+    }
+)
+
+Check.create!(
+    {
+        checked: true,
+        check_list_item_id: creativityItemTen.id,
+        journal_entry_id: entryTwo.id
+    }
+)
+
+Check.create!(
+    {
         checked: true,
         check_list_item_id: creativityItemOne.id,
         journal_entry_id: entryThree.id
@@ -486,6 +704,38 @@ Check.create!(
     {
         checked: false,
         check_list_item_id: creativityItemSix.id,
+        journal_entry_id: entryThree.id
+    }
+)
+
+Check.create!(
+    {
+        checked: false,
+        check_list_item_id: creativityItemSeven.id,
+        journal_entry_id: entryThree.id
+    }
+)
+
+Check.create!(
+    {
+        checked: false,
+        check_list_item_id: creativityItemEight.id,
+        journal_entry_id: entryThree.id
+    }
+)
+
+Check.create!(
+    {
+        checked: true,
+        check_list_item_id: creativityItemNine.id,
+        journal_entry_id: entryThree.id
+    }
+)
+
+Check.create!(
+    {
+        checked: true,
+        check_list_item_id: creativityItemTen.id,
         journal_entry_id: entryThree.id
     }
 )
@@ -493,7 +743,7 @@ Check.create!(
 # Sample answers
 Answer.create!(
     {
-        answer: "Today, I worked on building my bullet journal application.",
+        answer: "Today, I worked on building my journal application.",
         question_id: creativityQuestionOne.id,
         journal_entry_id: entryOne.id
     }
@@ -517,7 +767,7 @@ Answer.create!(
 
 Answer.create!(
     {
-        answer: "Today, I worked on building my bullet journal application.",
+        answer: "Today, I worked on building my journal application.",
         question_id: creativityQuestionOne.id,
         journal_entry_id: entryTwo.id
     }
@@ -541,7 +791,7 @@ Answer.create!(
 
 Answer.create!(
     {
-        answer: "Today, I worked on building my bullet journal application.",
+        answer: "Today, I worked on building my journal application.",
         question_id: creativityQuestionOne.id,
         journal_entry_id: entryThree.id
     }
