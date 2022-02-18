@@ -1,0 +1,36 @@
+.editchecklistcontainer {
+    width: 100%;
+}
+
+.edititemdiv {
+    padding-bottom: 10px;
+    padding-left: 220px;
+}
+
+.editchecklistcheck {
+    width: .8em;
+    height: .8em;
+    margin-left: 20px;
+    background-color: rgb(235, 231, 225);
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #000;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.editchecklistcheck:hover {
+    background-color: rgb(226, 223, 219);
+}
+
+.editchecklistcheck:checked {
+    background-color: #000;
+}
+
+.editchecklistitem {
+    font-family: Corbert, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding-left: 5px;
+}

@@ -39,16 +39,16 @@ function CheckList() {
                     <span>
                         <h4 className='entrydraftformheader'>Entry Check List</h4>
                     </span>
-                <div>
+                <div className='checklistcontainer'>
                     {entry.check_list_items.map((check_list_item) => (
-                    <div key={check_list_item.id}>
-                        <input
+                    <div className='itemdiv' key={check_list_item.id}>
+                        <input className='checklistcheck'
                         onChange={() => setChecks((checks) => {
                         checks[check_list_item.id] = true;
                         return checks
                         })}
-                        type="checkbox"/>
-                        <span>{check_list_item.item}</span>
+                        type='checkbox'/>
+                        <span className='checklistitem'>{check_list_item.item}</span>
                     </div>))}
                 </div>
                 <button className='entrydraftbutton'>PUBLISH ENTRY</button>

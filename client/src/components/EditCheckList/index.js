@@ -51,18 +51,19 @@ function EditCheckList() {
                     <span>
                         <h4 className='entrydraftformheader'>Entry Check List</h4>
                     </span>
-                    <div>
+                    <div className='editchecklistcontainer'>
                         {entry.check_list_items.map((check_list_item) => {
                         const checked = existing_checks.find((check) => check.check_list_item_id === check_list_item.id)
-                        return (<div key={check_list_item.id}>
+                        return (<div className='edititemdiv' key={check_list_item.id}>
                         <input
+                            className='editchecklistcheck'
                             checked={checked && checks[checked.id]}
                             onChange={(e) => {
                             const value = e.target.checked;
                             setChecks((checks) => ({...checks, [checked.id]: value}))
                         }}
-                        type="checkbox"/>
-                        <span>{check_list_item.item}</span>
+                        type='checkbox'/>
+                        <span className='editchecklistitem'>{check_list_item.item}</span>
                             </div>
                         )
                     })}
