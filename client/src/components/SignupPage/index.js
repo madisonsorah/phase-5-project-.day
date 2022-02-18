@@ -73,14 +73,13 @@ function SignUpPage({setCurrentAuthor}) {
   return (
     <div className='signupcontainer'>
       <div className='signupformcontainer'>
-        <form className='signupform' onSubmit={handleSubmit}>
+        <form className='signupform' autoComplete='off' onSubmit={handleSubmit}>
           <h3 className='signupformheader' style={{display: index === 0 ? 'block' : 'none'}}>Name</h3>
           <p className='signupformp' style={{display: index === 0 ? 'block' : 'none'}}>FIRST NAME</p>
           <input className='signupinput' 
               style={{display: index === 0 ? 'block' : 'none'}}
               placeholder='First Name_'
               type='text'
-              autoComplete='off'
               value={first_name}
               onChange={(e) => setFirstName(e.target.value)}>
           </input>
@@ -89,7 +88,6 @@ function SignUpPage({setCurrentAuthor}) {
               style={{display: index === 0 ? 'block' : 'none' }}
               placeholder='Last Name_'
               type='text'
-              autoComplete='off'
               value={last_name}
               onChange={(e) => setLastName(e.target.value)}>
           </input>
@@ -98,7 +96,6 @@ function SignUpPage({setCurrentAuthor}) {
               style={{display: index === 0 ? 'block' : 'none'}}
               placeholder='Pen Name_'
               type='text'
-              autoComplete='off'
               value={pen_name}
               onChange={(e) => setPenName(e.target.value)}>
           </input>
@@ -108,7 +105,6 @@ function SignUpPage({setCurrentAuthor}) {
               style={{display: index === 1 ? 'block' : 'none' }}
               placeholder='Email_'
               type='text'
-              autoComplete='off'
               value={email}
               onChange={(e) => setEmail(e.target.value)}>
           </input>
@@ -116,8 +112,7 @@ function SignUpPage({setCurrentAuthor}) {
           <input className='signupinput'
               style={{display: index === 1 ? 'block' : 'none'}}
               placeholder='Password_'
-              type='text'
-              autoComplete='off'
+              type='password'
               value={password}
               onChange={(e) => setPassword(e.target.value)}>
           </input>
@@ -125,23 +120,22 @@ function SignUpPage({setCurrentAuthor}) {
           <input className='signupinput'
               style={{display: index === 1 ? 'block' : 'none'}}
               placeholder='Password Confirmation_'
-              type='text'
-              autoComplete='off'
+              type='password'
               value={passwordConfirmation}
               onChange={(e) => setPasswordConfirmation(e.target.value)}>
           </input>
           <h3 className='signupformheader' style={{display: index === 2 ? 'block' : 'none'}}>Profile</h3>
           <p className='signupformp' style={{display: index === 2 ? 'block' : 'none'}}>BIO</p>
-          <input className='signupinput'
+          <textarea className='signupinput'
               style={{display: index === 2 ? 'block' : 'none'}}
               placeholder='Bio_'
               type='text'
-              autoComplete='off'
               value={bio}
               onChange={(e) => setBio(e.target.value)}>
-          </input>
+          </textarea>
           <p className='signupformp' style={{display: index === 2 ? 'block' : 'none'}}>THEME</p>
             <select className='signupthemeinput' style={{display: index === 2 ? 'block' : 'none'}} onChange={(e) => setThemeId(e.target.value)}>
+                <option value=''>Choose Theme</option>
                 {displayThemes}
             </select>
           <button className='signupbutton' style={{display: index === 2 ? 'block' : 'none'}} type='submit'>CREATE ACCOUNT</button>
@@ -149,7 +143,7 @@ function SignUpPage({setCurrentAuthor}) {
         </form>
         <div className='arrowcontainer'>
           <button className='signuparrow' onClick={slideLeft}>{'<'}</button>
-          <button className='signuparrow' style={{display: index <= 1 ? 'block' : 'none'}} onClick={slideRight}>{'>'}</button>
+          <button className='signuparrow' onClick={slideRight}>{'>'}</button>
         </div>
       </div>
     </div>
