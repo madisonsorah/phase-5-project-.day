@@ -128,11 +128,12 @@ function EntryPage() {
                 <div className='entrypageright'>
                     <div className='entrypagetitle'>Check List</div>
                         {
-                                checks.map((check) => {
+                                entry.check_list_items.map((item) => {
+                                    const check = checks.find((check) => check.check_list_item_id === item.id)
                                     return (
-                                        <div className='entrypageinnercolumn' key={check.id}>
-                                            {check.checked === true ? <img className='entrypagedotdaydot' src={dotdaydot}></img> : null}
-                                            <span className='entrypagelistanswer'>{check.check_list_item.item}</span>
+                                        <div className='entrypageinnercolumn' key={item.id}>
+                                            {check ? <img className='entrypagedotdaydot' src={dotdaydot}></img> : null}
+                                            <span className='entrypagelistanswer'>{item.item}</span>
                                         </div>
                                     )
                             })}

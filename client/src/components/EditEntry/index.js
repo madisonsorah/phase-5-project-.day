@@ -26,7 +26,7 @@ function EditEntry() {
           },
           body: JSON.stringify({updatedAnswers}),
         })
-        .then(() => navigate(`/entries/${id}`))
+        .then(() => navigate(`/editchecklist/${id}`))
     }
 
     console.log(updatedAnswers)
@@ -61,7 +61,7 @@ function EditEntry() {
                                 })
                             }
                         </div>
-                        <button className='entrydraftbutton'>PUBLISH ENTRY</button>
+                        <button className='entrydraftbutton'>NEXT</button>
                     </form>
                 </div>
             </div>
