@@ -23,7 +23,7 @@ function EntryDraft() {
           },
           body: JSON.stringify({answers}),
         })
-        .then(() => navigate(`/entries/${id}`))
+        .then(() => navigate(`/checklist/${id}`))
     }
 
     console.log(answers);
@@ -55,7 +55,7 @@ function EntryDraft() {
                                 })
                             }
                         </div>
-                        <button className='entrydraftbutton'>PUBLISH ENTRY</button>
+                        <button className='entrydraftbutton'>NEXT</button>
                     </form>
                 </div>
             </div>

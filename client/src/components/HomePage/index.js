@@ -120,7 +120,7 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                                 </div>
                                 <div className='homepageaboutleftsection'>
                                     <h4 className='homepageh4'>Choose a journal theme.</h4>
-                                    <p className='homepagep'>Select from three pre-built journal themes with specific question prompts or general to share daily thoughts.</p>
+                                    <p className='homepagep'>Select from three pre-built journal themes with thought-starter prompts or general.</p>
                                 </div>
                                 <div className='homepageaboutleftsection2'>
                                     <h4 className='homepageh4'>Track published entries on your calendar grid.</h4>
@@ -151,7 +151,7 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                         <img className='homepagesignedoutgrid' src={dotdayblackgridgraphic}></img>
                         <div className='homepagesignedoutleft'>
                             <h2 className='homepageh2signedout'>Welcome to .DAY</h2>
-                            <p className='homepagepsignedout'>Track your daily habits and thoughts in a minimalist, daily journal.</p>
+                            <p className='homepagepsignedout'>Track your daily habits and thoughts in a minimalist, digital journal.</p>
                             <button onClick={handleLogInForm} className='homepagebuttonsignedout'>Log In</button><p className='homepagedividersignedout'>|</p><Link className='homepagelinksignedout' to='/signup'>Sign Up</Link>
                         </div>
                     </div>
@@ -164,7 +164,7 @@ function HomePage({setCurrentAuthor, currentAuthor, logInForm, setLogInForm}) {
                                     </div>
                                     <div className='homepageaboutleftsection'>
                                         <h4 className='homepageh4'>Choose a journal theme.</h4>
-                                        <p className='homepagep'>Select from three pre-built journal themes with specific question prompts or general to share daily thoughts.</p>
+                                        <p className='homepagep'>Select from three pre-built journal themes with thought-starter prompts or general.</p>
                                     </div>
                                     <div className='homepageaboutleftsection2'>
                                         <h4 className='homepageh4'>Track published entries on your calendar grid.</h4>

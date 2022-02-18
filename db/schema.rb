@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_15_230533) do
+ActiveRecord::Schema.define(version: 2022_02_18_020839) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,21 @@ ActiveRecord::Schema.define(version: 2022_02_15_230533) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "theme_id"
+  end
+
+  create_table "check_list_items", force: :cascade do |t|
+    t.string "item"
+    t.integer "theme_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "checks", force: :cascade do |t|
+    t.boolean "checked"
+    t.integer "check_list_item_id"
+    t.integer "journal_entry_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "journal_entries", force: :cascade do |t|

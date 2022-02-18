@@ -7,6 +7,7 @@ function EntryPage() {
     const {id} = useParams();
     const [entry, setEntry] = useState(null);
     const [answers, setAnswers] = useState([]);
+    const [checks, setChecks] = useState([]);
     const [deletePopUp, setDeletePopUp] = useState(false);
     const navigate = useNavigate();
 
@@ -18,6 +19,10 @@ function EntryPage() {
         fetch(`/journal_entries/${id}/answers`)
         .then((r) => r.json())
         .then((answerData) => setAnswers(answerData))
+
+        fetch(`/journal_entries/${id}/checks`)
+        .then((r) => r.json())
+        .then((checksData) => setChecks(checksData))
      }, [id])
 
      function formatDate(date) {
@@ -121,20 +126,19 @@ function EntryPage() {
                 </div>
                 <div className='entrypageright'>
                     <div className='entrypagetitle'>Check List</div>
-                    <div className='entrypagechecklistcolumn'>
-                        <p className='entrypageanswer'>Doodled or sketched</p>
-                    </div>
-                    <div className='entrypagechecklistcolumn'>
-                        <p className='entrypageanswer'>Wrote down an idea</p>
-                    </div>
-                    <div className='entrypagechecklistcolumn'>
-                        <p className='entrypageanswer'>Worked on a passion project</p>
-                    </div>
-                    <div className='entrypagechecklistcolumn'>
-                        <p className='entrypageanswer'>Set aside time to brainstorm</p>
+                        {
+                                checks.map((check) => {
+                                    return (
+                                        <div className='entrypageinnercolumn' key={check.id}>
+                                            <input
+                                            value={check.checked}
+                                            type="checkbox"/>
+                                            <span>{check.check_list_item.item}</span>
+                                        </div>
+                                    )
+                            })}
                     </div>
                 </div>
-            </div>
         </div>
         )   
     }

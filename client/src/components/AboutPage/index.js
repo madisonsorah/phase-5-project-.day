@@ -16,7 +16,7 @@ function AboutPage() {
                     </div>
                     <div className='homepageaboutleftsection'>
                         <h4 className='homepageh4'>Choose a journal theme.</h4>
-                        <p className='homepagep'>Select from three pre-built journal themes with specific question prompts or general to share daily thoughts.</p>
+                        <p className='homepagep'>Select from three pre-built journal themes with thought-starter prompts or general.</p>
                     </div>
                     <div className='homepageaboutleftsection2'>
                         <h4 className='homepageh4'>Track published entries on your calendar grid.</h4>

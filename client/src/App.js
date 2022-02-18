@@ -12,6 +12,7 @@ import AuthorProfile from './components/AuthorProfile';
 import AuthorAccount from './components/AuthorAccount';
 import NewEntry from './components/NewEntry';
 import AuthorThemes from './components/AuthorThemes';
+import CheckList from './components/CheckList';
 
 function App() {
   const [currentAuthor, setCurrentAuthor] = useState(null);
@@ -41,6 +42,7 @@ function App() {
           <Route path='/entries/:id' element={currentAuthor ? <EntryPage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/> : <HomePage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor} logInForm={logInForm} setLogInForm={setLogInForm}/>}/>
           <Route path='/editentry/:id' element={currentAuthor ? <EditEntry currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/> : <HomePage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor} logInForm={logInForm} setLogInForm={setLogInForm}/>}/>
           <Route path='/newentry' element={currentAuthor ? <NewEntry currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/> : <HomePage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor} logInForm={logInForm} setLogInForm={setLogInForm}/>}/>
+          <Route path='/checklist/:id' element={currentAuthor ? <CheckList currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/> : <HomePage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor} logInForm={logInForm} setLogInForm={setLogInForm}/>}/>
           <Route path='/themes' element={<AuthorThemes currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>
           <Route path='/about' element={<AboutPage currentAuthor={currentAuthor} setCurrentAuthor={setCurrentAuthor}/>}/>
         </Routes>

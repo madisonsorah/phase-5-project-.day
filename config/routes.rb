@@ -18,6 +18,15 @@ Rails.application.routes.draw do
   # Updating a journal entry's answers
   patch '/journal_entries/:journal_entry_id/answers', to: 'answers#update_entry_answers'
 
+  # Checks that belong to a journal entry
+  get '/journal_entries/:journal_entry_id/checks', to: 'checks#entrychecks'
+
+  # Updating a journal entry's checks
+  patch '/journal_entries/:journal_entry_id/checks', to: 'checks#update_entry_checks'
+
+  # Adding checks to a journal entry
+  post '/journal_entries/:journal_entry_id/checks', to: 'checks#create_entry_checks'
+
   # Adding theme to an author
   patch '/authors/:id/theme', to: 'authors#addtheme'
 
@@ -35,6 +44,9 @@ Rails.application.routes.draw do
 
   # Question CRUD actions
   resources :questions, only: [:index, :show]
+
+  # CheckListItem CRUD actions
+  resources :check_list_items, only: [:index, :show, :create]
 
   # Answer CRUD actions 
   resources :answers, only: [:index, :show, :create, :update]

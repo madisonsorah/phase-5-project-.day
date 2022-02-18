@@ -141,6 +141,98 @@ generalQuestionOne = Question.create!(
     }
 )
 
+# Sample check list items
+creativityItemOne = CheckListItem.create!(
+    {
+        item: "Doodled or sketched.",
+        theme_id: creativity.id
+    }
+)
+
+creativityItemTwo = CheckListItem.create!(
+    {
+        item: "Wrote down an idea.",
+        theme_id: creativity.id
+    }
+)
+
+creativityItemThree = CheckListItem.create!(
+    {
+        item: "Worked on a side project.",
+        theme_id: creativity.id
+    }
+)
+
+creativityItemFour = CheckListItem.create!(
+    {
+        item: "Set aside time to brainstorm.",
+        theme_id: creativity.id
+    }
+)
+
+creativityItemFive = CheckListItem.create!(
+    {
+        item: "Consumed inspiring content.",
+        theme_id: creativity.id
+    }
+)
+
+creativityItemSix = CheckListItem.create!(
+    {
+        item: "Took a creative risk.",
+        theme_id: creativity.id
+    }
+)
+
+# Sample checks
+Check.create!(
+    {
+        checked: true,
+        check_list_item_id: creativityItemOne.id,
+        journal_entry_id: entryOne.id
+    }
+)
+
+Check.create!(
+    {
+        checked: false,
+        check_list_item_id: creativityItemTwo.id,
+        journal_entry_id: entryOne.id
+    }
+)
+
+Check.create!(
+    {
+        checked: true,
+        check_list_item_id: creativityItemThree.id,
+        journal_entry_id: entryOne.id
+    }
+)
+
+Check.create!(
+    {
+        checked: true,
+        check_list_item_id: creativityItemFour.id,
+        journal_entry_id: entryOne.id
+    }
+)
+
+Check.create!(
+    {
+        checked: true,
+        check_list_item_id: creativityItemFive.id,
+        journal_entry_id: entryOne.id
+    }
+)
+
+Check.create!(
+    {
+        checked: false,
+        check_list_item_id: creativityItemSix.id,
+        journal_entry_id: entryOne.id
+    }
+)
+
 
 # Sample answers
 Answer.create!(
