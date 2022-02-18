@@ -45,12 +45,12 @@ function EntryDraft() {
                                 entry.questions.map((question) => {
                                     return (<div className='entrydraftinputdiv' key={question.id}>
                                         <p className='entrydraftformp'>{question.question}</p>
-                                        <input 
+                                        <textarea 
                                         className='entrydraftinput' 
                                         onChange={(e) => setAnswers((answers) => {
                                             answers[question.id] = e.target.value;
                                             return answers;
-                                        })}></input>
+                                        })}></textarea>
                                     </div>)
                                 })
                             }

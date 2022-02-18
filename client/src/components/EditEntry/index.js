@@ -50,13 +50,13 @@ function EditEntry() {
                                     const answer = entry.answers.find((answer) => answer.question_id === question.id);
                                     return (<div className='entrydraftinputdiv' key={question.id}>
                                         <p className='entrydraftformp'>{question.question}</p>
-                                        <input 
+                                        <textarea 
                                         className='entrydraftinput' 
                                         placeholder={answer.answer}
                                         onChange={(e) => setUpdatedAnswers((updatedAnswers) => {
                                             updatedAnswers[answer.id] = e.target.value;
                                             return updatedAnswers;
-                                        })}></input>
+                                        })}></textarea>
                                     </div>)
                                 })
                             }

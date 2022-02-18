@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import dotdaylogo from '../../images/dotdaylogo.png';
+import dotdaydot from '../../images/dotdaydot.png';
 import './index.css';
 
 function NavBar({currentAuthor, setCurrentAuthor, setLogInForm, setErrorMessage}) {
@@ -39,7 +40,8 @@ function NavBar({currentAuthor, setCurrentAuthor, setLogInForm, setErrorMessage}
                     <Link className='navbarlink' to='/themes'>Themes</Link>
                     <img className='navbarlogologgedin' alt='.Day logo' src={dotdaylogo}></img>
                     <span className='navbardropdownspan'>
-                        <button className='navbarlink'>Hello, {currentAuthor.first_name}.</button>
+                        <img className='navbardotdaydot' src={dotdaydot}/>
+                        <button className='navbarnamelink'>Hello, {currentAuthor.first_name}.</button>
                         <div className='navbardropdown'>
                             <div className='dropdowndiv'>
                                 <Link className='dropdownlink' to={`/account`}>Account</Link>

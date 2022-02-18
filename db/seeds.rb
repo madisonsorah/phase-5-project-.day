@@ -30,6 +30,11 @@ positivity = Theme.create!(
         category: "Positivity"
     })
 
+general = Theme.create!(
+    {
+        category: "General"
+    })
+
 # Sample authors
 madison = Author.create!(
     {
@@ -126,6 +131,13 @@ positivityQuestionThree = Question.create!(
     {
         question: "What are you most looking forward to tomorrow?",
         theme_id: positivity.id
+    }
+)
+
+generalQuestionOne = Question.create!(
+    {
+        question: "Share today's thoughts.",
+        theme_id: general.id
     }
 )
 

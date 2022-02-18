@@ -71,7 +71,7 @@ function AuthorAccount({currentAuthor}) {
                         </div>
                         <div className='accountinputdiv'>
                             <p className='accountp'>BIO</p>
-                            <input className='accountinput' value={updatedAccount.bio} onChange={(e) => handleUpdate(e, 'bio')}></input>
+                            <textarea className='accountinput' value={updatedAccount.bio} onChange={(e) => handleUpdate(e, 'bio')}></textarea>
                         </div>
                         <button className='accountbutton'>UPDATE</button>
                         {accountUpdatedNote ? (<p className='accountsavedp'>{accountUpdatedNote}</p>) : null}
