@@ -125,13 +125,6 @@ entryEleven = JournalEntry.create!(
     }
 )
 
-entryTwelve = JournalEntry.create!(
-    {
-        date: "11/02/2022",
-        author_id: madison.id
-    }
-)
-
 # entryTwo = JournalEntry.create!(
 #     {
 #         image_url: "XX"

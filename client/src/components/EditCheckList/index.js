@@ -60,7 +60,7 @@ function EditCheckList() {
                             checked={checked && checks[checked.id]}
                             onChange={(e) => {
                             const value = e.target.checked;
-                            setChecks((checks) => ({...checks, [checked.id]: value}))
+                            // setChecks((checks) => ({...checks, [checked.id]: value}))
                         }}
                         type='checkbox'/>
                         <span className='editchecklistitem'>{check_list_item.item}</span>
