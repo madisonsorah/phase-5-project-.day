@@ -284,7 +284,7 @@ creativityItemTen = CheckListItem.create!(
 
 positivityItemOne = CheckListItem.create!(
     {
-        item: "Reflected on things that make me happy.",
+        item: "Reflected on happy moments.",
         theme_id: positivity.id
     }
 )
@@ -298,28 +298,28 @@ positivityItemTwo = CheckListItem.create!(
 
 positivityItemThree = CheckListItem.create!(
     {
-        item: "Ate healthy food that supports the mind.",
+        item: "Ate healthy food to support my mind.",
         theme_id: positivity.id
     }
 )
 
 positivityItemFour = CheckListItem.create!(
     {
-        item: "Gave back to others in some way.",
+        item: "Gave back to others.",
         theme_id: positivity.id
     }
 )
 
 positivityItemFive = CheckListItem.create!(
     {
-        item: "Remained positive during a stressful situation.",
+        item: "Remained positive during a stressful time.",
         theme_id: positivity.id
     }
 )
 
 positivityItemSix = CheckListItem.create!(
     {
-        item: "Decompressed or unplugged for an hour or more.",
+        item: "Unplugged for an hour or more.",
         theme_id: positivity.id
     }
 )
@@ -403,14 +403,14 @@ productivityItemSeven = CheckListItem.create!(
 
 productivityItemEight = CheckListItem.create!(
     {
-        item: "Silenced computer and phone notifications.",
+        item: "Silenced notifications.",
         theme_id: productivity.id
     }
 )
 
 productivityItemNine = CheckListItem.create!(
     {
-        item: "Took a break outdoors to clear head.",
+        item: "Took a break outdoors.",
         theme_id: productivity.id
     }
 )
