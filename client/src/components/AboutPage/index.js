@@ -16,7 +16,7 @@ function AboutPage() {
                     </div>
                     <div className='homepageaboutleftsection'>
                         <h4 className='homepageh4'>Choose a journal theme.</h4>
-                        <p className='homepagep'>Select from three pre-built journal themes or build your own.</p>
+                        <p className='homepagep'>Select from three pre-built journal themes with specific question prompts or general to share daily thoughts.</p>
                     </div>
                     <div className='homepageaboutleftsection2'>
                         <h4 className='homepageh4'>Track published entries on your calendar grid.</h4>
@@ -33,7 +33,7 @@ function AboutPage() {
                 <h3 className='footerheader'>About .DAY</h3>
                 <ul className='footerul'>
                     <div className='footerp'>.DAY is a project concept created by @madisonsorah, who recently kicked off her career as a front-end developer.</div>
-                    <div className='footerp'>Created with a clean interface and minimalist design, .DAY is your digital solution to bullet journaling on a daily basis.</div>
+                    <div className='footerp'>Created with a clean interface and minimalist design, .DAY is your digital solution to journaling on a daily basis.</div>
                     <div className='footerp2'>Feature updates will continuously be made to .DAY to improve your journaling experience.</div>
                 </ul>
             </div>

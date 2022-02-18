@@ -35,7 +35,7 @@ function AuthorThemes() {
             <div className='themeimagecontainer'>
               <img className='themeimage' src={dotdaycustom} alt='Custom'></img>
               <div className='thememiddle'>
-                <div class='thememiddletext'>Custom prompt for sharing general daily thoughts.</div>
+                <div class='thememiddletext'>General prompt for sharing daily thoughts and tasks.</div>
               </div>
             </div>
           </div>
