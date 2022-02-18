@@ -55,6 +55,83 @@ entryOne = JournalEntry.create!(
     }
 )
 
+entryTwo = JournalEntry.create!(
+    {
+        date: "03/02/2022",
+        author_id: madison.id
+    }
+)
+
+entryThree = JournalEntry.create!(
+    {
+        date: "05/02/2022",
+        author_id: madison.id
+    }
+)
+
+entryFour = JournalEntry.create!(
+    {
+        date: "07/02/2022",
+        author_id: madison.id
+    }
+)
+
+entryFive = JournalEntry.create!(
+    {
+        date: "08/02/2022",
+        author_id: madison.id
+    }
+)
+
+entrySix = JournalEntry.create!(
+    {
+        date: "10/02/2022",
+        author_id: madison.id
+    }
+)
+
+entrySeven = JournalEntry.create!(
+    {
+        date: "12/02/2022",
+        author_id: madison.id
+    }
+)
+
+entryEight = JournalEntry.create!(
+    {
+        date: "13/02/2022",
+        author_id: madison.id
+    }
+)
+
+entryNine = JournalEntry.create!(
+    {
+        date: "14/02/2022",
+        author_id: madison.id
+    }
+)
+
+entryTen = JournalEntry.create!(
+    {
+        date: "16/02/2022",
+        author_id: madison.id
+    }
+)
+
+entryEleven = JournalEntry.create!(
+    {
+        date: "17/02/2022",
+        author_id: madison.id
+    }
+)
+
+entryTwelve = JournalEntry.create!(
+    {
+        date: "11/02/2022",
+        author_id: madison.id
+    }
+)
+
 # entryTwo = JournalEntry.create!(
 #     {
 #         image_url: "XX"
@@ -184,6 +261,90 @@ creativityItemSix = CheckListItem.create!(
     }
 )
 
+positivityItemOne = CheckListItem.create!(
+    {
+        item: "Reflected on things that make me happy.",
+        theme_id: positivity.id
+    }
+)
+
+positivityItemTwo = CheckListItem.create!(
+    {
+        item: "Did an activity that I love.",
+        theme_id: positivity.id
+    }
+)
+
+positivityItemThree = CheckListItem.create!(
+    {
+        item: "Ate healthy food that supports the mind.",
+        theme_id: positivity.id
+    }
+)
+
+positivityItemFour = CheckListItem.create!(
+    {
+        item: "Gave back to others in some way.",
+        theme_id: positivity.id
+    }
+)
+
+positivityItemFive = CheckListItem.create!(
+    {
+        item: "Remained positive during a stressful situation.",
+        theme_id: positivity.id
+    }
+)
+
+positivityItemSix = CheckListItem.create!(
+    {
+        item: "Decompressed or unplugged for an hour or more.",
+        theme_id: positivity.id
+    }
+)
+
+productivityItemOne = CheckListItem.create!(
+    {
+        item: "Got 8 hours or more of sleep.",
+        theme_id: productivity.id
+    }
+)
+
+productivityItemTwo = CheckListItem.create!(
+    {
+        item: "Removed distractions.",
+        theme_id: productivity.id
+    }
+)
+
+productivityItemThree = CheckListItem.create!(
+    {
+        item: "Kept track of today's tasks.",
+        theme_id: productivity.id
+    }
+)
+
+productivityItemFour = CheckListItem.create!(
+    {
+        item: "Wrote down goals and priorities.",
+        theme_id: productivity.id
+    }
+)
+
+productivityItemFive = CheckListItem.create!(
+    {
+        item: "Drank water throughout the day.",
+        theme_id: productivity.id
+    }
+)
+
+productivityItemSix = CheckListItem.create!(
+    {
+        item: "Organized your home or work space.",
+        theme_id: productivity.id
+    }
+)
+
 # Sample checks
 Check.create!(
     {
@@ -233,6 +394,101 @@ Check.create!(
     }
 )
 
+Check.create!(
+    {
+        checked: true,
+        check_list_item_id: creativityItemOne.id,
+        journal_entry_id: entryTwo.id
+    }
+)
+
+Check.create!(
+    {
+        checked: false,
+        check_list_item_id: creativityItemTwo.id,
+        journal_entry_id: entryTwo.id
+    }
+)
+
+Check.create!(
+    {
+        checked: true,
+        check_list_item_id: creativityItemThree.id,
+        journal_entry_id: entryTwo.id
+    }
+)
+
+Check.create!(
+    {
+        checked: true,
+        check_list_item_id: creativityItemFour.id,
+        journal_entry_id: entryTwo.id
+    }
+)
+
+Check.create!(
+    {
+        checked: true,
+        check_list_item_id: creativityItemFive.id,
+        journal_entry_id: entryTwo.id
+    }
+)
+
+Check.create!(
+    {
+        checked: false,
+        check_list_item_id: creativityItemSix.id,
+        journal_entry_id: entryTwo.id
+    }
+)
+
+Check.create!(
+    {
+        checked: true,
+        check_list_item_id: creativityItemOne.id,
+        journal_entry_id: entryThree.id
+    }
+)
+
+Check.create!(
+    {
+        checked: false,
+        check_list_item_id: creativityItemTwo.id,
+        journal_entry_id: entryThree.id
+    }
+)
+
+Check.create!(
+    {
+        checked: true,
+        check_list_item_id: creativityItemThree.id,
+        journal_entry_id: entryThree.id
+    }
+)
+
+Check.create!(
+    {
+        checked: true,
+        check_list_item_id: creativityItemFour.id,
+        journal_entry_id: entryThree.id
+    }
+)
+
+Check.create!(
+    {
+        checked: true,
+        check_list_item_id: creativityItemFive.id,
+        journal_entry_id: entryThree.id
+    }
+)
+
+Check.create!(
+    {
+        checked: false,
+        check_list_item_id: creativityItemSix.id,
+        journal_entry_id: entryThree.id
+    }
+)
 
 # Sample answers
 Answer.create!(
@@ -256,6 +512,54 @@ Answer.create!(
         answer: "I plan to build out the CSS for my app to improve the design.",
         question_id: creativityQuestionThree.id,
         journal_entry_id: entryOne.id
+    }
+)
+
+Answer.create!(
+    {
+        answer: "Today, I worked on building my bullet journal application.",
+        question_id: creativityQuestionOne.id,
+        journal_entry_id: entryTwo.id
+    }
+)
+
+Answer.create!(
+    {
+        answer: "I thought about hanging up colorful paintings in my office to inspire my imagination.",
+        question_id: creativityQuestionTwo.id,
+        journal_entry_id: entryTwo.id
+    }
+)
+
+Answer.create!(
+    {
+        answer: "I plan to build out the CSS for my app to improve the design.",
+        question_id: creativityQuestionThree.id,
+        journal_entry_id: entryTwo.id
+    }
+)
+
+Answer.create!(
+    {
+        answer: "Today, I worked on building my bullet journal application.",
+        question_id: creativityQuestionOne.id,
+        journal_entry_id: entryThree.id
+    }
+)
+
+Answer.create!(
+    {
+        answer: "I thought about hanging up colorful paintings in my office to inspire my imagination.",
+        question_id: creativityQuestionTwo.id,
+        journal_entry_id: entryThree.id
+    }
+)
+
+Answer.create!(
+    {
+        answer: "I plan to build out the CSS for my app to improve the design.",
+        question_id: creativityQuestionThree.id,
+        journal_entry_id: entryThree.id
     }
 )
 
