@@ -26,13 +26,7 @@
 }
 
 .profileeditlink:hover {
-    text-decoration: none;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 5px;
-    border: 1px solid #000;
     background-color: rgb(226, 223, 219);
-    color: #000;
 }
 
 .profilenewentrylink {
@@ -46,13 +40,7 @@
 }
 
 .profilenewentrylink:hover {
-    text-decoration: none;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 5px;
-    border: 1px solid rgb(235, 231, 225);
     background-color: rgb(37, 37, 37);
-    color: rgb(235, 231, 225);
 }
 
 .profileentryheaderdiv {
@@ -158,11 +146,5 @@
   }
 
   .entrylink:hover {
-    text-decoration: none;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 5px;
-    border: 1px solid rgb(235, 231, 225);
     background-color: rgb(37, 37, 37);
-    color: rgb(235, 231, 225);
 }

@@ -25,14 +25,7 @@
 }
 
 .browseentriesnewlink:hover {
-    text-decoration: none;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 5px;
-    margin-left: 10%;
-    border: 1px solid #000;
     background-color: rgb(226, 223, 219);
-    color: #000;
 }
 
 
@@ -96,13 +89,7 @@
   }
 
   .browseentriesviewlink:hover {
-    text-decoration: none;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 5px;
-    border: 1px solid rgb(235, 231, 225);
     background-color: rgb(37, 37, 37);
-    color: rgb(235, 231, 225);
 }
 
 .react-calendar { 
@@ -141,7 +128,7 @@ abbr[title] {
     display: inline-block;
     text-align: center;
     align-items: flex-start;
-    cursor: default;
+    cursor: pointer;
     box-sizing: border-box;
     background-color: rgb(235, 231, 225);
     margin: 0em;
@@ -153,29 +140,7 @@ abbr[title] {
 }
 
 .react-calendar button:hover {
-    font-family: Corbert, Arial, Helvetica, sans-serif;
-    appearance: auto;
-    text-rendering: auto;
-    color: #000;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: center;
-    align-items: flex-start;
-    cursor: default;
-    box-sizing: border-box;
     background-color: rgb(226, 223, 219);
-    margin: 0em;
-    padding: 60px;
-    border-width: 0.5px;
-    border-style: solid;
-    border-color: #000;
-    border-image: initial;
-    cursor: pointer;
 }
 
 .react-calendar__navigation button {
@@ -191,21 +156,11 @@ abbr[title] {
     margin: 5px;
     padding: 5px;
     margin-bottom: 40px;
+    cursor: pointer;
 }
 
 .react-calendar__navigation button:hover {
-    font-family: Corbert, Arial, Helvetica, sans-serif;
-    color: #000;
-    min-width: 19%;
     background-color: rgb(226, 223, 219);
-    border: 1px solid #000;
-    font-size: 13px;
-    margin-top: 8px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin: 5px;
-    padding: 5px;
-    cursor: pointer;
 }
 
 .dotdaydot1 {

@@ -70,15 +70,7 @@
 }
 
 .signupbutton:hover {
-    padding: 10px;
-    margin-top: 40px;
-    width: 93.5%;
     background-color: rgb(226, 223, 219);
-    font-size: 11px;
-    font-weight: 600;
-    border: 1px solid #000;
-    color: #000;
-    cursor: pointer;
 }
 
 .signuparrow {
@@ -92,14 +84,7 @@
 }
 
 .signuparrow:hover {
-    padding: 10px;
-    margin-top: 20px;
-    border: none;
-    background-color: rgb(235, 231, 225);
-    font-size: 16px;
-    border: none;
     color: rgb(139, 135, 124);
-    cursor: pointer;
 }
 
 .arrowcontainer {

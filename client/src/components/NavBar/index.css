@@ -28,13 +28,7 @@
 }
 
 .navbarlink:hover {
-    display: inline-block;
-    text-decoration: none;
-    font-size: 12px;
-    border: none;
-    background-color: rgb(235, 231, 225);
     color: rgb(139, 135, 124);
-    cursor: pointer;
 }
 
 .navbardivider {
@@ -102,11 +96,6 @@
 }
 
 .dropdownlink:hover {
-    display: inline-block;
-    text-decoration: none;
-    font-size: 12px;
-    border: none;
-    background-color: #000;
     color: rgb(139, 135, 124);
 }
 
@@ -132,12 +121,6 @@
 }
 
 .navbarnamelink:hover {
-    display: inline-block;
-    text-decoration: none;
-    font-size: 12px;
-    border: none;
-    background-color: rgb(235, 231, 225);
     color: rgb(139, 135, 124);
-    cursor: pointer;
 }
 
